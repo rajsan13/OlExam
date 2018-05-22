@@ -33,7 +33,7 @@ public class StudentChangePword extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.student_c_pword);
 		sruname1 = (EditText) findViewById(R.id.editText1);
-		k++;
+		
 		srpword1 = (EditText) findViewById(R.id.editText2);
 		srconfpword1 = (EditText)findViewById(R.id.editText3);
 		pno=(EditText)findViewById((R.id.editText));
