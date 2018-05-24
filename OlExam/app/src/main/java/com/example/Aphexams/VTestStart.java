@@ -24,9 +24,14 @@ public class VTestStart extends Activity{
 
 	Button bvsubmit,bvnext,bvexit;
 	TextView oop1,oop2,oop3,oop4,textView1,qquestn;
-	EditText ccorrect;
+	//EditText ccorrect;
 	public static int  num5=1;
 	public static int counter1=0;
+	private RadioGroup radioGroup;
+	private RadioButton radio1;
+	private RadioButton radio2;
+	private RadioButton radio3;
+	private RadioButton radio4;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -46,7 +51,13 @@ public class VTestStart extends Activity{
         final String verbo = intentIndex.getStringExtra("verbo");
         num5=1;
         counter1=0;
-		
+		radioGroup = (RadioGroup)findViewById(R.id.group1);
+		radio1 = (RadioButton)findViewById(R.id.radio1);
+		radio2= (RadioButton)findViewById(R.id.radio2);
+		radio3= (RadioButton)findViewById(R.id.radio3);
+		radio4= (RadioButton)findViewById(R.id.radio4);
+
+
 		ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
 		query.whereEqualTo("vqno",num5);
 		query.getFirstInBackground(new GetCallback<ParseObject>() {
@@ -58,7 +69,7 @@ public class VTestStart extends Activity{
 		      String questiondata=object.getString("vque");
 		      final TextView qquestn = (TextView) findViewById(R.id.textView2);
 		      qquestn.setText(questiondata);
-		      String option1=object.getString("vopt1");
+		    /*  String option1=object.getString("vopt1");
 		      final TextView oop1 = (TextView) findViewById(R.id.textView3);
 		      oop1.setText(option1); 
 		      String option2=object.getString("vopt2");
@@ -69,7 +80,13 @@ public class VTestStart extends Activity{
 		      oop3.setText(option3);
 		      String option4=object.getString("vopt4");
 		      final TextView oop4 = (TextView) findViewById(R.id.textView6);
-		      oop4.setText(option4);
+		      oop4.setText(option4);*/
+				radio1.setText(object.getString("vopt1"));
+				radio2.setText(object.getString("vopt2"));
+				radio3.setText(object.getString("vopt3"));
+				radio4.setText(object.getString("vopt4"));
+
+				
 		      
 		     
 		    }
@@ -94,13 +111,14 @@ public class VTestStart extends Activity{
 			        res.put("Studname",studname);
 			        res.put("verbmarks",counter1);
 			        res.saveInBackground();
-					startActivity(indexIntent);	}else{
+					startActivity(indexIntent);	}
+		else{
 						 
 						
-					     final EditText ccorrect = (EditText) findViewById(R.id.editText1);
-					     String cor=ccorrect.getText().toString();
+					    // final EditText ccorrect = (EditText) findViewById(R.id.editText1);
+					   //  String cor=ccorrect.getText().toString();
 					     //ccorrect.setText("");
-					     ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
+					    /* ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
 							query.whereEqualTo("vqno",num5);
 							query.whereEqualTo("vrightans",Integer.parseInt(cor));
 							query.getFirstInBackground(new GetCallback<ParseObject>() {
@@ -108,21 +126,126 @@ public class VTestStart extends Activity{
 							    if (object == null) {
 							      Log.d("vque", "The getFirst request failed.");
 							      counter1=counter1-1;
-							      ccorrect.setEnabled(false);
+							    //  ccorrect.setEnabled(false);
 							    } else {
 							      Log.d("vque", "Retrieved the object.");
 							      counter1=counter1+5;
-							      ccorrect.setEnabled(false);
+							   //   ccorrect.setEnabled(false);
 							     
 							    }
 							  }
-							});
-					     
-					     
-					     
-					     
-					     
+							});*/
+
+			if(R.id.radio1==radioGroup.getCheckedRadioButtonId()) {
+
+				//String cor=radio1.getText().toString();
+				//ccorrect.setText("");
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
+				query.whereEqualTo("qno",num5);
+				//query.whereEqualTo("rightans",Integer.parseInt(cor));
+				query.whereEqualTo("rightans",1);
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							Log.d("que", "The getFirst request failed.");
+							//ccorrect.setEnabled(false);
+							counter1=counter1-1;
+							Log.d("MYINT", "value: " + counter1);
+						} else {
+							Log.d("que", "Retrieved the object.");
+							counter1=counter1+5;
+							//ccorrect.setEnabled(false);
+							Log.d("MYINT", "value: " + counter1);
+
+						}
 					}
+				});
+			}
+			else if(R.id.radio2==radioGroup.getCheckedRadioButtonId()) {
+
+				//String cor=radio2.getText().toString();
+				//ccorrect.setText("");
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
+				query.whereEqualTo("qno",num5);
+				//query.whereEqualTo("rightans",Integer.parseInt(cor));
+				query.whereEqualTo("rightans",2);
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							Log.d("que", "The getFirst request failed.");
+							//ccorrect.setEnabled(false);
+							counter1=counter1-1;
+							Log.d("MYINT", "value: " + counter1);
+						} else {
+							Log.d("que", "Retrieved the object.");
+							counter1=counter1+5;
+							//ccorrect.setEnabled(false);
+							Log.d("MYINT", "value: " + counter1);
+
+						}
+					}
+				});
+			}
+			else if(R.id.radio3==radioGroup.getCheckedRadioButtonId()) {
+
+				String cor=radio3.getText().toString();
+				//ccorrect.setText("");
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
+				query.whereEqualTo("qno",num5);
+				//query.whereEqualTo("rightans",Integer.parseInt(cor));
+				query.whereEqualTo("rightans",3);
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							Log.d("que", "The getFirst request failed.");
+							//ccorrect.setEnabled(false);
+							counter1=counter1-1;
+							Log.d("MYINT", "value: " + counter1);
+						} else {
+							Log.d("que", "Retrieved the object.");
+							counter1=counter1+5;
+							//ccorrect.setEnabled(false);
+							Log.d("MYINT", "value: " + counter1);
+
+						}
+					}
+				});
+			}
+			else if(R.id.radio4==radioGroup.getCheckedRadioButtonId()) {
+
+				String cor=radio4.getText().toString();
+				//ccorrect.setText("");
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
+				query.whereEqualTo("qno",num5);
+				//query.whereEqualTo("rightans",Integer.parseInt(cor));
+				query.whereEqualTo("rightans",4);
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							Log.d("que", "The getFirst request failed.");
+							//ccorrect.setEnabled(false);
+							counter1=counter1-1;
+							Log.d("MYINT", "value: " + counter1);
+						} else {
+							Log.d("que", "Retrieved the object.");
+							counter1=counter1+5;
+							//cccorrect.setEnabled(false);
+							Log.d("MYINT", "value: " + counter1);
+
+						}
+					}
+				});
+			}
+
+
+
+
+			radio1.setEnabled(true);
+			radio2.setEnabled(true);
+			radio3.setEnabled(true);
+			radio4.setEnabled(true);
+
+		}
 			}
 		});
 		
@@ -134,9 +257,18 @@ public class VTestStart extends Activity{
 			public void onClick(View v) {
 				
 				num5++;
-				EditText ccorrect = (EditText) findViewById(R.id.editText1);
-				ccorrect.setEnabled(true);
-			     ccorrect.setText("");
+				//EditText ccorrect = (EditText) findViewById(R.id.editText1);
+				//.setEnabled(true);
+			   //  ccorrect.setText("");
+				radio1.setChecked(false);
+				radio2.setChecked(false);
+				radio3.setChecked(false);
+				radio4.setChecked(false);
+				radio1.setEnabled(true);
+				radio2.setEnabled(true);
+				radio3.setEnabled(true);
+				radio4.setEnabled(true);
+
 				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
 				query.whereEqualTo("vqno",num5);
 				query.getFirstInBackground(new GetCallback<ParseObject>() {
@@ -148,7 +280,7 @@ public class VTestStart extends Activity{
 				      String questiondata=object.getString("vque");
 				      final TextView qquestn = (TextView) findViewById(R.id.textView2);
 				      qquestn.setText(questiondata);
-				      String option1=object.getString("vopt1");
+				     /* String option1=object.getString("vopt1");
 				      final TextView oop1 = (TextView) findViewById(R.id.textView3);
 				      oop1.setText(option1); 
 				      String option2=object.getString("vopt2");
@@ -159,7 +291,16 @@ public class VTestStart extends Activity{
 				      oop3.setText(option3);
 				      String option4=object.getString("vopt4");
 				      final TextView oop4 = (TextView) findViewById(R.id.textView6);
-				      oop4.setText(option4);
+				      oop4.setText(option4);*/
+
+						radio1.setText(object.getString("vopt1"));
+						radio2.setText(object.getString("vopt2"));
+						radio3.setText(object.getString("vopt3"));
+						radio4.setText(object.getString("vopt4"));
+						radio1.setEnabled(true);
+						radio2.setEnabled(true);
+						radio3.setEnabled(true);
+						radio4.setEnabled(true);
 				      
 				     
 				    }

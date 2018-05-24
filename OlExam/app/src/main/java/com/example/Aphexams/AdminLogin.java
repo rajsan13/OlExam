@@ -13,6 +13,8 @@ import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import android.app.ActionBar;
+import android.view.MenuItem;
 
 
 public class AdminLogin extends Activity {
@@ -30,8 +32,10 @@ public class AdminLogin extends Activity {
 		setContentView(R.layout.test_admin_login);
 		//Parse.initialize(this, "eX31t72OF1l2SfT72YlLNkBiCiMwRGCf6S8QGMHB", "r70qpWRJ6IMNgTn7YW2dLZUFMmvTn5GQRfNQcwsd");
 
-		
-		
+
+		ActionBar ab = getActionBar();
+		ab.setDisplayHomeAsUpEnabled(true);
+
 		aid = (EditText) findViewById(R.id.adminid);
 		apword = (EditText) findViewById(R.id.adminpword);
 		
@@ -108,6 +112,21 @@ public class AdminLogin extends Activity {
 		
 		
 }
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case android.R.id.home:
+				// app icon in action bar clicked; go home
+				Intent i=new Intent(AdminLogin.this,MainActivity.class);
+				startActivity(i);
+				i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				//If the Intent resolves to an Activity in the current task the Activities above it on the stack are destroyed so that it is at the top of the stack, and it is re-used.
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+	}
 	private boolean isEmpty(EditText etText) {
 	    if (etText.getText().toString().trim().length() > 0) {
 	      return false;

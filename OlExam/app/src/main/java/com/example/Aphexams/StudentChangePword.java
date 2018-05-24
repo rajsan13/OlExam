@@ -27,86 +27,84 @@ public class StudentChangePword extends Activity{
 	String c="Mismatch";
 	String PhoneeNumber;
 	int k=0;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.student_c_pword);
 		sruname1 = (EditText) findViewById(R.id.editText1);
-		
+
 		srpword1 = (EditText) findViewById(R.id.editText2);
 		srconfpword1 = (EditText)findViewById(R.id.editText3);
 		pno=(EditText)findViewById((R.id.editText));
-		
+
 		bscpcancel = (Button)findViewById(R.id.scpcancel);
 		bscpcancel.setOnClickListener(new OnClickListener() {
-			
+
 			public void onClick(View v) {
 				Intent indexIntent=new Intent(StudentChangePword.this,HomeStudent.class);
-					startActivity(indexIntent);	
+				startActivity(indexIntent);
 			}
 		});
-
-
 
 
 		bscpsubmit = (Button)findViewById(R.id.scpsubmit);
 		bscpsubmit.setOnClickListener(new OnClickListener() {
 
-											  public void onClick(View v){
+										  public void onClick(View v){
 
-												  // Validate the sign up data
-												  boolean validationError = false;
-												  StringBuilder validationErrorMessage =
-														  new StringBuilder(a);
-												  if (isEmpty(sruname1)) {
-													  validationError = true;
+											  // Validate the sign up data
+											  boolean validationError = false;
+											  StringBuilder validationErrorMessage =
+													  new StringBuilder(a);
+											  if (isEmpty(sruname1)) {
+												  validationError = true;
+												  validationErrorMessage.append(a);
+											  }
+
+											  if (!isMatching(srpword1, srconfpword1)) {
+												  if (validationError) {
 													  validationErrorMessage.append(a);
 												  }
-
-												  if (!isMatching(srpword1, srconfpword1)) {
-													  if (validationError) {
-														  validationErrorMessage.append(a);
-													  }
-													  validationError = true;
-													  validationErrorMessage.append(c);
-												  }
-												  validationErrorMessage.append(a);
-
-												  // If there is a validation error, display the error
-												  if (validationError) {
-													  Toast.makeText(StudentChangePword.this, validationErrorMessage.toString(), Toast.LENGTH_LONG)
-															  .show();
-													  return;
-												  }
-
-												  ParseQuery<ParseObject> query1 = ParseQuery.getQuery("studAuth");
-												  query1.whereEqualTo("StudUserName",sruname1.getText().toString());
-												  //query1.whereEqualTo("obj","gQX8gKIyYv");
-												  //query1.
-												  query1.getFirstInBackground(new GetCallback<ParseObject>() {
-													  public void done(ParseObject object, ParseException e) {
-														  if (object == null) {
-															  //Log.d("StudPhnNo", "The getFirst request failed.");
-															 // PhoneeNumber="NULL";
-														  } else {
-															  //Log.d("StudPhnNo", "Retrieved the object.");
-															  String PhoneNumber=object.getString("StudPhnNo");
-															  pno.setText(PhoneNumber);
-                                                              k++;
-                                                              cp();
-														  }
-													  }
-												  });
-                                                     //String l=pno.getText().toString();
-												 // pno=(EditText)findViewById((R.id.editText));
-                                                   //Toast.makeText(StudentChangePword.this,pno.getText().toString(),Toast.LENGTH_LONG).show();
-
+												  validationError = true;
+												  validationErrorMessage.append(c);
 											  }
+											  validationErrorMessage.append(a);
+
+											  // If there is a validation error, display the error
+											  if (validationError) {
+												  Toast.makeText(StudentChangePword.this, validationErrorMessage.toString(), Toast.LENGTH_LONG)
+														  .show();
+												  return;
+											  }
+
+											  ParseQuery<ParseObject> query1 = ParseQuery.getQuery("studAuth");
+											  query1.whereEqualTo("StudUserName",sruname1.getText().toString());
+											  //query1.whereEqualTo("obj","gQX8gKIyYv");
+											  //query1.
+											  query1.getFirstInBackground(new GetCallback<ParseObject>() {
+												  public void done(ParseObject object, ParseException e) {
+													  if (object == null) {
+														  //Log.d("StudPhnNo", "The getFirst request failed.");
+														  // PhoneeNumber="NULL";
+													  } else {
+														  //Log.d("StudPhnNo", "Retrieved the object.");
+														  String PhoneNumber=object.getString("StudPhnNo");
+														  pno.setText(PhoneNumber);
+														  k++;
+														  cp();
+													  }
+												  }
+											  });
+											  //String l=pno.getText().toString();
+											  // pno=(EditText)findViewById((R.id.editText));
+											  //Toast.makeText(StudentChangePword.this,pno.getText().toString(),Toast.LENGTH_LONG).show();
+
 										  }
+									  }
 		);
 
-        //if(k>0){
+		//if(k>0){
 //			Thread.sleep(1000)
 
 
@@ -170,7 +168,7 @@ public class StudentChangePword extends Activity{
 	}
 
 }
-		
-		
-		
-		
+
+
+
+

@@ -47,7 +47,7 @@
         android:id="@+id/hsedit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit Profile" />
+        android:text="View Profile" />
 
     <Button
         android:id="@+id/hschangepword"
@@ -55,6 +55,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:text="Change Password" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rank"
+        android:id="@+id/rank"/>
 
     <Button
         android:id="@+id/hscancel"
