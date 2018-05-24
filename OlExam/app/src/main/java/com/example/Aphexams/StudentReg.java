@@ -8,6 +8,8 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.ParseObject;
 import com.parse.SignUpCallback;
+import android.app.ActionBar;
+import android.view.MenuItem;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -23,6 +25,8 @@ public class StudentReg extends Activity {
 	EditText srpword1;
 	EditText srconfpword1;
 	EditText srphn1;
+	EditText sremail;
+	EditText srname;
 	String a="Invalid";
 	String b="blank password";
 	String c="Mismatch";
@@ -37,11 +41,14 @@ public class StudentReg extends Activity {
 				.server("https://parseapi.back4app.com/")
 				.build()
 		);*/
-		
+		ActionBar ab = getActionBar();
+		ab.setDisplayHomeAsUpEnabled(true);
 		sruname1 = (EditText) findViewById(R.id.sruname);
 		srpword1 = (EditText) findViewById(R.id.srpword);
 		srconfpword1 = (EditText)findViewById(R.id.srconfpword);
 		srphn1 = (EditText)findViewById(R.id.srphn);
+		sremail=(EditText)findViewById(R.id.sremail) ;
+		srname=(EditText) findViewById(R.id.srname);
 		
 		
 		
@@ -87,6 +94,8 @@ public class StudentReg extends Activity {
 		        studAuth.put("StudUserName",sruname1.getText().toString());
 		        studAuth.put("StudPassword",srpword1.getText().toString());
 		        studAuth.put("StudPhnNo",srphn1.getText().toString());
+				studAuth.put("StudEmId",sremail.getText().toString());
+				studAuth.put("StudName",srname.getText().toString());
 		        studAuth.saveInBackground();
 		        // Set up a progress dialog
 		        final ProgressDialog dlg = new ProgressDialog(StudentReg.this);
@@ -111,6 +120,7 @@ public class StudentReg extends Activity {
 		
 		
 		srcancelbutton = (Button)findViewById(R.id.srcancel);
+		srcancelbutton.setVisibility(View.INVISIBLE);
 		srcancelbutton.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
@@ -121,6 +131,22 @@ public class StudentReg extends Activity {
 		
 	
 	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case android.R.id.home:
+				// app icon in action bar clicked; go home
+				Intent i=new Intent(StudentReg.this,MainActivity.class);
+				startActivity(i);
+				i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				//If the Intent resolves to an Activity in the current task the Activities above it on the stack are destroyed so that it is at the top of the stack, and it is re-used.
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+	}
+
 	private boolean isEmpty(EditText etText) {
 	    if (etText.getText().toString().trim().length() > 0) {
 	      return false;

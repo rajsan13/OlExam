@@ -17,15 +17,15 @@ import com.parse.ParseInstallation;
 import com.parse.ParseObject;
 
 public class MainActivity extends Activity {
-	 TextView welcome;
-	 
-	 TextView textforregistered;
-	 TextView textfornew;
+	TextView welcome;
+
+	TextView textforregistered;
+	TextView textfornew;
 	Button adminLoginbutton;
-	 Button studentLoginbutton;
+	Button studentLoginbutton;
 	// Button adminLsignupbutton;
-	 Button studentsignupbutton;
-	
+	Button studentsignupbutton;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -35,46 +35,46 @@ public class MainActivity extends Activity {
 
 		adminLoginbutton = (Button)findViewById(R.id.button1);
 		adminLoginbutton.setOnClickListener(new OnClickListener() {
-			
+
 			public void onClick(View v) {
 				Intent indexIntent=new Intent(MainActivity.this,AdminLogin.class);
-					startActivity(indexIntent);	
+				startActivity(indexIntent);
 			}
 		});
 
-		
-		
+
+
 		studentLoginbutton = (Button)findViewById(R.id.button2);
 		studentLoginbutton.setOnClickListener(new OnClickListener() {
-			
+
 			public void onClick(View v) {
 				Intent indexIntent=new Intent(MainActivity.this,StudentLogin.class);
-					startActivity(indexIntent);	
+				startActivity(indexIntent);
 			}
 		});
 
 
 	/*	adminLsignupbutton = (Button)findViewById(R.id.button3);
 		adminLsignupbutton.setOnClickListener(new OnClickListener() {
-			
+
 			public void onClick(View v) {
 				Intent indexIntent=new Intent(MainActivity.this,AdminReg.class);
-					startActivity(indexIntent);	
+					startActivity(indexIntent);
 			}
 		});*/
-		
-		
-		
+
+
+
 		studentsignupbutton = (Button)findViewById(R.id.button4);
 		studentsignupbutton.setOnClickListener(new OnClickListener() {
-			
+
 			public void onClick(View v) {
 				Intent indexIntent=new Intent(MainActivity.this,StudentReg.class);
-					startActivity(indexIntent);	
+				startActivity(indexIntent);
 			}
 		});
-		
-		
+
+
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu paramMenu) {
