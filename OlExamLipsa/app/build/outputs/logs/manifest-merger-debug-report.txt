@@ -1,0 +1,334 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:2:1-116:12
+	xmlns:android
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:2:11-69
+	package
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml
+		INJECTED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:6:5-30
+		INJECTED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml
+		INJECTED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:5:5-28
+		INJECTED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml
+		INJECTED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml
+	android:installLocation
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:4:5-43
+uses-permission#android.permission.INTERNET
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:7:1-63
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:7:18-60
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:8:1-75
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:8:18-72
+uses-sdk
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:9:5-11:41
+MERGED from [com.android.support:appcompat-v7:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:11:9-38
+		INJECTED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml
+		INJECTED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:10:9-34
+		INJECTED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml
+		INJECTED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:14:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:15:5-80
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:15:22-77
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:16:5-71
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:16:22-68
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:17:5-75
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:17:22-72
+uses-permission#android.permission.PROCESS_OUTGOING_CALLS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:18:5-81
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:18:22-78
+uses-permission#android.permission.READ_SMS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:19:5-67
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:19:22-64
+uses-permission#android.permission.WRITE_SMS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:20:5-68
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:20:22-65
+uses-permission#android.permission.SEND_SMS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:21:22-64
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:22:5-70
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:22:22-67
+uses-permission#android.permission.READ_CONTACTS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:23:5-72
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:23:22-69
+uses-permission#android.permission.WRITE_CONTACTS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:24:5-73
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:24:22-70
+uses-permission#android.permission.BATTERY_STATS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:26:5-72
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:26:22-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:28:5-81
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:28:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:29:5-79
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:29:22-76
+uses-permission#android.permission.ACCESS_MOCK_LOCATION
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:30:5-79
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:30:22-76
+uses-permission#android.permission.ACCESS_LOCATION
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:31:5-74
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:31:22-71
+uses-permission#android.permission.ACCESS_GPS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:32:5-69
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:32:22-66
+uses-permission#android.permission.ACCESS_ASSISTED_GPS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:33:5-78
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:33:22-75
+uses-permission#android.permission.SET_TIME_ZONE
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:34:5-72
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:34:22-69
+uses-feature#android.hardware.telephony
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:36:5-63
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:36:19-60
+uses-permission#android.permission.RECEIVE_MMS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:42:5-70
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:42:22-67
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:45:5-46:23
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:45:22-70
+uses-permission#android.permission.READ_CALENDAR
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:47:5-48:23
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:47:22-69
+uses-permission#android.permission.GET_TASKS
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:49:5-68
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:49:22-65
+uses-permission#android.permission.KILL_BACKGROUND_PROCESSES
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:50:5-84
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:50:22-81
+uses-permission#android.permission.RESTART_PACKAGE
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:51:5-74
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:51:22-71
+supports-screens
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:53:5-58:39
+	android:resizeable
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:57:9-34
+	android:largeScreens
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:55:9-36
+	android:anyDensity
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:54:9-34
+	android:normalScreens
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:56:9-37
+	android:smallScreens
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:58:9-36
+application
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:60:5-114:19
+MERGED from [com.android.support:appcompat-v7:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:64:9-41
+	android:allowBackup
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:62:9-35
+	android:icon
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:63:9-45
+	android:theme
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:65:9-40
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:61:9-28
+meta-data#com.parse.SERVER_URL
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:66:9-68:59
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:67:13-48
+	android:value
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:68:13-56
+meta-data#com.parse.APPLICATION_ID
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:69:9-71:55
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:70:13-52
+	android:value
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:71:13-52
+meta-data#com.parse.CLIENT_KEY
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:72:9-74:59
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:73:13-48
+	android:value
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:74:13-56
+activity#com.example.Aphexams.MainActivity
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:75:9-84:20
+	android:label
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:77:13-45
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:78:13-61
+intent-filter#android.intent.action.MAIN+android.intent.category.DEFAULT
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:79:13-83:29
+action#android.intent.action.MAIN
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:80:17-69
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:80:25-66
+category#android.intent.category.DEFAULT
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:82:17-76
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:82:27-73
+activity#com.example.Aphexams.SplashScreen
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:85:9-91:20
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:85:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:86:13-90:29
+category#android.intent.category.LAUNCHER
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:89:17-77
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:89:27-74
+activity#com.example.Aphexams.AdminLogin
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:92:9-56
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:92:19-44
+activity#com.example.Aphexams.AdminChangePword
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:93:9-62
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:93:19-50
+activity#com.example.Aphexams.AdminReg
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:94:9-54
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:94:19-42
+activity#com.example.Aphexams.HomeAdmin
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:95:9-55
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:95:19-43
+activity#com.example.Aphexams.HomeStudent
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:96:9-57
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:96:19-45
+activity#com.example.Aphexams.QTestStart
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:97:9-56
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:97:19-44
+activity#com.example.Aphexams.Result
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:98:9-52
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:98:19-40
+activity#com.example.Aphexams.SetQues
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:99:9-53
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:99:19-41
+activity#com.example.Aphexams.SetQuant
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:100:10-55
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:100:20-43
+activity#com.example.Aphexams.SetVerb
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:101:11-55
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:101:21-43
+activity#com.example.Aphexams.StudentChangePword
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:102:9-64
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:102:19-52
+activity#com.example.Aphexams.StudentEdit
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:103:9-57
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:103:19-45
+activity#com.example.Aphexams.StudentLogin
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:104:9-58
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:104:19-46
+activity#com.example.Aphexams.StudentReg
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:105:9-56
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:105:19-44
+activity#com.example.Aphexams.SucAdminReg
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:106:9-57
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:106:19-45
+activity#com.example.Aphexams.SucStudReg
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:107:9-56
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:107:19-44
+activity#com.example.Aphexams.ViewQues
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:108:9-54
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:108:19-42
+activity#com.example.Aphexams.ViewQ
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:109:9-51
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:109:19-39
+activity#com.example.Aphexams.ViewV
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:110:9-51
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:110:19-39
+activity#com.example.Aphexams.ViewStudent
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:111:9-57
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:111:19-45
+activity#com.example.Aphexams.VTestStart
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:112:9-56
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:112:19-44
+activity#com.example.Aphexams.Rank
+ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:113:9-50
+	android:name
+		ADDED from E:\intern\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:113:19-38

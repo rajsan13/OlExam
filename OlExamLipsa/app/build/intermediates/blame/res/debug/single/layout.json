@@ -1,0 +1,314 @@
+[
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\admin_registration.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\admin_registration.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\success_student_login.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\success_student_login.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\header_gradient.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\header_gradient.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\admin_login.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\admin_login.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_v.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\view_v.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\qtest_start.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\qtest_start.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_admin_registration.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\test_admin_registration.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_admin_login.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\test_admin_login.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_students.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\view_students.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\student_registration.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\student_registration.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_lines.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splashscreen.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\activity_splashscreen.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_student_login.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\test_student_login.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\vtest_start.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\vtest_start.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\student_c_pword.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\student_c_pword.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_admin.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\home_admin.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_ques.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\set_ques.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_verb.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\set_verb.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_quant.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\set_quant.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_q.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\view_q.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\success_admin_registration.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\success_admin_registration.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\result.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\result.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_student_registration.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\test_student_registration.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\student_edit.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\student_edit.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\admin_c_pword.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\admin_c_pword.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_student.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\home_student.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\footer_repeat.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\footer_repeat.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\student_login.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\student_login.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_ques.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\src\\main\\res\\layout\\view_ques.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "E:\\intern\\OlExam-master\\OlExamLipsa\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_toolbar.xml"
+    }
+]
