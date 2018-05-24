@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.app.ActionBar;
+import android.view.MenuItem;
 public class ViewV extends Activity{
 	
 	TextView oop1,oop2,oop3,oop4,ccoreect,textView1,qquestn;
@@ -25,6 +27,8 @@ public class ViewV extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.view_v);
+		ActionBar ab = getActionBar();
+		ab.setDisplayHomeAsUpEnabled(true);
 		/*Parse.initialize(new Parse.Configuration.Builder(this)
 				.applicationId("QBQyVxRaYxbMEtpU31gZc0jbp7zoXD9WtoqtT1nd")
 				.clientKey("IZyyYsHU5dvxaoFNQ6GbTY0by1uFWgUgFI5xiU1K")
@@ -67,6 +71,7 @@ public class ViewV extends Activity{
 	
 		
 		vvqcancel = (Button)findViewById(R.id.vqcancel);
+		vvqcancel.setVisibility(View.INVISIBLE);
 		vvqcancel.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
@@ -174,6 +179,19 @@ public class ViewV extends Activity{
 		});
 		
 		
+	}
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case android.R.id.home:
+				// app icon in action bar clicked; go home
+				Intent i=new Intent(ViewV.this,ViewQues.class);
+				startActivity(i);
+				i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				//If the Intent resolves to an Activity in the current task the Activities above it on the stack are destroyed so that it is at the top of the stack, and it is re-used.
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu paramMenu) {

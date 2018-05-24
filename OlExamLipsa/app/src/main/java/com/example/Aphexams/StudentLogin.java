@@ -23,7 +23,7 @@ import android.view.MenuItem;
 
 public class StudentLogin extends Activity {
 	Button sloginbutton;
-	Button scancelbutton;
+	Button scancelbutton,register;
 	EditText sid;
 	EditText spword;
 	
@@ -86,6 +86,15 @@ public class StudentLogin extends Activity {
 					
 				
 
+			}
+		});
+
+		register=(Button)findViewById(R.id.register);
+		register.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent i =new Intent(getApplicationContext(),StudentReg.class);
+				startActivity(i);
 			}
 		});
 		

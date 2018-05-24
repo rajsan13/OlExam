@@ -24,7 +24,7 @@ import android.view.View.OnClickListener;
 import java.util.*;
 public class QTestStart extends Activity{
 
-	Button bqtssubmit,bqtsnext,bqtsexit;
+	Button bqtssubmit,bqtsnext,bqtsexit,bqprev,reset;
 	TextView oop1,oop2,oop3,oop4,textView1,qquestn;
 	EditText ccorrect;
 	public static int  num4=1;
@@ -314,8 +314,70 @@ public class QTestStart extends Activity{
 					
 			}
 		});
-		
-		
+
+		bqprev = (Button)findViewById(R.id.qtsprev);
+		bqprev.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+
+				num4--;
+				//final EditText ccorrect = (EditText) findViewById(R.id.editText1);
+				//ccorrect.setEnabled(true);
+				// ccorrect.setText("");
+
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
+				query.whereEqualTo("qno",num4);
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							Log.d("que", "The getFirst request failed.");
+						} else {
+							Log.d("que", "Retrieved the object.");
+							String questiondata=object.getString("que");
+							final TextView qquestn = (TextView) findViewById(R.id.textView2);
+							qquestn.setText(questiondata);
+				    /*  String option1=object.getString("opt1");
+				      final TextView oop1 = (TextView) findViewById(R.id.textView3);
+				      oop1.setText(option1);
+				      String option2=object.getString("opt2");
+				      final TextView oop2 = (TextView) findViewById(R.id.textView4);
+				      oop2.setText(option2);
+				      String option3=object.getString("opt3");
+				      final TextView oop3 = (TextView) findViewById(R.id.textView5);
+				      oop3.setText(option3);
+				      String option4=object.getString("opt4");
+				      final TextView oop4 = (TextView) findViewById(R.id.textView6);
+				      oop4.setText(option4);*/
+
+							radio1.setText(object.getString("opt1"));
+							radio2.setText(object.getString("opt2"));
+							radio3.setText(object.getString("opt3"));
+							radio4.setText(object.getString("opt4"));
+
+
+						}
+					}
+				});
+
+
+
+
+
+			}
+		});
+
+
+		reset = (Button)findViewById(R.id.reset);
+		reset.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				radio1.setChecked(false);
+				radio2.setChecked(false);
+				radio3.setChecked(false);
+				radio4.setChecked(false);
+			}
+		});
+
 		final int fverbo=0;
 		bqtsexit = (Button)findViewById(R.id.qtsexit);
 		bqtsexit.setOnClickListener(new OnClickListener() {

@@ -31,6 +31,12 @@ dependencies {
     compile 'com.parse:parse-android:1.13.1'
     //debugCompile 'com.parse:parseinterceptors:0.0.2'
     compile 'com.parse.bolts:bolts-android:1.+'
+    compile 'com.parse:parseui-widget-android:0.0.1'
+
+
+
+
+
 
 
 }
