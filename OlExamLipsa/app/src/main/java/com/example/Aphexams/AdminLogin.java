@@ -18,7 +18,7 @@ import android.view.MenuItem;
 
 
 public class AdminLogin extends Activity {
-	Button aloginbutton;
+	Button aloginbutton,register;
 	Button acancelbutton;
 	EditText aid;
 	EditText apword;
@@ -42,7 +42,7 @@ public class AdminLogin extends Activity {
 		
 		
 		
-		
+
 		aloginbutton = (Button)findViewById(R.id.albutton1);
 		aloginbutton.setOnClickListener(new OnClickListener() {
 			
@@ -100,6 +100,7 @@ public class AdminLogin extends Activity {
 		});
 		
 		acancelbutton = (Button)findViewById(R.id.albutton2);
+		acancelbutton.setVisibility(View.INVISIBLE);
 		acancelbutton.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
