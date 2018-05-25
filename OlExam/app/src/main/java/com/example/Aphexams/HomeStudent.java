@@ -54,9 +54,9 @@ public class HomeStudent extends Activity {
 				{
 					final ProgressDialog dlg = new ProgressDialog(HomeStudent.this);
 			        dlg.setTitle("Please wait.");
-			        dlg.setMessage("Processing request.  Navigating to quant questions.  Please wait.");
+			        dlg.setMessage("Processing request.  Navigating to quantitave questions Instructions.  Please wait.");
 			        dlg.show();
-					Intent indexIntent=new Intent(HomeStudent.this,QTestStart.class);
+					Intent indexIntent=new Intent(HomeStudent.this,QTestInstructiions.class);
 					indexIntent.putExtra("studentInvoking",studname);
 					indexIntent.putExtra("tillnow","");
 					indexIntent.putExtra("quanto","0");
@@ -69,7 +69,7 @@ public class HomeStudent extends Activity {
 			        dlg.setTitle("Please wait.");
 			        dlg.setMessage("Processing the request. Navigating to verbal questions. Please wait.");
 			        dlg.show();
-					Intent indexIntent=new Intent(HomeStudent.this,VTestStart.class);
+					Intent indexIntent=new Intent(HomeStudent.this,VTestInstructions.class);
 					indexIntent.putExtra("studentInvoking",studname);
 					indexIntent.putExtra("tillnow","");
 					indexIntent.putExtra("quanto","0");

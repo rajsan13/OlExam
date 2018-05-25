@@ -3,11 +3,13 @@ import com.parse.*;
 
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.widget.*;
 import android.util.Log;
 import android.view.Menu;
@@ -22,7 +24,7 @@ import android.view.View.OnClickListener;
 
 public class VTestStart extends Activity{
 
-	Button bvsubmit,bvnext,bvexit;
+	Button bvsubmit,bvnext,bvexit,reset,bvprev;
 	TextView oop1,oop2,oop3,oop4,textView1,qquestn;
 	//EditText ccorrect;
 	public static int  num5=1;
@@ -32,6 +34,10 @@ public class VTestStart extends Activity{
 	private RadioButton radio2;
 	private RadioButton radio3;
 	private RadioButton radio4;
+	private  TextView mTextField1;
+	private static final String FORMAT = "%02d:%02d:%02d";
+	private static int flag1=0;
+	private int flag;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -56,7 +62,29 @@ public class VTestStart extends Activity{
 		radio2= (RadioButton)findViewById(R.id.radio2);
 		radio3= (RadioButton)findViewById(R.id.radio3);
 		radio4= (RadioButton)findViewById(R.id.radio4);
+		mTextField1=(TextView)findViewById(R.id.textView);
+		bvexit = (Button)findViewById(R.id.vexit);
+		new CountDownTimer(30000, 1000) {
 
+			public void onTick(long millisUntilFinished) {
+				//mTextField.setText("Time remaining: " + millisUntilFinished / 1000);
+				//here you can have your logic to set text to edittext
+				mTextField1.setText("Time Remaining: "+String.format(FORMAT,
+						TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
+						TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
+								TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
+						TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
+								TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
+			}
+
+			public void onFinish() {
+				mTextField1.setText("done!");
+				//time=1;
+				if(flag1==0)
+				bvexit.performClick();
+			}
+
+		}.start();
 
 		ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
 		query.whereEqualTo("vqno",num5);
@@ -99,7 +127,7 @@ public class VTestStart extends Activity{
 			public void onClick(View v) {
 				
 				
-		if(num5==5){
+		if(num5==0){
 			final ProgressDialog dlg = new ProgressDialog(VTestStart.this);
 	        dlg.setTitle("Please wait.");
 	        dlg.setMessage("Processing request.  Navigating to result evaluation.  Please wait.");
@@ -140,6 +168,7 @@ public class VTestStart extends Activity{
 
 				//String cor=radio1.getText().toString();
 				//ccorrect.setText("");
+				flag=1;
 				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
 				query.whereEqualTo("qno",num5);
 				//query.whereEqualTo("rightans",Integer.parseInt(cor));
@@ -165,6 +194,7 @@ public class VTestStart extends Activity{
 
 				//String cor=radio2.getText().toString();
 				//ccorrect.setText("");
+				flag=2;
 				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
 				query.whereEqualTo("qno",num5);
 				//query.whereEqualTo("rightans",Integer.parseInt(cor));
@@ -188,6 +218,7 @@ public class VTestStart extends Activity{
 			}
 			else if(R.id.radio3==radioGroup.getCheckedRadioButtonId()) {
 
+				flag=3;
 				String cor=radio3.getText().toString();
 				//ccorrect.setText("");
 				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
@@ -212,7 +243,7 @@ public class VTestStart extends Activity{
 				});
 			}
 			else if(R.id.radio4==radioGroup.getCheckedRadioButtonId()) {
-
+				flag=4;
 				String cor=radio4.getText().toString();
 				//ccorrect.setText("");
 				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
@@ -238,14 +269,10 @@ public class VTestStart extends Activity{
 			}
 
 
-
-
-			radio1.setEnabled(true);
-			radio2.setEnabled(true);
-			radio3.setEnabled(true);
-			radio4.setEnabled(true);
-
-		}
+					     
+					     
+					     
+					}
 			}
 		});
 		
@@ -264,10 +291,6 @@ public class VTestStart extends Activity{
 				radio2.setChecked(false);
 				radio3.setChecked(false);
 				radio4.setChecked(false);
-				radio1.setEnabled(true);
-				radio2.setEnabled(true);
-				radio3.setEnabled(true);
-				radio4.setEnabled(true);
 
 				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
 				query.whereEqualTo("vqno",num5);
@@ -297,24 +320,107 @@ public class VTestStart extends Activity{
 						radio2.setText(object.getString("vopt2"));
 						radio3.setText(object.getString("vopt3"));
 						radio4.setText(object.getString("vopt4"));
-						radio1.setEnabled(true);
-						radio2.setEnabled(true);
-						radio3.setEnabled(true);
-						radio4.setEnabled(true);
+
 				      
 				     
 				    }
 				  }
 				});
-					
-					
-					
-					
-					
 			}
 		});
-		
-		
+
+		bvprev = (Button)findViewById(R.id.vprev);
+		bvprev.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+
+				num5--;
+				switch(flag)
+				{
+					case 1:
+						radio4.setChecked(false);
+						radio1.setChecked(true);
+						radio2.setChecked(false);
+						radio3.setChecked(false);
+						break;
+					case 2:
+						radio4.setChecked(false);
+						radio1.setChecked(false);
+						radio3.setChecked(false);
+						radio2.setChecked(true);
+						break;
+					case 3:
+						radio4.setChecked(false);
+						radio2.setChecked(false);
+						radio1.setChecked(false);
+						radio3.setChecked(true);
+						break;
+					case 4:
+						radio1.setChecked(false);
+						radio2.setChecked(false);
+						radio3.setChecked(false);
+						radio4.setChecked(true);
+						break;
+
+				}
+
+
+				//final EditText ccorrect = (EditText) findViewById(R.id.editText1);
+				//ccorrect.setEnabled(true);
+				// ccorrect.setText("");
+
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
+				query.whereEqualTo("qno",num5);
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							Log.d("que", "The getFirst request failed.");
+						} else {
+							Log.d("que", "Retrieved the object.");
+							String questiondata=object.getString("que");
+							final TextView qquestn = (TextView) findViewById(R.id.textView2);
+							qquestn.setText(questiondata);
+				    /*  String option1=object.getString("opt1");
+				      final TextView oop1 = (TextView) findViewById(R.id.textView3);
+				      oop1.setText(option1);
+				      String option2=object.getString("opt2");
+				      final TextView oop2 = (TextView) findViewById(R.id.textView4);
+				      oop2.setText(option2);
+				      String option3=object.getString("opt3");
+				      final TextView oop3 = (TextView) findViewById(R.id.textView5);
+				      oop3.setText(option3);
+				      String option4=object.getString("opt4");
+				      final TextView oop4 = (TextView) findViewById(R.id.textView6);
+				      oop4.setText(option4);*/
+
+							radio1.setText(object.getString("opt1"));
+							radio2.setText(object.getString("opt2"));
+							radio3.setText(object.getString("opt3"));
+							radio4.setText(object.getString("opt4"));
+
+
+						}
+					}
+				});
+
+
+
+
+
+			}
+		});
+
+
+		reset = (Button)findViewById(R.id.reset);
+		reset.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				radio1.setChecked(false);
+				radio2.setChecked(false);
+				radio3.setChecked(false);
+				radio4.setChecked(false);
+			}
+		});
 		
 		
 		bvexit = (Button)findViewById(R.id.vexit);
@@ -325,6 +431,7 @@ public class VTestStart extends Activity{
 		        dlg.setTitle("Please wait.");
 		        dlg.setMessage("Processing request. Exiting the test.  Please wait.");
 		        dlg.show();
+
 				
 				
 				/*ParseQuery<ParseObject> query = ParseQuery.getQuery("results");
@@ -343,7 +450,7 @@ public class VTestStart extends Activity{
 				    }
 				  }
 				});*/
-		        
+		        flag1=1;
 		        Intent indexIntent=new Intent(VTestStart.this,Result.class);
 				indexIntent.putExtra("studentInvoking",studname);
 				indexIntent.putExtra("quanto",quanto);

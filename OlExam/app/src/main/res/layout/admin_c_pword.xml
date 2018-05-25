@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/ediText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -17,16 +17,16 @@
     </EditText>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/ediText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText1"
         android:ems="10"
-        android:hint="Password" />
+        android:hint="Password"
+        android:layout_below="@+id/ediText1"
+        android:layout_alignParentStart="true"/>
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/ediText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -38,20 +38,21 @@
         android:id="@+id/acp1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText3"
         android:layout_marginLeft="46dp"
-        android:layout_marginTop="44dp"
-        android:text="Submit" />
+        android:layout_marginTop="149dp"
+        android:text="Submit"
+        android:layout_below="@+id/ediText1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"/>
 
     <Button
         android:id="@+id/acp2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/acp1"
-        android:layout_alignBottom="@+id/acp1"
-        android:layout_alignParentRight="true"
         android:layout_marginRight="44dp"
-        android:text="Cancel" />
+        android:text="Cancel"
+        android:layout_marginEnd="46dp"
+        android:layout_alignTop="@+id/acp1"
+        android:layout_alignParentEnd="true"/>
 
 </RelativeLayout>

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button
+   <!-- <Button
         android:id="@+id/vsubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,14 @@
         android:layout_alignBottom="@+id/vsubmit"
         android:layout_alignParentRight="true"
         android:layout_marginRight="27dp"
-        android:text="Next" />
+        android:text="Next" />-->
+
+    <Button
+        android:id="@+id/vexit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Exit Test" />
 
     <TextView
         android:id="@+id/textView2"
@@ -54,31 +61,23 @@
             android:id="@+id/radio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="false"
-            android:enabled="true"
             />
 
         <RadioButton
             android:id="@+id/radio2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="false"
-            android:enabled="true"
             />
         <RadioButton
             android:id="@+id/radio3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="false"
-            android:enabled="true"
             />
 
         <RadioButton
             android:id="@+id/radio4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="false"
-            android:enabled="true"
             />
     </RadioGroup>
 
@@ -192,5 +191,56 @@
         android:layout_alignParentTop="true"
         android:text="Hello"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+
+
+
+        <Button
+            android:id="@+id/vprev"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Prev"
+            android:layout_alignParentBottom="true"
+            />
+
+        <Button
+            android:id="@+id/vsubmit"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+
+            android:text="Submit"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:layout_alignParentBottom="true"
+            />
+        <Button
+            android:id="@+id/vnext"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_alignParentBottom="true"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

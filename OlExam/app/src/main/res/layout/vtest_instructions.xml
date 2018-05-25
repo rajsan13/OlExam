@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Instructions"
+        android:id="@+id/textView12"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="298dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="This Test consists of verbal questions"
+        android:id="@+id/textView13"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.85"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start!"
+        android:id="@+id/vbutton"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

@@ -36,7 +36,7 @@ public class StudentChangePword extends Activity{
 
 		srpword1 = (EditText) findViewById(R.id.editText2);
 		srconfpword1 = (EditText)findViewById(R.id.editText3);
-		pno=(EditText)findViewById((R.id.editText));
+		//pno=(EditText)findViewById((R.id.editText));
 
 		bscpcancel = (Button)findViewById(R.id.scpcancel);
 		bscpcancel.setOnClickListener(new OnClickListener() {
@@ -82,13 +82,16 @@ public class StudentChangePword extends Activity{
 											  query1.whereEqualTo("StudUserName",sruname1.getText().toString());
 											  //query1.whereEqualTo("obj","gQX8gKIyYv");
 											  //query1.
+											 // query1.whereEqualTo("StudUserName","san");
 											  query1.getFirstInBackground(new GetCallback<ParseObject>() {
 												  public void done(ParseObject object, ParseException e) {
 													  if (object == null) {
 														  //Log.d("StudPhnNo", "The getFirst request failed.");
+														  System.out.println(sruname1.getText().toString());
 														  // PhoneeNumber="NULL";
 													  } else {
 														  //Log.d("StudPhnNo", "Retrieved the object.");
+														  //System.out.println(sruname1.getText().toString());
 														  String PhoneNumber=object.getString("StudPhnNo");
 														  pno.setText(PhoneNumber);
 														  k++;
