@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter the Time Limit of Quant Test"
+        android:id="@+id/timer"
+        android:hint="Enter the time limit in seconds"
+        android:layout_gravity="center_horizontal"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter the Time Limit of Verbal Test"
+        android:id="@+id/timer1"
+        android:hint="Enter the time limit in seconds"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok!"
+        android:id="@+id/button6"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

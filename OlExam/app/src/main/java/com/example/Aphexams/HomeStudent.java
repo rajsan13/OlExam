@@ -19,7 +19,7 @@ public class HomeStudent extends Activity {
 	Button hseditbutton;
 	Button hschangepwordbutton;
 	Button hscancelbutton;
-	Button Rank;
+	Button bRank;
 
 	private RadioGroup radioGroup;
 	private RadioButton hsqradio1;
@@ -37,14 +37,19 @@ public class HomeStudent extends Activity {
         radioGroup = (RadioGroup)findViewById(R.id.group1);
         hsqradio1 = (RadioButton)findViewById(R.id.qradio1);
         hsvradio2= (RadioButton)findViewById(R.id.vradio2);
-	    Rank=(Button)findViewById(R.id.rank);
+	    bRank=(Button)findViewById(R.id.rank);
         
         Intent intentIndex = getIntent(); // gets the previously created intent
         final String studname = intentIndex.getStringExtra("studentInvoking"); 
         final TextView tw= (TextView)findViewById(R.id.textView2);
         tw.setText("Hello "+studname);
-        
-        
+
+
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(HomeStudent.this);
+		//prefs.edit().putBoolean("isMobile", Boolean.valueOf(mobile)).commit();
+		SharedPreferences.Editor editor= prefs.edit();
+		editor.putString("username",studname);
+		editor.commit();
         hsstartbutton = (Button)findViewById(R.id.hsstart);
         hsstartbutton.setOnClickListener(new OnClickListener() {
 			
@@ -115,7 +120,7 @@ public class HomeStudent extends Activity {
 					startActivity(indexIntent);	
 			}
 		});
-		Rank.setOnClickListener(new OnClickListener() {
+		bRank.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				Intent indexIntent=new Intent(HomeStudent.this,Rank.class);

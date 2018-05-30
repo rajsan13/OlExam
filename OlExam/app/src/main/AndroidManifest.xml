@@ -114,6 +114,8 @@
         <activity android:name="QTestInstructiions"></activity>
         <activity android:name="VTestInstructions"></activity>
         <activity android:name="Rank"></activity>
+        <activity android:name="TimeLimit"></activity>
+        <activity android:name="UploadImage"></activity>
     </application>
 
 </manifest>

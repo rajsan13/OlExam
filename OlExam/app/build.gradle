@@ -32,6 +32,10 @@ dependencies {
     //debugCompile 'com.parse:parseinterceptors:0.0.2'
     compile 'com.parse.bolts:bolts-android:1.+'
 
+    compile 'org.apache.directory.studio:org.apache.commons.io:2.4'
+
+
+
 
 }
 repositories {

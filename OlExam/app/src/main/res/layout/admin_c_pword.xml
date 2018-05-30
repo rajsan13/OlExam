@@ -29,10 +29,10 @@
         android:id="@+id/ediText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText2"
         android:ems="10"
-        android:hint="Confirm Password" />
+        android:hint="Confirm Password"
+        android:layout_below="@+id/ediText2"
+        android:layout_alignParentStart="true"/>
 
     <Button
         android:id="@+id/acp1"

@@ -100,4 +100,13 @@
         android:text="Quant"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Image"
+        android:id="@+id/add_image"
+        android:layout_alignTop="@+id/editText6"
+        android:layout_toEndOf="@+id/editText6"/>
+
+
 </RelativeLayout>

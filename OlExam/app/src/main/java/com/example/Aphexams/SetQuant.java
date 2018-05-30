@@ -12,7 +12,7 @@ import android.view.View.OnClickListener;
 public class SetQuant extends Activity{
 	
 	public static int  num=1;
-	Button bback,banother,bsub;
+	Button bback,banother,bsub,bsetimage;
 	TextView top1,top2,top3,top4,tque,tcorrect;
 	
 	
@@ -27,6 +27,7 @@ public class SetQuant extends Activity{
 				.server("https://parseapi.back4app.com/")
 				.build()
 		);*/
+
 		tque = (EditText)findViewById(R.id.editText1);
 		top1 = (EditText)findViewById(R.id.editText2);
 		top2 = (EditText)findViewById(R.id.editText3);
@@ -72,9 +73,16 @@ public class SetQuant extends Activity{
 				
 			}
 		});
-		
-		
-		
+
+
+		bsetimage = (Button)findViewById(R.id.add_image);
+		bsetimage.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Intent indexIntent=new Intent(SetQuant.this,UploadImage.class);
+				startActivity(indexIntent);
+			}
+		});
 		
 		
 		
@@ -87,5 +95,7 @@ public class SetQuant extends Activity{
 			}
 		});
 	}}
+
+
 
 

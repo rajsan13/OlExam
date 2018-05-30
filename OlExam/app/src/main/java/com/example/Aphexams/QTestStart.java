@@ -24,7 +24,7 @@ import android.view.View.OnClickListener;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
-
+import com.example.Aphexams.Global;
 public class QTestStart extends Activity{
 
 	Button bqtssubmit,bqtsnext,bqtsexit,bqprev,reset;
@@ -70,7 +70,7 @@ public class QTestStart extends Activity{
 		radio4= (RadioButton)findViewById(R.id.radio4);
 		mTextField=(TextView)findViewById(R.id.textView11);
 		bqtsexit = (Button)findViewById(R.id.qtsexit);
-		new CountDownTimer(30000, 1000) {
+		new CountDownTimer(Global.time1, Global.time2) {
 
 			public void onTick(long millisUntilFinished) {
 				//mTextField.setText("Time remaining: " + millisUntilFinished / 1000);

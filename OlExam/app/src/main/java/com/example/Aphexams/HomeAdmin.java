@@ -16,6 +16,7 @@ public class HomeAdmin extends Activity {
 	Button setquebutton;
 	Button changepwordbutton;
 	Button hacancelbutton;
+	Button timelimit;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -88,7 +89,15 @@ public class HomeAdmin extends Activity {
 		});
 		
 		
-		
+		timelimit=(Button)findViewById(R.id.button5);
+		timelimit.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+
+				Intent indexIntent=new Intent(HomeAdmin.this,TimeLimit.class);
+				startActivity(indexIntent);
+			}
+		});
 		
 }
 

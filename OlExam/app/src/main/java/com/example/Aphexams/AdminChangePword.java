@@ -76,20 +76,21 @@ public class AdminChangePword extends Activity{
 											  }
 
 											  ParseQuery<ParseObject> query1 = ParseQuery.getQuery("User");
-											  query1.whereEqualTo("username",sruname1.getText().toString());
+											  //query1.whereEqualTo("username",sruname1.getText().toString());
 											  //query1.whereEqualTo("obj","gQX8gKIyYv");
-											  //query1.
+											  query1.whereEqualTo("password","ghj");
 
 											  query1.getFirstInBackground(new GetCallback<ParseObject>() {
 												  public void done(ParseObject object, ParseException e) {
 													  if (object == null) {
 														  //Log.d("StudPhnNo", "The getFirst request failed.");
 														  // PhoneeNumber="NULL";
-														  System.out.println(sruname1.getText().toString());
+														 // System.out.println(sruname1.getText().toString());
 													  } else {
 														  //Log.d("StudPhnNo", "Retrieved the object.");
 														 // String PhoneNumber=object.getString("StudPhnNo");
 														  //pno.setText(PhoneNumber);
+														  System.out.println(sruname1.getText().toString());
 														  k++;
 														  cp();
 													  }

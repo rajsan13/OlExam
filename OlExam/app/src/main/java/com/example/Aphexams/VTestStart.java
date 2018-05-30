@@ -64,7 +64,7 @@ public class VTestStart extends Activity{
 		radio4= (RadioButton)findViewById(R.id.radio4);
 		mTextField1=(TextView)findViewById(R.id.textView);
 		bvexit = (Button)findViewById(R.id.vexit);
-		new CountDownTimer(30000, 1000) {
+		new CountDownTimer(Global.time3, Global.time4) {
 
 			public void onTick(long millisUntilFinished) {
 				//mTextField.setText("Time remaining: " + millisUntilFinished / 1000);

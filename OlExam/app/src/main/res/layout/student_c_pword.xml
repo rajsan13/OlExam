@@ -35,23 +35,51 @@
         android:hint="Confirm Password" />
 
     <Button
-        android:id="@+id/scpsubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText3"
-        android:layout_marginLeft="46dp"
-        android:layout_marginTop="44dp"
-        android:text="Submit" />
-
-    <Button
         android:id="@+id/scpcancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/scpsubmit"
-        android:layout_alignBottom="@+id/scpsubmit"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_marginBottom="54dp"
         android:layout_marginRight="44dp"
         android:text="Cancel" />
+
+    <Button
+        android:id="@+id/scpsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/scpcancel"
+        android:layout_alignBottom="@+id/scpcancel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="44dp"
+        android:text="Submit" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:visibility="invisible"
+        android:layout_below="@+id/editText3"
+        android:layout_toStartOf="@+id/scpcancel"
+        android:hint="phone number"/>
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:visibility="invisible"
+
+        android:hint="phone number"/>
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:visibility="invisible"
+
+        android:hint="phone number"/>
 
 </RelativeLayout>
