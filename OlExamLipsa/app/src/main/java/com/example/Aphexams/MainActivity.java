@@ -57,14 +57,14 @@ public class MainActivity extends Activity {
 		});
 
 
-		adminLsignupbutton = (Button)findViewById(R.id.button3);
+		/*adminLsignupbutton = (Button)findViewById(R.id.button3);
 		adminLsignupbutton.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
 				Intent indexIntent=new Intent(MainActivity.this,AdminReg.class);
 					startActivity(indexIntent);	
 			}
-		});
+		});*/
 		
 		
 		

@@ -107,9 +107,15 @@
         <activity android:name=".ViewV" />
         <activity android:name=".ViewStudent" />
         <activity android:name=".VTestStart" />
+        <activity android:name=".QTestInstructiions" />
+        <activity android:name=".VTestInstructions" />
+        <activity android:name=".Rank" />
+        <activity android:name=".TimeLimit" />
+        <activity android:name=".UploadImage" />
         <activity
             android:name=".AdminShowStudentId"
-            android:label="@string/title_activity_admin_show_student_id"></activity>
+            android:label="@string/title_activity_admin_show_student_id" />
+        <activity android:name=".AdminSetQuesLimit"></activity>
     </application>
 
 </manifest>

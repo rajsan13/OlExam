@@ -25,6 +25,8 @@ public class StudentReg extends Activity {
 	EditText srpword1;
 	EditText srconfpword1;
 	EditText srphn1;
+	EditText sremail;
+	EditText srname;
 	String a="Invalid";
 	String b="blank password";
 	String c="Mismatch";
@@ -45,6 +47,8 @@ public class StudentReg extends Activity {
 		srpword1 = (EditText) findViewById(R.id.srpword);
 		srconfpword1 = (EditText)findViewById(R.id.srconfpword);
 		srphn1 = (EditText)findViewById(R.id.srphn);
+		sremail=(EditText)findViewById(R.id.sremail) ;
+		srname=(EditText) findViewById(R.id.srname);
 		
 		
 		
@@ -90,6 +94,8 @@ public class StudentReg extends Activity {
 		        studAuth.put("StudUserName",sruname1.getText().toString());
 		        studAuth.put("StudPassword",srpword1.getText().toString());
 		        studAuth.put("StudPhnNo",srphn1.getText().toString());
+				studAuth.put("StudEmId",sremail.getText().toString());
+				studAuth.put("StudName",srname.getText().toString());
 		        studAuth.saveInBackground();
 		        // Set up a progress dialog
 		        final ProgressDialog dlg = new ProgressDialog(StudentReg.this);
