@@ -80,7 +80,7 @@ public class VTestStart extends Activity{
 			public void onFinish() {
 				mTextField1.setText("done!");
 				//time=1;
-				if(flag1==0)
+				//if(flag1==0)
 				bvexit.performClick();
 			}
 
@@ -169,10 +169,42 @@ public class VTestStart extends Activity{
 				//String cor=radio1.getText().toString();
 				//ccorrect.setText("");
 				flag=1;
-				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
-				query.whereEqualTo("qno",num5);
+
+				ParseQuery<ParseObject> query1 = ParseQuery.getQuery("Vex");
+				query1.whereEqualTo("vqno",num5);
+				query1.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+                                bvsubmit.setText("Null");
+						} else {
+
+							Global.corr=object.getNumber("vrightans");
+							Global.quest=object.getString("vque");
+
+
+							//co.setText(corr.toString());
+							//qu.setText(quest);
+
+						}
+						Number n=Global.corr;
+						String s=Global.quest;
+						ParseObject response = new ParseObject("response"+studname);
+						response.put("questionNumber",num5);
+						response.put("question",s);
+						response.put("submittedAnswer",1);
+						response.put("correctAnswer",n);
+						response.saveInBackground();
+					}
+				});
+
+
+
+
+
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
+				query.whereEqualTo("vqno",num5);
 				//query.whereEqualTo("rightans",Integer.parseInt(cor));
-				query.whereEqualTo("rightans",1);
+				query.whereEqualTo("vrightans",1);
 				query.getFirstInBackground(new GetCallback<ParseObject>() {
 					public void done(ParseObject object, ParseException e) {
 						if (object == null) {
@@ -195,10 +227,39 @@ public class VTestStart extends Activity{
 				//String cor=radio2.getText().toString();
 				//ccorrect.setText("");
 				flag=2;
-				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
-				query.whereEqualTo("qno",num5);
+
+				ParseQuery<ParseObject> query1 = ParseQuery.getQuery("Vex");
+				query1.whereEqualTo("vqno",num5);
+				query1.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							bvsubmit.setText("Null");
+						} else {
+
+							Global.corr=object.getNumber("vrightans");
+							Global.quest=object.getString("vque");
+
+
+							//co.setText(corr.toString());
+							//qu.setText(quest);
+
+						}
+						Number n=Global.corr;
+						String s=Global.quest;
+						ParseObject response = new ParseObject("response"+studname);
+						response.put("questionNumber",num5);
+						response.put("question",s);
+						response.put("submittedAnswer",2);
+						response.put("correctAnswer",n);
+						response.saveInBackground();
+					}
+				});
+
+
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
+				query.whereEqualTo("vqno",num5);
 				//query.whereEqualTo("rightans",Integer.parseInt(cor));
-				query.whereEqualTo("rightans",2);
+				query.whereEqualTo("vrightans",2);
 				query.getFirstInBackground(new GetCallback<ParseObject>() {
 					public void done(ParseObject object, ParseException e) {
 						if (object == null) {
@@ -219,12 +280,41 @@ public class VTestStart extends Activity{
 			else if(R.id.radio3==radioGroup.getCheckedRadioButtonId()) {
 
 				flag=3;
+
+				ParseQuery<ParseObject> query1 = ParseQuery.getQuery("Vex");
+				query1.whereEqualTo("vqno",num5);
+				query1.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							bvsubmit.setText("Null");
+						} else {
+
+							Global.corr=object.getNumber("vrightans");
+							Global.quest=object.getString("vque");
+
+
+							//co.setText(corr.toString());
+							//qu.setText(quest);
+
+						}
+						Number n=Global.corr;
+						String s=Global.quest;
+						ParseObject response = new ParseObject("response"+studname);
+						response.put("questionNumber",num5);
+						response.put("question",s);
+						response.put("submittedAnswer",3);
+						response.put("correctAnswer",n);
+						response.saveInBackground();
+					}
+				});
+
+
 				String cor=radio3.getText().toString();
 				//ccorrect.setText("");
-				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
-				query.whereEqualTo("qno",num5);
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
+				query.whereEqualTo("vqno",num5);
 				//query.whereEqualTo("rightans",Integer.parseInt(cor));
-				query.whereEqualTo("rightans",3);
+				query.whereEqualTo("vrightans",3);
 				query.getFirstInBackground(new GetCallback<ParseObject>() {
 					public void done(ParseObject object, ParseException e) {
 						if (object == null) {
@@ -244,12 +334,41 @@ public class VTestStart extends Activity{
 			}
 			else if(R.id.radio4==radioGroup.getCheckedRadioButtonId()) {
 				flag=4;
+
+				ParseQuery<ParseObject> query1 = ParseQuery.getQuery("Vex");
+				query1.whereEqualTo("vqno",num5);
+				query1.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							bvsubmit.setText("Null");
+						} else {
+
+							Global.corr=object.getNumber("vrightans");
+							Global.quest=object.getString("vque");
+
+
+							//co.setText(corr.toString());
+							//qu.setText(quest);
+
+						}
+						Number n=Global.corr;
+						String s=Global.quest;
+						ParseObject response = new ParseObject("response"+studname);
+						response.put("questionNumber",num5);
+						response.put("question",s);
+						response.put("submittedAnswer",4);
+						response.put("correctAnswer",n);
+						response.saveInBackground();
+					}
+				});
+
+
 				String cor=radio4.getText().toString();
 				//ccorrect.setText("");
-				ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
-				query.whereEqualTo("qno",num5);
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
+				query.whereEqualTo("vqno",num5);
 				//query.whereEqualTo("rightans",Integer.parseInt(cor));
-				query.whereEqualTo("rightans",4);
+				query.whereEqualTo("vrightans",4);
 				query.getFirstInBackground(new GetCallback<ParseObject>() {
 					public void done(ParseObject object, ParseException e) {
 						if (object == null) {
@@ -282,15 +401,20 @@ public class VTestStart extends Activity{
 		bvnext.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				
+
 				num5++;
 				//EditText ccorrect = (EditText) findViewById(R.id.editText1);
 				//.setEnabled(true);
 			   //  ccorrect.setText("");
+				radio1.performClick();
+				radio2.performClick();
+				radio3.performClick();
+				radio4.performClick();
 				radio1.setChecked(false);
 				radio2.setChecked(false);
 				radio3.setChecked(false);
 				radio4.setChecked(false);
+				radioGroup.clearCheck();
 
 				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
 				query.whereEqualTo("vqno",num5);
@@ -451,13 +575,13 @@ public class VTestStart extends Activity{
 				  }
 				});*/
 		        flag1=1;
-		        Intent indexIntent=new Intent(VTestStart.this,Result.class);
-				indexIntent.putExtra("studentInvoking",studname);
-				indexIntent.putExtra("quanto",quanto);
-				indexIntent.putExtra("verbo",Integer.toString(counter1));
-				indexIntent.putExtra("which","quant");
-				if(tillNow.equals("")){indexIntent.putExtra("tillnow","v");}
-				else if(tillNow.equals("q")){indexIntent.putExtra("tillnow","qv");}
+		        Intent indexIntent=new Intent(VTestStart.this,Result1.class);
+				//indexIntent.putExtra("studentInvoking",studname);
+				//indexIntent.putExtra("quanto",quanto);
+				//indexIntent.putExtra("verbo",Integer.toString(counter1));
+				//indexIntent.putExtra("which","quant");
+				//if(tillNow.equals("")){indexIntent.putExtra("tillnow","v");}
+				//else if(tillNow.equals("q")){indexIntent.putExtra("tillnow","qv");}
 				startActivity(indexIntent);
 			}
 		});

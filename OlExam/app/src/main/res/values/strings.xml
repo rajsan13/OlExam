@@ -9,5 +9,14 @@
     <!-- Change the following strings as required -->
     <string name="back4app_app_id">QBQyVxRaYxbMEtpU31gZc0jbp7zoXD9WtoqtT1nd</string>
     <string name="back4app_client_key">IZyyYsHU5dvxaoFNQ6GbTY0by1uFWgUgFI5xiU1K</string>
+    <string-array name="list_items">
+        <item>iPh__one 6__84__5$</item>
+        <item>iPa__d Air__80__0$</item>
+        <item>iP__ad Mini 2__50__0$</item>
+        <item>Gal__axy Note 4__74__0$</item>
+        <item>Galax__y Alpha__59__9$</item>
+        <item>Gala__xy Golden__95__0$</item>
+
+    </string-array>
 
 </resources>

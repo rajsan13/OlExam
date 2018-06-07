@@ -17,7 +17,7 @@
         android:layout_width="298dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="This Test consists of verbal questions"
+        android:text="This Test consists of SAS questions"
         android:id="@+id/textView13"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.85"/>

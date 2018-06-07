@@ -3,9 +3,13 @@ import com.parse.*;
 import java.io.*;
 import java.util.*;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.preference.PreferenceManager;
+import android.util.Base64;
 import android.widget.*;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,7 +18,7 @@ public class SetQuant extends Activity{
 	public static int  num=1;
 	Button bback,banother,bsub,bsetimage;
 	TextView top1,top2,top3,top4,tque,tcorrect;
-	
+    ImageView mImageView;
 	
 	
 	@Override
@@ -55,7 +59,8 @@ public class SetQuant extends Activity{
 				top3.setText("");
 				top4.setText("");
 				tcorrect.setText("");
-				
+				String c=		PreferenceManager.getDefaultSharedPreferences(SetQuant.this).getString("image", "defaultStringIfNothingFound");
+				mImageView.setImageBitmap(StringToBitMap(c));
 			}
 		});
 		
@@ -84,8 +89,7 @@ public class SetQuant extends Activity{
 			}
 		});
 		
-		
-		
+
 		bback = (Button)findViewById(R.id.button3);
 		bback.setOnClickListener(new OnClickListener() {
 			
@@ -94,7 +98,19 @@ public class SetQuant extends Activity{
 					startActivity(indexIntent);	
 			}
 		});
-	}}
+	}
+
+	public Bitmap StringToBitMap(String encodedString){
+		try {
+			byte [] encodeByte=Base64.decode(encodedString, Base64.DEFAULT);
+			Bitmap bitmap= BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
+			return bitmap;
+		} catch(Exception e) {
+			e.getMessage();
+			return null;
+		}
+	}
+}
 
 
 

@@ -17,6 +17,7 @@ public class HomeAdmin extends Activity {
 	Button changepwordbutton;
 	Button hacancelbutton;
 	Button timelimit;
+	Button queslimit;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,7 +34,7 @@ public class HomeAdmin extends Activity {
 		        dlg.setTitle("Please wait.");
 		        dlg.setMessage("Processing request.  Navigating to student details.  Please wait.");
 		        dlg.show();
-				Intent indexIntent=new Intent(HomeAdmin.this,ViewStudent.class);
+				Intent indexIntent=new Intent(HomeAdmin.this,AdminShowStudentId.class);
 					startActivity(indexIntent);	
 			}
 		});
@@ -46,7 +47,7 @@ public class HomeAdmin extends Activity {
 		        dlg.setTitle("Please wait.");
 		        dlg.setMessage("Processing request.  Navigating to questions.  Please wait.");
 		        dlg.show();
-				Intent indexIntent=new Intent(HomeAdmin.this,ViewQues.class);
+				Intent indexIntent=new Intent(HomeAdmin.this,ViewV.class);
 					startActivity(indexIntent);	
 			}
 		});
@@ -59,7 +60,7 @@ public class HomeAdmin extends Activity {
 		        dlg.setTitle("Please wait.");
 		        dlg.setMessage("Processing request.  Navigating to set questions.  Please wait.");
 		        dlg.show();
-				Intent indexIntent=new Intent(HomeAdmin.this,SetQues.class);
+				Intent indexIntent=new Intent(HomeAdmin.this,SetVerb.class);
 					startActivity(indexIntent);	
 			}
 		});
@@ -96,6 +97,14 @@ public class HomeAdmin extends Activity {
 
 				Intent indexIntent=new Intent(HomeAdmin.this,TimeLimit.class);
 				startActivity(indexIntent);
+			}
+		});
+		queslimit=(Button)findViewById(R.id.bqueslimit);
+		queslimit.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent i= new Intent(HomeAdmin.this,AdminSetQuesLimit.class);
+				startActivity(i);
 			}
 		});
 		

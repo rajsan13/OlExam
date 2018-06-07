@@ -31,6 +31,7 @@ public class QTestStart extends Activity{
 	TextView oop1,oop2,oop3,oop4,textView1,qquestn;
 	EditText ccorrect;
 	private static final String FORMAT = "%02d:%02d:%02d";
+	public Number corr;
 	public static int  num4=1;
 	public static int counter=0;
 	private RadioGroup radioGroup;
@@ -41,6 +42,8 @@ public class QTestStart extends Activity{
 	private TextView mTextField;
 	private static int time=0;
 	private static int flag2=0;
+	public String quest;
+	public TextView co,qu;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +65,8 @@ public class QTestStart extends Activity{
         final String tillNow = intentIndex.getStringExtra("tillnow");
        final String verbo = intentIndex.getStringExtra("verbo");
        final String quanto = intentIndex.getStringExtra("quanto");
-
+        co=(TextView)findViewById(R.id.correct);
+		qu=(TextView)findViewById(R.id.question);
 		radioGroup = (RadioGroup)findViewById(R.id.group1);
 		radio1 = (RadioButton)findViewById(R.id.radio1);
 		radio2= (RadioButton)findViewById(R.id.radio2);
@@ -179,6 +183,28 @@ public class QTestStart extends Activity{
 
 							//String cor=radio1.getText().toString();
 							//ccorrect.setText("");
+							ParseQuery<ParseObject> query1 = ParseQuery.getQuery("exams");
+							query1.whereEqualTo("qno",num4);
+							query1.getFirstInBackground(new GetCallback<ParseObject>() {
+								public void done(ParseObject object, ParseException e) {
+									if (object == null) {
+
+									} else {
+
+                                     corr=object.getNumber("rightans");
+								     quest=object.getString("que");
+										co.setText(corr.toString());
+										qu.setText(quest);
+
+									}
+								}
+							});
+							ParseObject response = new ParseObject("response");
+							response.put("questionNumber",num4);
+							response.put("question",qu.getText().toString());
+							response.put("submittedAnswer",1);
+							response.put("correctAnswer",co.getText().toString());
+							response.saveInBackground();
 							ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
 							query.whereEqualTo("qno",num4);
 							//query.whereEqualTo("rightans",Integer.parseInt(cor));
@@ -204,6 +230,28 @@ public class QTestStart extends Activity{
 
 							//String cor=radio2.getText().toString();
 							//ccorrect.setText("");
+							ParseQuery<ParseObject> query1 = ParseQuery.getQuery("exams");
+							query1.whereEqualTo("qno",num4);
+							query1.getFirstInBackground(new GetCallback<ParseObject>() {
+								public void done(ParseObject object, ParseException e) {
+									if (object == null) {
+                                          bqtsnext.setText("hi");
+									} else {
+
+										corr=object.getNumber("rightans");
+										quest=object.getString("que");
+
+
+									}
+								}
+							});
+							ParseObject response = new ParseObject("response");
+							response.put("questionNumber",num4);
+							bqtsnext.setText(quest);
+							//response.put("question",quest);
+							response.put("submittedAnswer",2);
+							//response.put("correctAnswer",corr);
+							response.saveInBackground();
 							ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
 							query.whereEqualTo("qno",num4);
 							//query.whereEqualTo("rightans",Integer.parseInt(cor));
@@ -226,7 +274,26 @@ public class QTestStart extends Activity{
 							});
 						}
 						else if(R.id.radio3==radioGroup.getCheckedRadioButtonId()) {
+							ParseQuery<ParseObject> query1 = ParseQuery.getQuery("exams");
+							query1.whereEqualTo("qno",num4);
+							query1.getFirstInBackground(new GetCallback<ParseObject>() {
+								public void done(ParseObject object, ParseException e) {
+									if (object == null) {
 
+									} else {
+
+										corr=object.getNumber("rightans");
+										quest=object.getString("que");
+
+									}
+								}
+							});
+							ParseObject response = new ParseObject("response");
+							response.put("questionNumber",num4);
+							response.put("question",quest);
+							response.put("submittedAnswer",3);
+							response.put("correctAnswer",corr);
+							response.saveInBackground();
 							String cor=radio3.getText().toString();
 							//ccorrect.setText("");
 							ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
@@ -251,7 +318,25 @@ public class QTestStart extends Activity{
 							});
 						}
 						else if(R.id.radio4==radioGroup.getCheckedRadioButtonId()) {
+							ParseQuery<ParseObject> query1 = ParseQuery.getQuery("exams");
+							query1.whereEqualTo("qno",num4);
+							query1.getFirstInBackground(new GetCallback<ParseObject>() {
+								public void done(ParseObject object, ParseException e) {
+									if (object == null) {
 
+									} else {
+
+										corr=object.getNumber("rightans");
+										quest=object.getString("que");
+									}
+								}
+							});
+							ParseObject response = new ParseObject("response");
+							response.put("questionNumber",num4);
+							response.put("question",quest);
+							response.put("submittedAnswer",4);
+							response.put("correctAnswer",corr);
+							response.saveInBackground();
 							String cor=radio4.getText().toString();
 							//ccorrect.setText("");
 							ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");

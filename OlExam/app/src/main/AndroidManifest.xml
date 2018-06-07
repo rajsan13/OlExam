@@ -116,6 +116,9 @@
         <activity android:name="Rank"></activity>
         <activity android:name="TimeLimit"></activity>
         <activity android:name="UploadImage"></activity>
+        <activity android:name="Result1"></activity>
+        <activity android:name="AdminShowStudentId"></activity>
+        <activity android:name="AdminSetQuesLimit"></activity>
     </application>
 
 </manifest>

@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
@@ -15,7 +16,9 @@ import android.app.Activity;
 import android.content.Intent;
 //import android.support.v7.app.AlertDialog;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.*;
 import android.view.View;
@@ -30,14 +33,17 @@ public class UploadImage extends Activity {
     public static final int CHOOSE_PIC_REQUEST_CODE = 1;
     public static final int MEDIA_TYPE_IMAGE = 2;
     public static final int MEDIA_TYPE_VIDEO = 3;
-
+    public static String g="";
     private Button mRetrieveButton;
     private Button mAddImageButton;
     private Button mUploadImageButton;
+    private ImageView mImageView;
+    private EditText mEditText;
     private Uri mMediaUri;
     private ImageView mPreviewImageView;
     public void queryImagesFromParse(){
         ParseQuery<ParseObject> imagesQuery=new ParseQuery<ParseObject>("Uploads");
+        imagesQuery.whereEqualTo("questionno","2");
         imagesQuery.getFirstInBackground(new GetCallback<ParseObject>() {
             public void done(ParseObject object, ParseException e) {
                 if (object == null) {
@@ -50,6 +56,12 @@ public class UploadImage extends Activity {
                         public void done(byte[] data, ParseException e) {
                             Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
                             mPreviewImageView.setImageBitmap(bitmap);
+                            mImageView.setImageBitmap(bitmap);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(UploadImage.this);
+                            //prefs.edit().putBoolean("isMobile", Boolean.valueOf(mobile)).commit();
+                            SharedPreferences.Editor editor= prefs.edit();
+                            editor.putString("image",BitMapToString(bitmap));
+                            editor.commit();
                         }
                     });
 
@@ -67,7 +79,8 @@ public class UploadImage extends Activity {
         mUploadImageButton = (Button) findViewById(R.id.image_upload);
         mRetrieveButton=(Button)findViewById(R.id.retrieve_image);
         mPreviewImageView = (ImageView) findViewById(R.id.image_view);
-
+        mImageView=(ImageView)findViewById(R.id.image_view);
+        mEditText=(EditText)findViewById(R.id.textView15);
         mRetrieveButton.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
@@ -124,6 +137,7 @@ public class UploadImage extends Activity {
 
             }
         });
+        g=PreferenceManager.getDefaultSharedPreferences(UploadImage.this).getString("questno", "defaultStringIfNothingFound");
         mUploadImageButton = (Button)findViewById(R.id.image_upload);
         mUploadImageButton.setOnClickListener(new OnClickListener() {
 
@@ -142,6 +156,7 @@ public class UploadImage extends Activity {
                                 if (e == null) {
                                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                                     imageUpload.put("imageContent", file);
+                                    imageUpload.put("questionno",mEditText.getText().toString());
                                     imageUpload.saveInBackground(new SaveCallback() {
                                         @Override
                                         public void done(ParseException e) {
@@ -228,5 +243,12 @@ public class UploadImage extends Activity {
         }
 
         return mediaFile;
+    }
+    public String BitMapToString(Bitmap bitmap){
+        ByteArrayOutputStream baos=new  ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG,100, baos);
+        byte [] b=baos.toByteArray();
+        String temp=Base64.encodeToString(b, Base64.DEFAULT);
+        return temp;
     }
 }

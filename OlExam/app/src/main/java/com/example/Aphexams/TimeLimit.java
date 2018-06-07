@@ -33,12 +33,12 @@ public class TimeLimit extends Activity {
         ok.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                String tim = Timer.getText().toString();
-                int value=Integer.parseInt(tim);
+               // String tim = Timer.getText().toString();
+               // int value=Integer.parseInt(tim);
                 String tim1=Timer1.getText().toString();
                 int value1=Integer.parseInt(tim1);
-                Global.time1=value*1000;
-                Global.time2=1000;
+                //Global.time1=value*1000;
+                //Global.time2=1000;
                 Global.time3=value1*1000;
                 Global.time4=1000;
                 Toast.makeText(TimeLimit.this,"Time Limit is set Successfully",
