@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.*;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -75,31 +76,29 @@ public class AdminChangePword extends Activity{
 												  return;
 											  }
 
-											  ParseQuery<ParseObject> query1 = ParseQuery.getQuery("User");
-											  //query1.whereEqualTo("username",sruname1.getText().toString());
-											  //query1.whereEqualTo("obj","gQX8gKIyYv");
-											  query1.whereEqualTo("password","ghj");
-
-											  query1.getFirstInBackground(new GetCallback<ParseObject>() {
+											  ParseQuery<ParseObject> query = ParseQuery.getQuery("User");
+											  query.whereEqualTo("username",sruname1.getText().toString());
+											  query.getFirstInBackground(new GetCallback<ParseObject>() {
 												  public void done(ParseObject object, ParseException e) {
 													  if (object == null) {
-														  //Log.d("StudPhnNo", "The getFirst request failed.");
-														  // PhoneeNumber="NULL";
-														 // System.out.println(sruname1.getText().toString());
+														 // Log.d("Studname", "The getFirst request failed.");
+														 /* ParseObject res = new ParseObject("User");
+														  res.put("Studname",names);
+														  res.put("MARKS",marks);
+														  res.saveInBackground();*/
 													  } else {
-														  //Log.d("StudPhnNo", "Retrieved the object.");
-														 // String PhoneNumber=object.getString("StudPhnNo");
-														  //pno.setText(PhoneNumber);
-														  System.out.println(sruname1.getText().toString());
-														  k++;
-														  cp();
+														  //Log.d("Studname", "Retrieved the object.");
+														  object.put("password",srpword1.getText().toString());
+														  Toast.makeText(AdminChangePword.this,"Success",Toast.LENGTH_LONG).show();
+														  object.saveInBackground();
 													  }
 												  }
 											  });
-											  //String l=pno.getText().toString();
-											  // pno=(EditText)findViewById((R.id.editText));
-											  //Toast.makeText(StudentChangePword.this,pno.getText().toString(),Toast.LENGTH_LONG).show();
 
+											  //Start an intent for the dispatch activity
+											 /* Intent intent = new Intent(AdminChangePword.this, SucAdminReg.class);
+											  intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+											  startActivity(intent);*/
 										  }
 									  }
 		);
@@ -113,44 +112,10 @@ public class AdminChangePword extends Activity{
 
 
 	}
-	public void cp()
-	{
-		//ParseObject x = ParseObject.deleteAll();
-		ParseQuery<ParseObject> query1 = ParseQuery.getQuery("User");
-		query1.whereEqualTo("username",sruname1.getText().toString());
-		query1.getFirstInBackground(new GetCallback<ParseObject>() {
-			public void done(ParseObject object, ParseException e) {
-				if (object == null) {
-					//Log.d("StudPhnNo", "The getFirst request failed.");
-					// PhoneeNumber="NULL";
-				} else {
-					//Log.d("StudPhnNo", "Retrieved the object.");
-					object.deleteInBackground();
-
-				}
-			}
-		});
-		ParseObject studAuth = new ParseObject("User");
-		studAuth.put("username",sruname1.getText().toString());
-		studAuth.put("password",srpword1.getText().toString());
-		//studAuth.put("StudPassword",l);
-		//studAuth.put("StudPhnNo",pno.getText().toString());
-		studAuth.saveInBackground();
-		// Set up a progress dialog
-		final ProgressDialog dlg = new ProgressDialog(AdminChangePword.this);
-		dlg.setTitle("Please wait.");
-		dlg.setMessage("Signing up.  Please wait.");
-		dlg.show();
 
 
 
 
-
-		//Start an intent for the dispatch activity
-		Intent intent = new Intent(AdminChangePword.this, SucAdminReg.class);
-		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-		startActivity(intent);
-	}
 	private boolean isEmpty(EditText etText) {
 		if (etText.getText().toString().trim().length() > 0) {
 			return false;

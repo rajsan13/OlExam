@@ -5,11 +5,13 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.CountDownTimer;
+import android.preference.PreferenceManager;
 import android.widget.*;
 import android.util.Log;
 import android.view.Menu;
@@ -22,13 +24,16 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class VTestStart extends Activity{
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
+public class VTestStart extends Activity implements View.OnClickListener{
 
 	Button bvsubmit,bvnext,bvexit,reset,bvprev;
 	TextView oop1,oop2,oop3,oop4,textView1,qquestn;
 	//EditText ccorrect;
 	public static int  num5=1;
 	public static int counter1=0;
+	public static String s;
 	private RadioGroup radioGroup;
 	private RadioButton radio1;
 	private RadioButton radio2;
@@ -52,6 +57,7 @@ public class VTestStart extends Activity{
         final String studname = intentIndex.getStringExtra("studentInvoking"); 
         final TextView tw= (TextView)findViewById(R.id.textView9);
         tw.setText("Hello "+studname);
+		s=studname;
         final String tillNow = intentIndex.getStringExtra("tillnow");
         final String quanto = intentIndex.getStringExtra("quanto"); 
         final String verbo = intentIndex.getStringExtra("verbo");
@@ -81,7 +87,8 @@ public class VTestStart extends Activity{
 				mTextField1.setText("done!");
 				//time=1;
 				//if(flag1==0)
-				bvexit.performClick();
+				Intent i2=new Intent(VTestStart.this,Result2.class);
+				startActivity(i2);
 			}
 
 		}.start();
@@ -556,7 +563,9 @@ public class VTestStart extends Activity{
 		        dlg.setMessage("Processing request. Exiting the test.  Please wait.");
 		        dlg.show();
 
-				
+
+
+
 				
 				/*ParseQuery<ParseObject> query = ParseQuery.getQuery("results");
 				query.whereEqualTo("Studname",studname);
@@ -575,7 +584,7 @@ public class VTestStart extends Activity{
 				  }
 				});*/
 		        flag1=1;
-		        Intent indexIntent=new Intent(VTestStart.this,Result1.class);
+		      Intent indexIntent=new Intent(VTestStart.this,Result.class);
 				//indexIntent.putExtra("studentInvoking",studname);
 				//indexIntent.putExtra("quanto",quanto);
 				//indexIntent.putExtra("verbo",Integer.toString(counter1));
@@ -585,7 +594,63 @@ public class VTestStart extends Activity{
 				startActivity(indexIntent);
 			}
 		});
-	
-	
+
+		findViewById(R.id.vexit).setOnClickListener(this);
 }
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+			case R.id.vexit:
+				new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+						.setTitleText("Are you sure?")
+						.setContentText("You won't be able to continue the Test")
+						.setCancelText("No,cancel please!")
+						.setConfirmText("Yes,Exit the Test!")
+						.showCancelButton(true)
+						.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+							@Override
+							public void onClick(SweetAlertDialog sDialog) {
+								// reuse previous dialog instance, keep widget user state, reset them if you need
+								sDialog.setTitleText("Cancelled!")
+										.setContentText("Continue with the test :)")
+										.setConfirmText("OK")
+										.showCancelButton(false)
+										.setCancelClickListener(null)
+										.setConfirmClickListener(null)
+										.changeAlertType(SweetAlertDialog.ERROR_TYPE);
+
+								// or you can new a SweetAlertDialog to show
+                               /* sDialog.dismiss();
+                                new SweetAlertDialog(SampleActivity.this, SweetAlertDialog.ERROR_TYPE)
+                                        .setTitleText("Cancelled!")
+                                        .setContentText("Your imaginary file is safe :)")
+                                        .setConfirmText("OK")
+                                        .show();*/
+							}
+						})
+						.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+							@Override
+							public void onClick(SweetAlertDialog sDialog) {
+								sDialog.setTitleText("Exiting the Test!")
+										.setContentText("Your Response is stored!")
+										.setConfirmText("OK")
+										.showCancelButton(false)
+										.setCancelClickListener(null)
+										.setConfirmClickListener(null)
+										.changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
+								SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(VTestStart.this);
+								SharedPreferences.Editor editor= prefs.edit();
+								editor.putString("mark",Integer.toString(counter1));
+								editor.putString("name",s);
+								editor.commit();
+								Intent i=new Intent(VTestStart.this,Result2.class);
+								startActivity(i);
+							}
+						})
+						.show();
+
+
+				break;
+		}
+	}
 }

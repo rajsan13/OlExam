@@ -78,7 +78,7 @@ public class HomeAdmin extends Activity {
 			}
 		});
 		
-		hacancelbutton = (Button)findViewById(R.id.hacancel);
+		/*hacancelbutton = (Button)findViewById(R.id.hacancel);
 		hacancelbutton.setVisibility(View.INVISIBLE);
 		hacancelbutton.setOnClickListener(new OnClickListener() {
 			
@@ -87,7 +87,7 @@ public class HomeAdmin extends Activity {
 				Intent indexIntent=new Intent(HomeAdmin.this,MainActivity.class);
 					startActivity(indexIntent);	
 			}
-		});
+		});*/
 		
 		
 		timelimit=(Button)findViewById(R.id.button5);

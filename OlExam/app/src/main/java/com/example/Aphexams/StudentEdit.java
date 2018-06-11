@@ -45,7 +45,7 @@ public class StudentEdit extends Activity{
 		SharedPreferences settings;
 		settings = PreferenceManager.getDefaultSharedPreferences(StudentEdit.this);
 
-		String username = settings.getString("username", "");
+		String username = settings.getString("usernames", "");
 		ParseQuery<ParseObject> query1 = ParseQuery.getQuery("studAuth");
 		query1.whereEqualTo("StudUserName",username);
 		//query1.whereEqualTo("StudPassword",srpword1.getText().toString());

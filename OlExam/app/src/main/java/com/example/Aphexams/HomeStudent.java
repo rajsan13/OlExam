@@ -29,6 +29,7 @@ public class HomeStudent extends Activity {
 	private RadioGroup radioGroup;
 	private RadioButton hsqradio1;
 	private RadioButton hsvradio2;
+	public static String h;
 
 
 
@@ -48,6 +49,7 @@ public class HomeStudent extends Activity {
 		final String studname = intentIndex.getStringExtra("studentInvoking");
 		final TextView tw= (TextView)findViewById(R.id.textView2);
 		tw.setText("Hello "+studname);
+		h=studname;
 
 
 		hsstartbutton = (Button)findViewById(R.id.hsstart);
@@ -87,14 +89,18 @@ public class HomeStudent extends Activity {
 		hseditbutton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-
+				SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(HomeStudent.this);
+				SharedPreferences.Editor editor= prefs.edit();
+				editor.putString("usernames",h);
+				//editor.putString("name",s);
+				editor.commit();
 				Intent indexIntent=new Intent(HomeStudent.this,StudentEdit.class);
 				startActivity(indexIntent);
 
 			}
 		});
 
-		hscancelbutton = (Button)findViewById(R.id.hscancel);
+		/*hscancelbutton = (Button)findViewById(R.id.hscancel);
 		hscancelbutton.setVisibility(View.INVISIBLE);
 		hscancelbutton.setOnClickListener(new OnClickListener() {
 
@@ -106,7 +112,7 @@ public class HomeStudent extends Activity {
 				Intent indexIntent=new Intent(HomeStudent.this,MainActivity.class);
 				startActivity(indexIntent);
 			}
-		});
+		});*/
 		Rank.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {

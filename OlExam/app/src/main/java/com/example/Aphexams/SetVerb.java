@@ -65,7 +65,7 @@ public class SetVerb extends Activity{
 
 							ParseObject vex = new ParseObject("Vex");
 							//Toast.makeText(SetVerb.this,"out side done "+invques.getText().toString(),Toast.LENGTH_LONG).show();
-							vex.put("vqno", sequence_gen++);
+							vex.put("vqno", ++sequence_gen);
 							vex.put("vque", vtque.getText().toString());
 							vex.put("vopt1", vtop1.getText().toString());
 							vex.put("vopt2", vtop2.getText().toString());
