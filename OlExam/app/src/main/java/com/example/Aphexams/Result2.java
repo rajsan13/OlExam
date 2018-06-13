@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,6 +63,40 @@ public static String marks,names;
         });
 
        mar.setText(marks);
+        findViewById(R.id.mButtonRank).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Result2.this);
+                //prefs.edit().putBoolean("isMobile", Boolean.valueOf(mobile)).commit();
+                SharedPreferences.Editor editor= prefs.edit();
+                editor.putString("namer",names);
+                editor.commit();
+               // Intent indexIntent=new Intent(Result2.this,Rank1.class);
+                Intent indexIntent=new Intent(Result2.this,Rank1.class);
+                startActivity(indexIntent);
+            }
+        });
+        findViewById(R.id.mButtonChart).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences settings;
+                settings = PreferenceManager.getDefaultSharedPreferences(Result2.this);
+                String corr = settings.getString("correct", "");
+                String incorr = settings.getString("incorrect", "");
+                String skipp = settings.getString("skipped", "");
+              //  Toast.makeText(Result2.this,corr+" "+incorr+" "+skipp,Toast.LENGTH_LONG).show();
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Result2.this);
+                //prefs.edit().putBoolean("isMobile", Boolean.valueOf(mobile)).commit();
+                SharedPreferences.Editor editor= prefs.edit();
+                editor.putString("correct1",corr);
+                editor.putString("incorrect1",incorr);
+                editor.putString("skipped1",skipp);
+                editor.commit();
+                // Intent indexIntent=new Intent(Result2.this,Rank1.class);
+                Intent indexIntent=new Intent(Result2.this,PieChartActivity.class);
+                startActivity(indexIntent);
+            }
+        });
     //   mMatchTextView.setText(names);
 
 

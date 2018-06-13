@@ -9,5 +9,8 @@ public class Global {
 	public static Number corr;
 	public static String quest;
 	public static ArrayList<String>ar=new ArrayList<>();
+	public static int correcta;
+	public static int incorrecta;
+	public static int skippeda;
     
 }

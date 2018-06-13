@@ -31,6 +31,9 @@ public class VTestStart extends Activity implements View.OnClickListener{
 	Button bvsubmit,bvnext,bvexit,reset,bvprev;
 	TextView oop1,oop2,oop3,oop4,textView1,qquestn;
 	//EditText ccorrect;
+	public static  int correct=0;
+	public static int  skipped=0;
+	public static int  incorrect=0;
 	public static int  num5=1;
 	public static int counter1=0;
 	public static String s;
@@ -87,8 +90,30 @@ public class VTestStart extends Activity implements View.OnClickListener{
 				mTextField1.setText("done!");
 				//time=1;
 				//if(flag1==0)
-				Intent i2=new Intent(VTestStart.this,Result2.class);
-				startActivity(i2);
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("QuestionNo");
+				query.orderByDescending("updatedAt");
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+						} else {
+							skipped=object.getNumber("Quesno").intValue()-(correct+incorrect);
+							//Toast.makeText(VTestStart.this,Integer.toString(skipped)+" "+Integer.toString(correct)+" "+Integer.toString(incorrect),Toast.LENGTH_LONG).show();
+							//Toast.makeText(VTestStart.this,Integer.toString(correct),Toast.LENGTH_LONG).show();
+							//Toast.makeText(VTestStart.this,Integer.toString(skipped),Toast.LENGTH_LONG).show();
+							SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(VTestStart.this);
+							//prefs.edit().putBoolean("isMobile", Boolean.valueOf(mobile)).commit();
+							SharedPreferences.Editor editor= prefs.edit();
+							editor.putString("correct",Integer.toString(correct));
+							editor.putString("incorrect",Integer.toString(incorrect));
+							editor.putString("skipped",Integer.toString(skipped));
+							editor.commit();
+							Intent i2=new Intent(VTestStart.this,Result2.class);
+							startActivity(i2);
+						}
+					}
+				});
+
+
 			}
 
 		}.start();
@@ -218,10 +243,12 @@ public class VTestStart extends Activity implements View.OnClickListener{
 							Log.d("que", "The getFirst request failed.");
 							//ccorrect.setEnabled(false);
 							counter1=counter1-1;
+							incorrect++;
 							Log.d("MYINT", "value: " + counter1);
 						} else {
 							Log.d("que", "Retrieved the object.");
 							counter1=counter1+5;
+							correct++;
 							//ccorrect.setEnabled(false);
 							Log.d("MYINT", "value: " + counter1);
 
@@ -273,10 +300,12 @@ public class VTestStart extends Activity implements View.OnClickListener{
 							Log.d("que", "The getFirst request failed.");
 							//ccorrect.setEnabled(false);
 							counter1=counter1-1;
+							incorrect++;
 							Log.d("MYINT", "value: " + counter1);
 						} else {
 							Log.d("que", "Retrieved the object.");
 							counter1=counter1+5;
+							correct++;
 							//ccorrect.setEnabled(false);
 							Log.d("MYINT", "value: " + counter1);
 
@@ -328,10 +357,12 @@ public class VTestStart extends Activity implements View.OnClickListener{
 							Log.d("que", "The getFirst request failed.");
 							//ccorrect.setEnabled(false);
 							counter1=counter1-1;
+							incorrect++;
 							Log.d("MYINT", "value: " + counter1);
 						} else {
 							Log.d("que", "Retrieved the object.");
 							counter1=counter1+5;
+							correct++;
 							//ccorrect.setEnabled(false);
 							Log.d("MYINT", "value: " + counter1);
 
@@ -382,10 +413,12 @@ public class VTestStart extends Activity implements View.OnClickListener{
 							Log.d("que", "The getFirst request failed.");
 							//ccorrect.setEnabled(false);
 							counter1=counter1-1;
+							incorrect++;
 							Log.d("MYINT", "value: " + counter1);
 						} else {
 							Log.d("que", "Retrieved the object.");
 							counter1=counter1+5;
+							correct++;
 							//cccorrect.setEnabled(false);
 							Log.d("MYINT", "value: " + counter1);
 
@@ -452,7 +485,7 @@ public class VTestStart extends Activity implements View.OnClickListener{
 						radio3.setText(object.getString("vopt3"));
 						radio4.setText(object.getString("vopt4"));
 
-				      
+		                skipped++;
 				     
 				    }
 				  }
@@ -566,6 +599,7 @@ public class VTestStart extends Activity implements View.OnClickListener{
 
 
 
+
 				
 				/*ParseQuery<ParseObject> query = ParseQuery.getQuery("results");
 				query.whereEqualTo("Studname",studname);
@@ -584,14 +618,14 @@ public class VTestStart extends Activity implements View.OnClickListener{
 				  }
 				});*/
 		        flag1=1;
-		      Intent indexIntent=new Intent(VTestStart.this,Result.class);
+		      /*Intent indexIntent=new Intent(VTestStart.this,Result.class);
 				//indexIntent.putExtra("studentInvoking",studname);
 				//indexIntent.putExtra("quanto",quanto);
 				//indexIntent.putExtra("verbo",Integer.toString(counter1));
 				//indexIntent.putExtra("which","quant");
 				//if(tillNow.equals("")){indexIntent.putExtra("tillnow","v");}
 				//else if(tillNow.equals("q")){indexIntent.putExtra("tillnow","qv");}
-				startActivity(indexIntent);
+				startActivity(indexIntent);*/
 			}
 		});
 
@@ -638,13 +672,32 @@ public class VTestStart extends Activity implements View.OnClickListener{
 										.setCancelClickListener(null)
 										.setConfirmClickListener(null)
 										.changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
-								SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(VTestStart.this);
-								SharedPreferences.Editor editor= prefs.edit();
-								editor.putString("mark",Integer.toString(counter1));
-								editor.putString("name",s);
-								editor.commit();
-								Intent i=new Intent(VTestStart.this,Result2.class);
-								startActivity(i);
+
+								ParseQuery<ParseObject> query = ParseQuery.getQuery("QuestionNo");
+								query.orderByDescending("updatedAt");
+								query.getFirstInBackground(new GetCallback<ParseObject>() {
+									public void done(ParseObject object, ParseException e) {
+										if (object == null) {
+											Toast.makeText(VTestStart.this,"Failure",Toast.LENGTH_LONG).show();
+										} else {
+											skipped=object.getNumber("Quesno").intValue()-(correct+incorrect);
+											//Toast.makeText(VTestStart.this,"Success",Toast.LENGTH_LONG).show();
+											Toast.makeText(VTestStart.this,Integer.toString(skipped)+" "+Integer.toString(correct)+" "+Integer.toString(incorrect),Toast.LENGTH_LONG).show();
+											SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(VTestStart.this);
+											SharedPreferences.Editor editor= prefs.edit();
+											editor.putString("mark",Integer.toString(counter1));
+											editor.putString("name",s);
+											editor.commit();
+											Global.skippeda=skipped;
+											Global.correcta=correct;
+											Global.incorrecta=incorrect;
+											Intent i2=new Intent(VTestStart.this,Result2.class);
+											startActivity(i2);
+										}
+									}
+								});
+								/*Intent i=new Intent(VTestStart.this,Result2.class);
+								startActivity(i);*/
 							}
 						})
 						.show();

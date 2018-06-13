@@ -24,6 +24,22 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <com.roger.match.library.MatchButton
+        android:id="@+id/mButtonRank"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/mButton"
+        android:layout_centerInParent="true"
+        match:text="CLICK TO CHECK RANK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.roger.match.library.MatchButton
+        android:id="@+id/mButtonChart"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/mButtonRank"
+        android:layout_centerInParent="true"
+        match:text="CLICK TO SEE CHART"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
