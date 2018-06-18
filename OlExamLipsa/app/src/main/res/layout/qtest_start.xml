@@ -176,7 +176,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout">
 
 
 
@@ -214,6 +215,15 @@
 
 
     </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CountDown"
+        android:id="@+id/textView11"
+        android:layout_above="@+id/textView1"
+        android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>

@@ -72,7 +72,8 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/MyTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -86,10 +87,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AdminLogin" />
+        <activity
+            android:name=".AdminLogin"
+            android:theme="@style/MyTheme" />
         <activity android:name=".AdminChangePword" />
         <activity android:name=".AdminReg" />
-        <activity android:name=".HomeAdmin" />
+        <activity android:name=".HomeAdmin" android:theme="@style/MyTheme"/>
         <activity android:name=".HomeStudent" />
         <activity android:name=".QTestStart" />
         <activity android:name=".Result" />
@@ -98,7 +101,8 @@
         <activity android:name=".SetVerb" />
         <activity android:name=".StudentChangePword" />
         <activity android:name=".StudentEdit" />
-        <activity android:name=".StudentLogin" />
+        <!-- <activity android:name=".MainActivity"/ -->
+        <!-- < <activity android:name=".StudentLogin" / -->
         <activity android:name=".StudentReg" />
         <activity android:name=".SucAdminReg" />
         <activity android:name=".SucStudReg" />
@@ -107,9 +111,16 @@
         <activity android:name=".ViewV" />
         <activity android:name=".ViewStudent" />
         <activity android:name=".VTestStart" />
+        <activity android:name=".QTestInstructiions" />
+        <activity android:name=".VTestInstructions" />
+        <activity android:name=".Rank" />
+        <activity android:name=".TimeLimit" />
+        <activity android:name=".UploadImage" />
         <activity
             android:name=".AdminShowStudentId"
-            android:label="@string/title_activity_admin_show_student_id"></activity>
+            android:label="@string/title_activity_admin_show_student_id" />
+        <activity android:name=".AdminSetQuesLimit" />
+        <activity android:name=".StudentView"></activity>
     </application>
 
 </manifest>

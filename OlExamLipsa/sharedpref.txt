@@ -1,0 +1,27 @@
+ if("success".equals(status))
+                    {
+                        Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_LONG).show();
+
+                        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                        //prefs.edit().putBoolean("isMobile", Boolean.valueOf(mobile)).commit();
+                        SharedPreferences.Editor editor= prefs.edit();
+                        editor.putString("rollno",rollno);
+                        editor.commit();
+
+                        Intent i=new Intent(MainActivity.this,home.class);
+                        //i.putExtra("userid",userid);
+                        startActivity(i);
+
+                    }
+                    else
+                    {
+                        Toast.makeText(MainActivity.this, "Login failed", Toast.LENGTH_LONG).show();
+                    }
+
+
+
+RETRIEVING DATA FROM SHARED PREFERENCE:
+SharedPreferences settings;
+ settings = PreferenceManager.getDefaultSharedPreferences(home.this);
+
+        rollno = settings.getString("rollno", "");
