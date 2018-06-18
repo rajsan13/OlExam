@@ -80,8 +80,8 @@ public class AdminLogin extends Activity {
 		        dlg.setMessage("Logging in.  Please wait.");
 		        dlg.show();
 		        // Call the Parse login method
-		        ParseUser.logInInBackground(aid.getText().toString(), apword.getText()
-		            .toString(), new LogInCallback() {
+		        ParseUser.logInInBackground(aid.getText().toString().trim(), apword.getText()
+		            .toString().trim(), new LogInCallback() {
 
 		          @Override
 		          public void done(ParseUser user, ParseException e) {
@@ -94,7 +94,7 @@ public class AdminLogin extends Activity {
 						SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(AdminLogin.this);
 						//prefs.edit().putBoolean("isMobile", Boolean.valueOf(mobile)).commit();
 						SharedPreferences.Editor editor= prefs.edit();
-						editor.putString("AdminUserName",aid.getText().toString());
+						editor.putString("AdminUserName",aid.getText().toString().trim());
 						editor.commit();
 		              Intent intent = new Intent(AdminLogin.this, HomeAdmin.class);
 		              intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -106,7 +106,7 @@ public class AdminLogin extends Activity {
 			}
 		});
 		
-		acancelbutton = (Button)findViewById(R.id.albutton2);
+		/*acancelbutton = (Button)findViewById(R.id.albutton2);
 		acancelbutton.setVisibility(View.INVISIBLE);
 		acancelbutton.setOnClickListener(new OnClickListener() {
 			
@@ -114,7 +114,7 @@ public class AdminLogin extends Activity {
 				Intent indexIntent=new Intent(AdminLogin.this,MainActivity.class);
 					startActivity(indexIntent);	
 			}
-		});
+		});*/
 		
 		
 		

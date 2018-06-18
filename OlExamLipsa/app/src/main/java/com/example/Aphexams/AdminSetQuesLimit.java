@@ -29,9 +29,9 @@ public class AdminSetQuesLimit extends Activity {
             public void onClick(View view) {
                 ParseObject QuestionNo = new ParseObject("QuestionNo");
 
-                int a=Integer.parseInt(tvsetqueslimit.getText().toString())+1;
-                Toast.makeText(getApplicationContext(),a,Toast.LENGTH_LONG).show();
-                QuestionNo.put("Quesno",Integer.parseInt(tvsetqueslimit.getText().toString()));
+                Toast.makeText(getApplicationContext(),tvsetqueslimit.getText().toString(),Toast.LENGTH_LONG).show();
+               QuestionNo.put("Quesno",Integer.parseInt(tvsetqueslimit.getText().toString()));
+                QuestionNo.saveInBackground();
                 Toast.makeText(getApplicationContext(),"the no of questions appearing in the text is set!",Toast.LENGTH_LONG).show();
                 Intent i=new Intent(getApplicationContext(),HomeAdmin.class);
                 startActivity(i);

@@ -88,7 +88,7 @@ public class HomeStudent extends Activity {
 
 			public void onClick(View v) {
 
-				Intent indexIntent=new Intent(HomeStudent.this,StudentEdit.class);
+				Intent indexIntent=new Intent(HomeStudent.this,StudentView.class);
 				startActivity(indexIntent);
 
 			}
@@ -132,7 +132,7 @@ public class HomeStudent extends Activity {
 		switch (item.getItemId()) {
 			case android.R.id.home:
 				// app icon in action bar clicked; go home
-				Intent i=new Intent(HomeStudent.this,StudentLogin.class);
+				Intent i=new Intent(HomeStudent.this,MainActivity.class);
 				startActivity(i);
 				i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				//If the Intent resolves to an Activity in the current task the Activities above it on the stack are destroyed so that it is at the top of the stack, and it is re-used.
@@ -141,7 +141,7 @@ public class HomeStudent extends Activity {
 				Toast.makeText(HomeStudent.this,"Logout",Toast.LENGTH_LONG).show();
 				Settings = this.getSharedPreferences("StudUserName", Context.MODE_PRIVATE);
 				Settings.edit().clear().commit();
-				Intent intent=new Intent(HomeStudent.this,StudentLogin.class);
+				Intent intent=new Intent(HomeStudent.this,MainActivity.class);
 				startActivity(intent);
 				return true;
 

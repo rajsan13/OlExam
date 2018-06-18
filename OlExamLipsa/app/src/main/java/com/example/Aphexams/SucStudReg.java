@@ -20,7 +20,7 @@ public class SucStudReg extends Activity{
 		sucloginbutton1.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				Intent indexIntent=new Intent(SucStudReg.this,StudentLogin.class);
+				Intent indexIntent=new Intent(SucStudReg.this,MainActivity.class);
 					startActivity(indexIntent);	
 			}
 		});
@@ -33,9 +33,5 @@ public class SucStudReg extends Activity{
 					startActivity(indexIntent);	
 			}
 		});
-		
-		
-		
-		
 }
 }

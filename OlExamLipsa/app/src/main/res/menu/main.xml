@@ -3,5 +3,10 @@
     <item
         android:id="@+id/logout"
         android:title="Logout"/>
+    <item
+        android:id="@+id/adminlogin"
+        android:title="Admin Login"
+
+        />
 
 </menu>

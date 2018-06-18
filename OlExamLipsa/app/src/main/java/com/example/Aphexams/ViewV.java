@@ -233,8 +233,8 @@ public class ViewV extends Activity{
 
 
 	private void showPopup(final Activity context, Point p) {
-		Toast.makeText(getApplicationContext(),"inside showpopup",Toast.LENGTH_LONG).show();
-		int popupWidth = 1200;
+		//Toast.makeText(getApplicationContext(),"inside showpopup",Toast.LENGTH_LONG).show();
+		int popupWidth = 1000;
 		int popupHeight = 550;
 		// Inflate the popup_layout.xml
 		LinearLayout viewGroup = (LinearLayout) context.findViewById(R.id.popup);
@@ -266,7 +266,7 @@ public class ViewV extends Activity{
 		yes.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Toast.makeText(getApplicationContext(),"inside yes!",Toast.LENGTH_LONG).show();
+				//Toast.makeText(getApplicationContext(),"inside yes!",Toast.LENGTH_LONG).show();
 
 				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
 

@@ -21,7 +21,7 @@ public class HomeAdmin extends Activity {
 	Button setquebutton;
 	Button changepwordbutton;
 	Button hacancelbutton;
-	Button timelimit;
+	Button setlimit;
 	Button queslimit;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +31,14 @@ public class HomeAdmin extends Activity {
 		ActionBar ab = getActionBar();
 		ab.setDisplayHomeAsUpEnabled(true);
 
-		queslimit=(Button)findViewById(R.id.bqueslimit);
+	/*	queslimit=(Button)findViewById(R.id.bqueslimit);
 		queslimit.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				Intent i= new Intent(HomeAdmin.this,AdminSetQuesLimit.class);
 				startActivity(i);
 			}
-		});
+		});*/
 
 		viewstudentbutton = (Button)findViewById(R.id.viewstudent);
 		viewstudentbutton.setOnClickListener(new OnClickListener() {
@@ -92,7 +92,7 @@ public class HomeAdmin extends Activity {
 			}
 		});
 		
-		hacancelbutton = (Button)findViewById(R.id.hacancel);
+		/*hacancelbutton = (Button)findViewById(R.id.hacancel);
 		hacancelbutton.setVisibility(View.INVISIBLE);
 		hacancelbutton.setOnClickListener(new OnClickListener() {
 			
@@ -101,11 +101,11 @@ public class HomeAdmin extends Activity {
 				Intent indexIntent=new Intent(HomeAdmin.this,MainActivity.class);
 					startActivity(indexIntent);	
 			}
-		});
+		});*/
 		
 		
-		timelimit=(Button)findViewById(R.id.button5);
-		timelimit.setOnClickListener(new OnClickListener() {
+		setlimit=(Button)findViewById(R.id.setlimit);
+		setlimit.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 

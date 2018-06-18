@@ -1,10 +1,15 @@
 package com.example.Aphexams;
 import com.parse.*;
 
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.preference.PreferenceManager;
+import android.util.Base64;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.*;
@@ -16,12 +21,13 @@ import android.view.MenuItem;
 import java.util.List;
 
 public class SetVerb extends Activity{
-	
+
 	public static int  num1=1;
 	int count=5,cnt=0;
 	static int sequence_gen;
-	Button vbback,vbanother,vbsub,vdelete;
+	Button vbback,vbanother,vbsub,vdelete,bsetimage1;
 	TextView vtop1,vtop2,vtop3,vtop4,vtque,vtcorrect,editText,invques;
+	ImageView mImageView;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -42,7 +48,7 @@ public class SetVerb extends Activity{
 		vtop4 = (EditText)findViewById(R.id.editText5);
 		vtcorrect = (EditText)findViewById(R.id.editText6);
 		//invques=(TextView)findViewById(R.id.invisibleqno);
-		
+
 		vbsub = (Button)findViewById(R.id.button1);
 		vbsub.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
@@ -59,7 +65,7 @@ public class SetVerb extends Activity{
 
 							ParseObject vex = new ParseObject("Vex");
 							//Toast.makeText(SetVerb.this,"out side done "+invques.getText().toString(),Toast.LENGTH_LONG).show();
-							vex.put("vqno", sequence_gen++);
+							vex.put("vqno", ++sequence_gen);
 							vex.put("vque", vtque.getText().toString());
 							vex.put("vopt1", vtop1.getText().toString());
 							vex.put("vopt2", vtop2.getText().toString());
@@ -92,19 +98,31 @@ public class SetVerb extends Activity{
 				});
 
 
-				
+
 			}
 		});
-		
-		
+		bsetimage1 = (Button)findViewById(R.id.button8);
+		bsetimage1.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(SetVerb.this);
+				//prefs.edit().putBoolean("isMobile", Boolean.valueOf(mobile)).commit();
+				SharedPreferences.Editor editor= prefs.edit();
+				editor.putString("questno",Integer.toString(num1));
+				editor.commit();
+				Intent indexIntent=new Intent(SetVerb.this,UploadImage.class);
+				startActivity(indexIntent);
+			}
+		});
+
 		vbanother = (Button)findViewById(R.id.button2);
 		vbanother.setOnClickListener(new OnClickListener() {
-			
+
 			public void onClick(View v) {
 				if(count==5)
 				{
 					LinearLayout linearLayout= (LinearLayout) findViewById(R.id.llv);
-					 editText = new EditText(getApplicationContext());
+					editText = new EditText(getApplicationContext());
 					editText.setHint("Option "+count);
 					editText.setTextColor(Color.GRAY);
 					editText.setHintTextColor(Color.GRAY);
@@ -114,6 +132,9 @@ public class SetVerb extends Activity{
 					}
 					Toast.makeText(getApplicationContext(),""+count,Toast.LENGTH_LONG).show();
 					count++;
+				/*	String c=PreferenceManager.getDefaultSharedPreferences(SetVerb.this).getString("image", "defaultStringIfNothingFound");
+					mImageView=(ImageView)findViewById(R.id.image_view);
+					mImageView.setImageBitmap(StringToBitMap(c));*/
 				}
 
 			}
@@ -122,23 +143,22 @@ public class SetVerb extends Activity{
 		/*vdelete.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
-
 			}
 		});*/
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
 		vbback = (Button)findViewById(R.id.button3);
 		vbback.setVisibility(View.INVISIBLE);
 		vbback.setVisibility(View.INVISIBLE);
 		vbback.setOnClickListener(new OnClickListener() {
-			
+
 			public void onClick(View v) {
 				Intent indexIntent=new Intent(SetVerb.this,HomeAdmin.class);
-					startActivity(indexIntent);	
+				startActivity(indexIntent);
 			}
 		});
 	}
@@ -156,7 +176,14 @@ public class SetVerb extends Activity{
 				return super.onOptionsItemSelected(item);
 		}
 	}
-
+	public Bitmap StringToBitMap(String encodedString){
+		try {
+			byte [] encodeByte= Base64.decode(encodedString, Base64.DEFAULT);
+			Bitmap bitmap= BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
+			return bitmap;
+		} catch(Exception e) {
+			e.getMessage();
+			return null;
+		}
+	}
 }
-
-

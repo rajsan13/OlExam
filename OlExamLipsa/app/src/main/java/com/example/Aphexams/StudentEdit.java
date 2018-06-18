@@ -21,31 +21,31 @@ public class StudentEdit extends Activity{
 	Button srsubmitbutton;
 	Button srcancelbutton;
 	EditText sruname1;
-	EditText srpword1;
+	//EditText srpword1;
 	EditText sremail;
 	EditText srphn1;
 	EditText srname;
 	String a="Invalid";
 	String b="blank password";
 	String c="Mismatch";
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.student_edit);
-		
+
 
 		ActionBar ab = getActionBar();
 		ab.setDisplayHomeAsUpEnabled(true);
 		sruname1 = (EditText) findViewById(R.id.sruname);
-		srpword1 = (EditText) findViewById(R.id.srpword);
+		//srpword1 = (EditText) findViewById(R.id.srpword);
 		sremail = (EditText)findViewById(R.id.sremail1);
 		srphn1 = (EditText)findViewById(R.id.srphn);
 		srname=(EditText)findViewById(R.id.srname1);
 		SharedPreferences settings;
 		settings = PreferenceManager.getDefaultSharedPreferences(StudentEdit.this);
 
-		String username = settings.getString("username", "");
+		String username = settings.getString("StudUserName", "");
 		ParseQuery<ParseObject> query1 = ParseQuery.getQuery("studAuth");
 		query1.whereEqualTo("StudUserName",username);
 		//query1.whereEqualTo("StudPassword",srpword1.getText().toString());
@@ -59,8 +59,11 @@ public class StudentEdit extends Activity{
 					//Log.d("StudPhnNo", "Retrieved the object.");
 					String UserName = object.getString("StudUserName");
 					sruname1.setText(UserName);
-					String Password = object.getString("StudPassword");
-					srpword1.setText(Password);
+					//
+					// Toast.makeText(getApplicationContext(),UserName,Toast.LENGTH_LONG).show();
+
+				//	String Password = object.getString("StudPassword");
+				//	srpword1.setText(Password);
 					String PhoneNumber=object.getString("StudPhnNo");
 					srphn1.setText(PhoneNumber);
 					String Email = object.getString("StudEmId");
@@ -106,7 +109,6 @@ public class StudentEdit extends Activity{
 													  validationErrorMessage.append(c);
 												  }
 												  validationErrorMessage.append(a);
-
 												  // If there is a validation error, display the error
 												  if (validationError) {
 													  Toast.makeText(StudentEdit.this, validationErrorMessage.toString(), Toast.LENGTH_LONG)
@@ -125,11 +127,6 @@ public class StudentEdit extends Activity{
 												  dlg.setTitle("Please wait.");
 												  dlg.setMessage("Signing up.  Please wait.");
 												  dlg.show();
-
-
-
-
-
 												  // Start an intent for the dispatch activity
 												  Intent intent = new Intent(StudentEdit.this, SucStudReg.class);
 												  intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -141,6 +138,7 @@ public class StudentEdit extends Activity{
 														  if (object == null) {
 															  //Log.d("StudPhnNo", "The getFirst request failed.");
 															  // PhoneeNumber="NULL";
+
 														  } else {
 															  //Log.d("StudPhnNo", "Retrieved the object.");
 															  object.deleteInBackground();
@@ -151,7 +149,7 @@ public class StudentEdit extends Activity{
 
 												  ParseObject studAuth = new ParseObject("studAuth");
 												  studAuth.put("StudUserName",sruname1.getText().toString());
-												  studAuth.put("StudPassword",srpword1.getText().toString());
+												//  studAuth.put("StudPassword",srpword1.getText().toString());
 												  //studAuth.put("StudPassword",l);
 												  studAuth.put("StudPhnNo",srphn1.getText().toString());
 												  studAuth.put("StudEmId",sremail.getText().toString());
@@ -167,7 +165,7 @@ public class StudentEdit extends Activity{
 
 
 
-		srcancelbutton = (Button)findViewById(R.id.srcancel);
+	/*	srcancelbutton = (Button)findViewById(R.id.srcancel);
 		srcancelbutton.setVisibility(View.INVISIBLE);
 		srcancelbutton.setOnClickListener(new OnClickListener() {
 
@@ -175,7 +173,7 @@ public class StudentEdit extends Activity{
 				Intent indexIntent=new Intent(StudentEdit.this,MainActivity.class);
 				startActivity(indexIntent);
 			}
-		});
+		});*/
 
 
 	}
@@ -185,7 +183,7 @@ public class StudentEdit extends Activity{
 		switch (item.getItemId()) {
 			case android.R.id.home:
 				// app icon in action bar clicked; go home
-				Intent i=new Intent(StudentEdit.this,MainActivity.class);
+				Intent i=new Intent(StudentEdit.this,StudentView.class);
 				startActivity(i);
 				i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				//If the Intent resolves to an Activity in the current task the Activities above it on the stack are destroyed so that it is at the top of the stack, and it is re-used.
@@ -212,8 +210,3 @@ public class StudentEdit extends Activity{
 	}
 
 }
-
-
-
-
-
