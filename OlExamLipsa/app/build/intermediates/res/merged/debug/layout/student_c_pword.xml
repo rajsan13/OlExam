@@ -64,4 +64,22 @@
         android:layout_toStartOf="@+id/scpcancel"
         android:hint="phone number"/>
 
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:visibility="invisible"
+
+        android:hint="phone number"/>
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:visibility="invisible"
+
+        android:hint="phone number"/>
+
 </RelativeLayout>

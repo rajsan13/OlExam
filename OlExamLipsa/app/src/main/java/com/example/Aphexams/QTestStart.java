@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.widget.*;
 import android.util.Log;
 import android.view.Menu;
@@ -22,11 +23,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import java.util.*;
+import java.util.concurrent.TimeUnit;
+
 public class QTestStart extends Activity{
 
 	Button bqtssubmit,bqtsnext,bqtsexit,bqprev,reset;
 	TextView oop1,oop2,oop3,oop4,textView1,qquestn;
 	EditText ccorrect;
+	private static final String FORMAT = "%02d:%02d:%02d";
 	public static int  num4=1;
 	public static int counter=0;
 	private RadioGroup radioGroup;
@@ -34,7 +38,9 @@ public class QTestStart extends Activity{
 	private RadioButton radio2;
 	private RadioButton radio3;
 	private RadioButton radio4;
-	
+	private TextView mTextField;
+	private static int time=0;
+	private static int flag2=0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,12 +62,35 @@ public class QTestStart extends Activity{
         final String tillNow = intentIndex.getStringExtra("tillnow");
        final String verbo = intentIndex.getStringExtra("verbo");
        final String quanto = intentIndex.getStringExtra("quanto");
+
 		radioGroup = (RadioGroup)findViewById(R.id.group1);
 		radio1 = (RadioButton)findViewById(R.id.radio1);
 		radio2= (RadioButton)findViewById(R.id.radio2);
 		radio3= (RadioButton)findViewById(R.id.radio3);
 		radio4= (RadioButton)findViewById(R.id.radio4);
+		mTextField=(TextView)findViewById(R.id.textView11);
+		bqtsexit = (Button)findViewById(R.id.qtsexit);
+		new CountDownTimer(30000, 1000) {
 
+			public void onTick(long millisUntilFinished) {
+				//mTextField.setText("Time remaining: " + millisUntilFinished / 1000);
+				//here you can have your logic to set text to edittext
+				mTextField.setText("Time Remaining: "+String.format(FORMAT,
+						TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
+						TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
+								TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
+						TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
+								TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
+			}
+
+			public void onFinish() {
+				mTextField.setText("done!");
+				time=1;
+				if(flag2==0)
+				bqtsexit.performClick();
+			}
+
+		}.start();
 		
 		ParseQuery<ParseObject> query = ParseQuery.getQuery("exams");
 		query.whereEqualTo("qno",num4);
@@ -103,8 +132,9 @@ public class QTestStart extends Activity{
 			
 			public void onClick(View v) {
 				
-				
-		if(num4==5){
+		// in if condition num4==5
+		if(time==1){
+			time=0;
 			final ProgressDialog dlg = new ProgressDialog(QTestStart.this);
 	        dlg.setTitle("Please wait.");
 	        dlg.setMessage("Processing request.  Navigating to result evaluation.  Please wait.");
@@ -406,7 +436,7 @@ public class QTestStart extends Activity{
 				}); */
 		        
 		        
-		        
+		        flag2=1;
 				Intent indexIntent=new Intent(QTestStart.this,Result.class);
 				indexIntent.putExtra("studentInvoking",studname);
 				indexIntent.putExtra("quanto",Integer.toString(counter));

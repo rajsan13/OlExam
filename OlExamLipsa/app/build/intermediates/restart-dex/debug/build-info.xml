@@ -4,34 +4,41 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="858602551913440"
-    token="5403355514106505371" >
+    timestamp="22466042235687"
+    token="-7069764170100183437" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="4292" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="271" />
     <task
         name="verifier"
-        duration="0" />
+        duration="89" />
 
-    <build timestamp="857272430113240" >
+    <artifact
+        location="C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+        type="DEX" />
+
+    <build timestamp="17760631029831" >
         <artifact
-            location="E:\intern\OlExam-master\OlExamLipsa\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="858208259252733"
-        verifier="CLASS_ADDED" >
+    <build timestamp="22466042235687" >
         <artifact
-            location="E:\intern\OlExam-master\OlExamLipsa\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            location="C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
             type="DEX" />
     </build>
-    <build timestamp="858602551913440" />
 
 </instant-run>

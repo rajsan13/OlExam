@@ -1,9 +1,11 @@
 package com.example.Aphexams;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.widget.*;
 import android.view.Menu;
 import android.view.View;
@@ -31,7 +33,14 @@ public class AdminLogin extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.test_admin_login);
 		//Parse.initialize(this, "eX31t72OF1l2SfT72YlLNkBiCiMwRGCf6S8QGMHB", "r70qpWRJ6IMNgTn7YW2dLZUFMmvTn5GQRfNQcwsd");
-
+		if(Global.check==0){
+			Parse.initialize(new Parse.Configuration.Builder(this)
+					.applicationId("QBQyVxRaYxbMEtpU31gZc0jbp7zoXD9WtoqtT1nd")
+					.clientKey("IZyyYsHU5dvxaoFNQ6GbTY0by1uFWgUgFI5xiU1K")
+					.server("https://parseapi.back4app.com/")
+					.build()
+			);
+			Global.check=1;}
 
 		ActionBar ab = getActionBar();
 		ab.setDisplayHomeAsUpEnabled(true);
@@ -78,8 +87,8 @@ public class AdminLogin extends Activity {
 		        dlg.setMessage("Logging in.  Please wait.");
 		        dlg.show();
 		        // Call the Parse login method
-		        ParseUser.logInInBackground(aid.getText().toString(), apword.getText()
-		            .toString(), new LogInCallback() {
+		        ParseUser.logInInBackground(aid.getText().toString().trim(), apword.getText()
+		            .toString().trim(), new LogInCallback() {
 
 		          @Override
 		          public void done(ParseUser user, ParseException e) {
@@ -89,6 +98,11 @@ public class AdminLogin extends Activity {
 		              Toast.makeText(AdminLogin.this, e.getMessage(), Toast.LENGTH_LONG).show();
 		            } else {
 		              // Start an intent for the dispatch activity
+						SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(AdminLogin.this);
+						//prefs.edit().putBoolean("isMobile", Boolean.valueOf(mobile)).commit();
+						SharedPreferences.Editor editor= prefs.edit();
+						editor.putString("AdminUserName",aid.getText().toString().trim());
+						editor.commit();
 		              Intent intent = new Intent(AdminLogin.this, HomeAdmin.class);
 		              intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
 		              startActivity(intent);
@@ -99,7 +113,7 @@ public class AdminLogin extends Activity {
 			}
 		});
 		
-		acancelbutton = (Button)findViewById(R.id.albutton2);
+		/*acancelbutton = (Button)findViewById(R.id.albutton2);
 		acancelbutton.setVisibility(View.INVISIBLE);
 		acancelbutton.setOnClickListener(new OnClickListener() {
 			
@@ -107,7 +121,7 @@ public class AdminLogin extends Activity {
 				Intent indexIntent=new Intent(AdminLogin.this,MainActivity.class);
 					startActivity(indexIntent);	
 			}
-		});
+		});*/
 		
 		
 		
