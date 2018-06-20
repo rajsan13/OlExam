@@ -94,7 +94,7 @@ public class HomeStudent extends Activity {
 			}
 			});
 		
-		hscancelbutton = (Button)findViewById(R.id.hscancel);
+		/*hscancelbutton = (Button)findViewById(R.id.hscancel);
 		hscancelbutton.setVisibility(View.INVISIBLE);
 		hscancelbutton.setOnClickListener(new OnClickListener() {
 			
@@ -106,7 +106,7 @@ public class HomeStudent extends Activity {
 				Intent indexIntent=new Intent(HomeStudent.this,MainActivity.class);
 					startActivity(indexIntent);	
 			}
-		});
+		});*/
 		Rank.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {

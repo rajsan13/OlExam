@@ -100,6 +100,9 @@
         <activity android:name=".SetQuant" />
         <activity android:name=".SetVerb" />
         <activity android:name=".StudentChangePword" />
+        <activity android:name=".Result2"/>
+        <activity android:name=".PieChartActivity"/>
+        <activity android:name=".Rank1"/>.
         <activity android:name=".StudentEdit" />
         <!-- <activity android:name=".MainActivity"/ -->
         <!-- < <activity android:name=".StudentLogin" / -->

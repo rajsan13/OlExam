@@ -5,12 +5,14 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.CountDownTimer;
+import android.preference.PreferenceManager;
 import android.widget.*;
 import android.util.Log;
 import android.view.Menu;
@@ -23,10 +25,16 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class VTestStart extends Activity{
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
+public class VTestStart extends Activity implements View.OnClickListener{
 
 	Button bvsubmit,bvnext,bvexit,reset,bvprev;
 	TextView oop1,oop2,oop3,oop4,textView1,qquestn;
+	public static  int correct=0;
+	public static int  skipped=0;
+	public static int  incorrect=0;
+	public static String s;
 	//EditText ccorrect;
 	static int noOfRows,randint;
 	static ArrayList<Integer> list;
@@ -56,6 +64,7 @@ public class VTestStart extends Activity{
 				.build()
 		);*/
 		//fetching no of rows in the questions!
+
 		rand=new Random();
 		num5=(int) rand.nextInt((10 - 1) + 1) + 1;
 		Toast.makeText(getApplicationContext(),"first value "+num5,Toast.LENGTH_SHORT).show();
@@ -154,9 +163,29 @@ public class VTestStart extends Activity{
 				mTextField1.setText("done!");
 				//time=1;
 
-				bvexit.performClick();
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("QuestionNo");
+				query.orderByDescending("updatedAt");
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+						} else {
+							skipped = object.getNumber("Quesno").intValue() - (correct + incorrect);
+							//Toast.makeText(VTestStart.this,Integer.toString(skipped)+" "+Integer.toString(correct)+" "+Integer.toString(incorrect),Toast.LENGTH_LONG).show();
+							//Toast.makeText(VTestStart.this,Integer.toString(correct),Toast.LENGTH_LONG).show();
+							//Toast.makeText(VTestStart.this,Integer.toString(skipped),Toast.LENGTH_LONG).show();
+							SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(VTestStart.this);
+							//prefs.edit().putBoolean("isMobile", Boolean.valueOf(mobile)).commit();
+							SharedPreferences.Editor editor = prefs.edit();
+							editor.putString("correct", Integer.toString(correct));
+							editor.putString("incorrect", Integer.toString(incorrect));
+							editor.putString("skipped", Integer.toString(skipped));
+							editor.commit();
+							Intent i2 = new Intent(VTestStart.this, Result2.class);
+							startActivity(i2);
+						}
+					}
+				});
 			}
-
 		}.start();
 
 
@@ -244,10 +273,12 @@ public class VTestStart extends Activity{
 						if (object == null) {
 							Log.d("que", "The getFirst request failed.");
 							//ccorrect.setEnabled(false);
+							incorrect++;
 							counter1=counter1-1;
 							Log.d("MYINT", "value: " + counter1);
 						} else {
 							Log.d("que", "Retrieved the object.");
+							correct++;
 							counter1=counter1+5;
 							//ccorrect.setEnabled(false);
 							Log.d("MYINT", "value: " + counter1);
@@ -270,10 +301,12 @@ public class VTestStart extends Activity{
 						if (object == null) {
 							Log.d("que", "The getFirst request failed.");
 							//ccorrect.setEnabled(false);
+							incorrect++;
 							counter1=counter1-1;
 							Log.d("MYINT", "value: " + counter1);
 						} else {
 							Log.d("que", "Retrieved the object.");
+							correct++;
 							counter1=counter1+5;
 							//ccorrect.setEnabled(false);
 							Log.d("MYINT", "value: " + counter1);
@@ -296,10 +329,12 @@ public class VTestStart extends Activity{
 						if (object == null) {
 							Log.d("que", "The getFirst request failed.");
 							//ccorrect.setEnabled(false);
+							incorrect++;
 							counter1=counter1-1;
 							Log.d("MYINT", "value: " + counter1);
 						} else {
 							Log.d("que", "Retrieved the object.");
+							correct++;
 							counter1=counter1+5;
 							//ccorrect.setEnabled(false);
 							Log.d("MYINT", "value: " + counter1);
@@ -321,10 +356,12 @@ public class VTestStart extends Activity{
 						if (object == null) {
 							Log.d("que", "The getFirst request failed.");
 							//ccorrect.setEnabled(false);
+							incorrect++;
 							counter1=counter1-1;
 							Log.d("MYINT", "value: " + counter1);
 						} else {
 							Log.d("que", "Retrieved the object.");
+							correct++;
 							counter1=counter1+5;
 							//cccorrect.setEnabled(false);
 							Log.d("MYINT", "value: " + counter1);
@@ -486,18 +523,94 @@ public class VTestStart extends Activity{
 				  }
 				});*/
 		        flag1=1;
-		        Intent indexIntent=new Intent(VTestStart.this,Result.class);
+		      /*  Intent indexIntent=new Intent(VTestStart.this,Result.class);
 				indexIntent.putExtra("studentInvoking",studname);
 				indexIntent.putExtra("quanto",quanto);
 				indexIntent.putExtra("verbo",Integer.toString(counter1));
 				indexIntent.putExtra("which","quant");
 				if(tillNow.equals("")){indexIntent.putExtra("tillnow","v");}
 				else if(tillNow.equals("q")){indexIntent.putExtra("tillnow","qv");}
-				startActivity(indexIntent);
+				startActivity(indexIntent);*/
 			}
 		});
-	
 
+
+		findViewById(R.id.vexit).setOnClickListener(this);
+	}
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+			case R.id.vexit:
+				new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+						.setTitleText("Are you sure?")
+						.setContentText("You won't be able to continue the Test")
+						.setCancelText("No,cancel please!")
+						.setConfirmText("Yes,Exit the Test!")
+						.showCancelButton(true)
+						.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+							@Override
+							public void onClick(SweetAlertDialog sDialog) {
+								// reuse previous dialog instance, keep widget user state, reset them if you need
+								sDialog.setTitleText("Cancelled!")
+										.setContentText("Continue with the test :)")
+										.setConfirmText("OK")
+										.showCancelButton(false)
+										.setCancelClickListener(null)
+										.setConfirmClickListener(null)
+										.changeAlertType(SweetAlertDialog.ERROR_TYPE);
+
+								// or you can new a SweetAlertDialog to show
+                               /* sDialog.dismiss();
+                                new SweetAlertDialog(SampleActivity.this, SweetAlertDialog.ERROR_TYPE)
+                                        .setTitleText("Cancelled!")
+                                        .setContentText("Your imaginary file is safe :)")
+                                        .setConfirmText("OK")
+                                        .show();*/
+							}
+						})
+						.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+							@Override
+							public void onClick(SweetAlertDialog sDialog) {
+								sDialog.setTitleText("Exiting the Test!")
+										.setContentText("Your Response is stored!")
+										.setConfirmText("OK")
+										.showCancelButton(false)
+										.setCancelClickListener(null)
+										.setConfirmClickListener(null)
+										.changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
+
+								ParseQuery<ParseObject> query = ParseQuery.getQuery("QuestionNo");
+								query.orderByDescending("updatedAt");
+								query.getFirstInBackground(new GetCallback<ParseObject>() {
+									public void done(ParseObject object, ParseException e) {
+										if (object == null) {
+											Toast.makeText(VTestStart.this,"Failure",Toast.LENGTH_LONG).show();
+										} else {
+											skipped=object.getNumber("Quesno").intValue()-(correct+incorrect);
+											//Toast.makeText(VTestStart.this,"Success",Toast.LENGTH_LONG).show();
+											Toast.makeText(VTestStart.this,Integer.toString(skipped)+" "+Integer.toString(correct)+" "+Integer.toString(incorrect),Toast.LENGTH_LONG).show();
+											SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(VTestStart.this);
+											SharedPreferences.Editor editor= prefs.edit();
+											editor.putString("mark",Integer.toString(counter1));
+											editor.putString("name",s);
+											editor.commit();
+											Global.skippeda=skipped;
+											Global.correcta=correct;
+											Global.incorrecta=incorrect;
+											Intent i2=new Intent(VTestStart.this,Result2.class);
+											startActivity(i2);
+										}
+									}
+								});
+								/*Intent i=new Intent(VTestStart.this,Result2.class);
+								startActivity(i);*/
+							}
+						})
+						.show();
+
+
+				break;
+		}
+	}
 }
 
-}
