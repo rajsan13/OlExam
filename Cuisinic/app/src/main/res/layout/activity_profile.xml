@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView android:id="@+id/profileImage" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_image_gray_24dp" android:scaleType="fitXY"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/changeImage" android:background="#000000" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_alignParentBottom="true" android:alpha="0.7">
+                    <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/cuisinic_camera"/>
+                    <TextView android:textSize="20sp" android:textColor="@color/colorAccent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Change Image "/>
+                </LinearLayout>
+                <ProgressBar android:gravity="center" android:layout_gravity="center" android:id="@+id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30dp" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+                <com.wang.avi.AVLoadingIndicatorView android:id="@+id/progressUpload" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" app:indicatorColor="@color/colorPrimary" app:indicatorName="BallPulseIndicator"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Email:" android:layout_weight="8"/>
+                    <EditText android:id="@+id/profileEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:editable="false" android:layout_weight="2"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Name:" android:layout_weight="8"/>
+                    <EditText android:id="@+id/profileName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Phone:" android:layout_weight="8"/>
+                    <EditText android:id="@+id/profileMobile" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLength="10" android:layout_weight="2" android:inputType="number"/>
+                </LinearLayout>
+                <TextView android:textColor="@color/colorPrimary" android:id="@+id/profileChangePassword" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Change Password"/>
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.v7.widget.CardView android:layout_gravity="center" android:id="@+id/doneButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20dp" android:layout_alignParentBottom="true" app:cardCornerRadius="10dp">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="Done"/>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

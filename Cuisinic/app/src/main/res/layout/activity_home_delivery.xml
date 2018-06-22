@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/payButton">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.gms.maps.MapView android:id="@+id/googleMap" android:background="#b6b6b6" android:layout_width="match_parent" android:layout_height="300dp" class="com.google.android.gms.maps.SupportMapFragment"/>
+            <EditText android:textSize="15sp" android:id="@+id/deliveryAddress" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:hint="Address"/>
+            <EditText android:textSize="15sp" android:id="@+id/deliveryName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:hint="Name"/>
+            <EditText android:textSize="15sp" android:id="@+id/deliveryNumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:hint="Phone Number"/>
+            <RadioGroup android:orientation="horizontal" android:id="@+id/rg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:weightSum="10">
+                <RadioButton android:id="@+id/rb1" android:layout_width="match_parent" android:layout_height="match_parent" android:checked="true" android:text="Deliver to current location" android:layout_weight="5"/>
+                <RadioButton android:id="@+id/rb2" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Select another address" android:layout_weight="5"/>
+            </RadioGroup>
+            <TextView android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Payment Details"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:weightSum="10">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Order Amount" android:layout_weight="3"/>
+                <TextView android:gravity="end" android:id="@+id/orderAmount" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:text="200" android:layout_weight="7"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:weightSum="10">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Delivery Charges (If order amount less than 200)" android:layout_weight="3"/>
+                <TextView android:gravity="end" android:id="@+id/deliveryAmount" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:text="0" android:layout_weight="7"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/showCouponDetails" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:weightSum="10">
+                <TextView android:id="@+id/couponDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Coupon" android:layout_weight="3"/>
+                <TextView android:gravity="end" android:id="@+id/couponAmountTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:text="-100" android:layout_weight="7"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:weightSum="10">
+                <TextView android:textStyle="bold" android:textColor="#000000" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Total Amount" android:layout_weight="3"/>
+                <TextView android:textStyle="bold" android:textColor="#000000" android:gravity="end" android:id="@+id/totalAmount" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:text="200" android:layout_weight="7"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:weightSum="10">
+                <CheckBox android:id="@+id/couponCheckBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Have a look at new available Offers?"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="10">
+                    <EditText android:id="@+id/couponEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:hint="Offer code" android:layout_weight="2"/>
+                    <Button android:textSize="10sp" android:id="@+id/couponCheckButton" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:text="Check" android:layout_weight="8"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:text="Payment Mode"/>
+            <Spinner android:id="@+id/paymentMode" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorAccent1" android:gravity="center" android:id="@+id/payButton" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Place Order" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

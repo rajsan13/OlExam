@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="ld_activityScreenIcons">
+        <item>@drawable/ic_account_circle_black_24dp</item>
+        <item>@drawable/ic_local_offer_black_24dp</item>
+        <item>@drawable/ic_flight_takeoff_black_24dp</item>
+        <item>@drawable/ic_rate_review_black_24dp</item>
+        <item>@drawable/ic_forum_black_24dp</item>
+        <item>@drawable/ic_settings_black_24dp</item>
+    </array>
+    <array name="ld_activityScreenTitles">
+        <item>My Account</item>
+        <item>Coupons</item>
+        <item>Travel Packs</item>
+        <item>Rate and Review</item>
+        <item>Forum</item>
+        <item>Settings</item>
+    </array>
+</resources>

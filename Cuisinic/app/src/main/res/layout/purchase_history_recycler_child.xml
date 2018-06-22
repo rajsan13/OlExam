@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:weightSum="10">
+        <TextView android:textColor="#646464" android:id="@+id/historyDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Date" android:layout_weight="5"/>
+        <TextView android:textColor="#000000" android:gravity="end" android:id="@+id/history_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="item_number" android:layout_weight="5"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:weightSum="10">
+        <TextView android:textSize="15sp" android:textColor="#000000" android:id="@+id/history_rest_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Restaurant Name" android:layout_weight="5"/>
+        <TextView android:textColor="@color/colorPrimary" android:gravity="end" android:id="@+id/history_amount" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Amount" android:layout_weight="5"/>
+    </LinearLayout>
+    <LinearLayout android:background="#a4a4a4" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+</LinearLayout>

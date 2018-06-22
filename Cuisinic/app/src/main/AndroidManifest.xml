@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="7" android:versionName="2.1.0" package="in.skaipal.kushalm.cuisinicuser">
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="27"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.javapapers.currentlocationinmap.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-feature android:glEsVersion="20000" android:required="true"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="in.skaipal.kushalm.cuisinicuser.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="in.skaipal.kushalm.cuisinicuser.permission.C2D_MESSAGE"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/cuisinic_logo" android:allowBackup="true" android:largeHeap="true" android:supportsRtl="true" android:roundIcon="@drawable/cuisinic_logo_round">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBWlPX0yrP2sxduzY62VRFHcUoidplTPTo"/>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:name="in.skaipal.kushalm.cuisinicuser.activity.SplashActivity" android:fitsSystemWindows="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:name="in.skaipal.kushalm.cuisinicuser.activity.LoginActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:name="in.skaipal.kushalm.cuisinicuser.activity.SignupActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.CartActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.GalleryActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.DeliveryActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.BookTableActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.AddAddressActivity"/>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:name="in.skaipal.kushalm.cuisinicuser.activity.WelcomeActivity" android:fitsSystemWindows="true"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.CuisinicMenuActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.BeveragesActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.MealsActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.JuiceActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.CuisinicItemActivity"/>
+        <activity android:theme="@style/AppTheme_NoActionBarNew" android:name="in.skaipal.kushalm.cuisinicuser.activity.DrawerActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.ProfileActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.GalleryUtil"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.MakeSaladActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.AddressActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.ContestActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.ContestApplyActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.LiveMusicActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.LiveMusicBookingActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.ShareRecipeActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.AddRecipeActivity"/>
+        <activity android:theme="@style/AppTheme_NoActionBarNew" android:name="in.skaipal.kushalm.cuisinicuser.activity.OrderActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.NewOrderViewActivity"/>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:name="in.skaipal.kushalm.cuisinicuser.activity.ForgotPasswordActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.IndianActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.OfferActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.OffersSelectActivity"/>
+        <activity android:name="in.skaipal.kushalm.cuisinicuser.activity.ContactUsActivity"/>
+        <service android:name="in.skaipal.kushalm.cuisinicuser.service.MyService"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="a117c06711accd0501d5956e3a5c8ba9c07c67e8"/>
+        <service android:name="in.skaipal.kushalm.cuisinicuser.service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="in.skaipal.kushalm.cuisinicuser.service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:name="com.crashlytics.android.CrashlyticsInitProvider" android:exported="false" android:authorities="in.skaipal.kushalm.cuisinicuser.crashlyticsinitprovider" android:initOrder="100"/>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:exported="true" android:excludeFromRecents="true" android:launchMode="singleInstance"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="in.skaipal.kushalm.cuisinicuser"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.iid.FirebaseInstanceIdService" android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="in.skaipal.kushalm.cuisinicuser.firebaseinitprovider" android:initOrder="100"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

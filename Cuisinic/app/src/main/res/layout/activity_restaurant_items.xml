@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/main_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@+id/toolbar" android:background="?attr/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?attr/actionBarSize" android:layout_alignParentTop="true" app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <android.support.design.widget.TabLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@+id/tab_layout" android:background="?attr/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?attr/actionBarSize" android:layout_below="@+id/toolbar"/>
+    <android.support.v4.view.ViewPager android:id="@+id/pager" android:background="@color/colorAccent1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tab_layout"/>
+</RelativeLayout>

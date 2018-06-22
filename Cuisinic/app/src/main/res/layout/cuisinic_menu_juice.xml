@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView android:id="@+id/mintCoolerCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Mint Cooler"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of mint cooler available." android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_mint_cooler" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView android:id="@+id/mocktailCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Mocktail"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of mocktail available." android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_mocktails" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView android:id="@+id/milkshakeCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Milkshake"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of milkshake available." android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_milkshake" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView android:id="@+id/freshJuiceCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Fresh Juice"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of fresh juice available." android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_juice" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView android:id="@+id/detoxCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Detox"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of detox available." android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_detox" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView android:id="@+id/acvCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="ACV"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of acv available." android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_acv" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

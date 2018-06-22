@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="@dimen/list_item_height">
+    <CheckedTextView android:gravity="center" android:id="@+id/list_item_multicheck_artist_name" android:paddingLeft="52dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:checkMark="?android:attr/listChoiceIndicatorMultiple" android:textAllCaps="true"/>
+</FrameLayout>

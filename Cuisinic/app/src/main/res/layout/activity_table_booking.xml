@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="start" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/payAndBook">
+        <ScrollView android:id="@+id/scroll" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="top" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Book Table"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="Number of Seaters:"/>
+                <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RadioGroup android:orientation="horizontal" android:id="@+id/rg1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:weightSum="12">
+                        <RadioButton android:id="@+id/seat1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="1" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/seat2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="2" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/seat3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="3" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/seat4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="4" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/seat5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="5" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/seat6" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="6" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/seat7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="7" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/seat8" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="8" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/seat9" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="9" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/seatMore" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="5dp" android:text="More" android:layout_weight="2"/>
+                    </RadioGroup>
+                </HorizontalScrollView>
+                <EditText android:id="@+id/seaterMoreET" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:hint="Number of Seaters" android:maxLength="2" android:inputType="number"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:text="Table Number"/>
+                <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RadioGroup android:orientation="horizontal" android:id="@+id/rg2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:weightSum="12">
+                        <RadioButton android:id="@+id/tableAny" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Any Table" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/table1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Table 1" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/table2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Table 2" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/table3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Table 3" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/table4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Table 4" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/table5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Table 5" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/table6" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Table 6" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/table7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Table 7" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/table8" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Table 8" android:layout_weight="2"/>
+                        <RadioButton android:id="@+id/table9" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="5dp" android:text="Table 9" android:layout_weight="2"/>
+                    </RadioGroup>
+                </HorizontalScrollView>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:weightSum="10">
+                    <TextView android:gravity="start" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="View gallery to know where the tables are situated" android:layout_weight="2"/>
+                    <Button android:textStyle="bold" android:textColor="@color/colorAccent1" android:id="@+id/galleryButton" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="30dp" android:text="Gallery" android:layout_weight="8"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:weightSum="10">
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Name" android:layout_weight="7"/>
+                    <EditText android:textColor="#000000" android:gravity="end" android:id="@+id/BookingName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="3"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:weightSum="10">
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Phone No." android:layout_weight="7"/>
+                    <EditText android:textColor="#000000" android:gravity="end" android:id="@+id/BookingNumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxEms="10" android:maxLength="10" android:layout_weight="3" android:inputType="number"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:weightSum="10">
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Select Date" android:layout_weight="5"/>
+                    <EditText android:textColor="#000000" android:gravity="end" android:id="@+id/selectDate" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Select Date" android:layout_weight="5"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:weightSum="10">
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Select Time" android:layout_weight="5"/>
+                    <EditText android:textColor="#000000" android:gravity="end" android:id="@+id/selectTime" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Select time" android:layout_weight="5"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_marginTop="10dp" android:weightSum="10">
+                    <CheckBox android:id="@+id/couponCheckBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Have Coupon?"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="10">
+                        <EditText android:id="@+id/couponEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:hint="Coupon code" android:layout_weight="2"/>
+                        <Button android:textSize="10sp" android:id="@+id/couponCheckButton" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:text="Check" android:layout_weight="8"/>
+                    </LinearLayout>
+                    <TextView android:gravity="center" android:id="@+id/tableCouponDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:text="Payment"/>
+                <RadioGroup android:gravity="center" android:orientation="horizontal" android:id="@+id/rg3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:weightSum="4">
+                    <RadioButton android:id="@+id/paymentFull" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Full" android:layout_weight="3"/>
+                    <RadioButton android:id="@+id/paymentToken" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Token (10% of Full Amount)" android:layout_weight="1"/>
+                </RadioGroup>
+                <TextView android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:text="Payment Mode"/>
+                <Spinner android:id="@+id/paymentModeBook" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp"/>
+                <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" app:cardCornerRadius="10dp">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:src="@drawable/cusinic_paytm"/>
+                        <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" app:cardCornerRadius="10dp">
+                            <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textColor="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/paytm"/>
+                                <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+                                    <TextView android:textSize="22sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mob: "/>
+                                    <TextView android:textSize="22sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+91 8342057714"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <Button android:textColor="@color/colorAccent1" android:id="@+id/payAndBook" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pay and Book" android:layout_weight="5" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

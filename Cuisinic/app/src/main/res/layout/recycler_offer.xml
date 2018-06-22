@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="9">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@+id/offer_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="40off" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:id="@+id/offer_valid" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Exxpiring in 2 days" android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView android:textStyle="normal" android:textColor="@color/colorPrimary" android:id="@+id/description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="40 % off on order greater than 400"/>
+            <TextView android:id="@+id/offer_description" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Description: "/>
+        </LinearLayout>
+        <CheckBox android:id="@+id/offerSelected" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:background="#eaeaea" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+</LinearLayout>

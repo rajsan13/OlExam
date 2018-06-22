@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <EditText android:id="@+id/addNameET" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:hint="Name" android:inputType="text"/>
+    <EditText android:id="@+id/addMobileET" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:hint="Mobile" android:maxLength="10" android:inputType="number"/>
+    <EditText android:id="@+id/addAddressET" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Address" android:inputType="text"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="10">
+        <Button android:textColor="@color/colorAccent1" android:id="@+id/addAddressNew" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Done" android:layout_weight="5"/>
+        <Button android:textColor="@color/colorAccent1" android:id="@+id/deleteAddressNew" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Delete" android:layout_weight="5"/>
+    </LinearLayout>
+</LinearLayout>

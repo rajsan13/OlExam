@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="16sp" android:textStyle="bold" android:id="@+id/head" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:text="Order:"/>
+        <ScrollView android:padding="10dp" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/buttonPanel" android:layout_below="@+id/head">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:layout_marginRight="3dp" android:layout_marginBottom="3dp">
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Order Time: " android:layout_weight="7"/>
+                    <TextView android:textSize="16sp" android:id="@+id/orderTime" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="3"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/addressLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:layout_marginRight="3dp" android:layout_marginBottom="3dp">
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Address: " android:layout_weight="7"/>
+                    <TextView android:textSize="16sp" android:id="@+id/orderAddress" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sashid Nagar, Bhubaneswar" android:layout_weight="3"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="3dp">
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Name: " android:layout_weight="7"/>
+                    <TextView android:textSize="16sp" android:id="@+id/orderName" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Kushal " android:layout_weight="3"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="3dp">
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Mobile: " android:layout_weight="7"/>
+                    <TextView android:textSize="16sp" android:id="@+id/orderMobile" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="+91 9692968333" android:layout_weight="3"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="3dp">
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Payment Mode:" android:layout_weight="7"/>
+                    <TextView android:textSize="16sp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cash on delivery" android:layout_weight="3"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="3dp">
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Total Price" android:layout_weight="3"/>
+                    <TextView android:textSize="16sp" android:id="@+id/orderPrice" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2" android:layout_weight="3"/>
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Paid:" android:layout_weight="3"/>
+                    <TextView android:textSize="16sp" android:id="@+id/orderPaidPrice" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2" android:layout_weight="3"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="3dp">
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Coupon" android:layout_weight="3"/>
+                    <TextView android:textSize="16sp" android:id="@+id/orderCoupon" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2" android:layout_weight="3"/>
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Discount:" android:layout_weight="3"/>
+                    <TextView android:textSize="16sp" android:id="@+id/orderDiscount" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2" android:layout_weight="3"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/tableDetails" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="3dp">
+                        <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Table No:" android:layout_weight="3"/>
+                        <TextView android:textSize="16sp" android:id="@+id/orderTableNumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2" android:layout_weight="3"/>
+                        <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Members:" android:layout_weight="3"/>
+                        <TextView android:textSize="16sp" android:id="@+id/orderTableMembers" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2" android:layout_weight="3"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="3dp">
+                        <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Booking Date:" android:layout_weight="7"/>
+                        <TextView android:textSize="16sp" android:id="@+id/tableBookingDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Debit Card (**45)" android:layout_weight="3"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="3dp">
+                        <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Booking Time:" android:layout_weight="7"/>
+                        <TextView android:textSize="16sp" android:id="@+id/tableBookingTime" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Debit Card (**45)" android:layout_weight="3"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TableLayout android:id="@+id/maintable" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:stretchColumns="0,1"/>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/buttonPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="10" android:layout_alignParentBottom="true">
+            <Button android:textColor="@color/colorAccent1" android:id="@+id/declineButton" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Decline" android:layout_weight="5"/>
+            <Button android:textColor="@color/colorAccent1" android:id="@+id/acceptButton" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Process" android:layout_weight="5"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/loadingLayout" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Fetching Orders Details Please wait"/>
+            <com.wang.avi.AVLoadingIndicatorView android:id="@+id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" app:indicatorColor="@color/colorPrimary" app:indicatorName="BallPulseIndicator"/>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

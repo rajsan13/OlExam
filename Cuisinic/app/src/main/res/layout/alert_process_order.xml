@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Mention the time required to deliver the order (60-90 mins)"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <EditText android:id="@+id/timeOne" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Time 1" android:maxLength="4" android:inputType="number"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text=" to "/>
+        <EditText android:id="@+id/timeTwo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Time 2" android:maxLength="4" android:inputType="number"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" in minutes "/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+        <Button android:textColor="@color/colorAccent1" android:id="@+id/cancelButton" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="cancle" android:layout_weight="1"/>
+        <Button android:textColor="@color/colorAccent1" android:id="@+id/doneButton" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="Done" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/progress" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Updating order status please wait"/>
+        <com.wang.avi.AVLoadingIndicatorView android:layout_width="wrap_content" android:layout_height="wrap_content" app:indicatorColor="@color/colorPrimary" app:indicatorName="BallPulseIndicator"/>
+    </LinearLayout>
+</LinearLayout>

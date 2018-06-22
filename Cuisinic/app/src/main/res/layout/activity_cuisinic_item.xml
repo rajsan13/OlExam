@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.wang.avi.AVLoadingIndicatorView android:id="@+id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" app:indicatorColor="@color/colorPrimary" app:indicatorName="BallPulseIndicator"/>
+    <android.support.v7.widget.RecyclerView android:id="@+id/itemRecycler" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.andremion.counterfab.CounterFab android:id="@+id/cartFab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cart" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" app:backgroundTint="@color/colorPrimary" app:fabSize="0"/>
+</RelativeLayout>

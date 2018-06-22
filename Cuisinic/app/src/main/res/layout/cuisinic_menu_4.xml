@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView android:id="@+id/soupCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Soup"/>
+                    <TextView android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="30dp" android:layout_marginBottom="10dp" android:text="Choose from the varieties of soup available." android:layout_weight="1"/>
+                </LinearLayout>
+                <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/cuisinic_soup" android:scaleType="fitEnd" android:layout_weight="1" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:alpha="1"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:id="@+id/appetizersCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Appetizers"/>
+                    <TextView android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="30dp" android:layout_marginBottom="10dp" android:text="Choose from the varieties of appetizer available." android:layout_weight="1"/>
+                </LinearLayout>
+                <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/cuisinic_appetizer" android:scaleType="fitEnd" android:layout_weight="1" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:alpha="1"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView android:id="@+id/grilledContinentalCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginTop="10dp" android:layout_marginRight="2dp" android:layout_marginBottom="5dp" android:text="Grilled Cont."/>
+                    <TextView android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="30dp" android:layout_marginBottom="5dp" android:text="Choose from the varieties of grilled cont. available." android:layout_weight="1"/>
+                </LinearLayout>
+                <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/cuisinic_grilled" android:scaleType="fitEnd" android:layout_weight="1" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:alpha="1"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

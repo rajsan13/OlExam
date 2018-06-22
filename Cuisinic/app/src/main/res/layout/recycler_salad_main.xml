@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Below prepared salads will be added to card"/>
+        <ImageView android:id="@+id/closeDialog" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_black_24dp" android:scaleType="fitEnd" android:layout_alignParentRight="true"/>
+        <android.support.v7.widget.RecyclerView android:id="@+id/ownSaladRecyclerView" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="60dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/closeDialog"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/buttonLayout" android:padding="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignBottom="@+id/ownSaladRecyclerView">
+            <Button android:textColor="@color/colorAccent1" android:id="@+id/makeAnotherSalad" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="Make another Salad" android:layout_weight="1"/>
+            <Button android:textColor="@color/colorAccent1" android:id="@+id/addSaladToCart" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="Add to Cart" android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

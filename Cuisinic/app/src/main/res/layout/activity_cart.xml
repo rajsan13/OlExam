@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/button">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="150dp">
+            <ImageView android:layout_width="match_parent" android:layout_height="150dp" android:src="@drawable/restaurant" android:scaleType="fitXY" android:alpha="0.8"/>
+            <LinearLayout android:background="#000000" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_alignParentBottom="true" android:alpha="0.7">
+                <TextView android:textColor="@color/colorAccent" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Get the details of all the items that are added in your cart. "/>
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Cart Value"/>
+        <TextView android:textSize="20sp" android:textColor="#000000" android:gravity="center" android:id="@+id/emptyCart" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="The cart is empty"/>
+        <ScrollView android:padding="10dp" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TableLayout android:id="@+id/maintable" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:stretchColumns="0,1"/>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/button" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="10" android:layout_alignParentBottom="true">
+        <Button android:textColor="@color/colorAccent1" android:id="@+id/deliveryButton" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Home Delivery" android:layout_weight="5"/>
+        <Button android:textColor="@color/colorAccent1" android:id="@+id/tableBooking" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Book a table" android:layout_weight="5"/>
+    </LinearLayout>
+</RelativeLayout>

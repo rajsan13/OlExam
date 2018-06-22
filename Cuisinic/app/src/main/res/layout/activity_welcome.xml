@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@drawable/welcome_main" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/buttonPanel">
+            <android.support.v4.view.ViewPager android:id="@+id/welcomePager" android:fitsSystemWindows="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="0.7"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/viewPagerCountDots" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="9.3"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/buttonPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_alignParentBottom="true">
+            <Button android:textColor="#ffffff" android:id="@+id/welcomeLogin" android:background="#000000" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Log in" android:layout_weight="5"/>
+            <Button android:textColor="#ffffff" android:id="@+id/welcomeSignup" android:background="@color/colorPrimaryDark" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Sign Up" android:layout_weight="5"/>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

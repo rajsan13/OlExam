@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ItemDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="10">
+        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="#000000" android:id="@+id/saladName" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Salad Name" android:layout_weight="3"/>
+        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="#000000" android:gravity="end" android:id="@+id/saladPrice" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="@string/Rupee" android:layout_weight="7"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/countLayout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:weightSum="10">
+        <TextView android:textColor="#787878" android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:text="Quantity" android:layout_weight="3"/>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="7">
+            <ImageView android:id="@+id/subs1" android:padding="7dp" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/subs"/>
+            <EditText android:textColor="#000000" android:id="@+id/quantity1" android:padding="5dp" android:layout_width="30dp" android:layout_height="wrap_content" android:text="1" android:maxLength="2" android:inputType="number"/>
+            <ImageView android:id="@+id/add1" android:padding="10.2dp" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/add"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <TextView android:textColor="@color/colorPrimary" android:id="@+id/showItem" android:paddingTop="10dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="View Salad Contents" android:layout_weight="1"/>
+        <TextView android:textColor="@android:color/holo_red_dark" android:id="@+id/removeSalad" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Remove Created Salad" android:layout_weight="1"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@+id/saladContentRecycler" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:background="#aeaeae" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="20dp" android:layout_marginTop="5dp" android:layout_marginRight="20dp"/>
+</LinearLayout>

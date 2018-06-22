@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/buttonShare">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/recipeName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Recipe Name" android:layout_weight="3"/>
+                <EditText android:id="@+id/recipePrice" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Price in ₹" android:layout_weight="7"/>
+            </LinearLayout>
+            <EditText android:id="@+id/recipeDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Short Description"/>
+            <RadioGroup android:orientation="horizontal" android:id="@+id/rg" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RadioButton android:id="@+id/typeVeg" android:layout_width="match_parent" android:layout_height="wrap_content" android:checked="true" android:text="Veg" android:layout_weight="1"/>
+                <RadioButton android:id="@+id/typeNonVeg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Non Veg" android:layout_weight="1"/>
+            </RadioGroup>
+            <EditText android:gravity="top" android:id="@+id/recipeDetails" android:layout_width="match_parent" android:layout_height="match_parent" android:text="hello"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/progress" android:background="#ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sharing recipe,please wait!!"/>
+        <com.wang.avi.AVLoadingIndicatorView android:layout_width="wrap_content" android:layout_height="wrap_content" app:indicatorColor="@color/colorPrimary"/>
+    </LinearLayout>
+    <Button android:id="@+id/buttonShare" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Share" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

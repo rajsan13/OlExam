@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#dadada" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+    <LinearLayout android:orientation="vertical" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorAccent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Select the desired address"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@+id/selectAddressRecycler" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="#000000" android:id="@+id/noAddressTV" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="No address found. Please add address in the profile section"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="10">
+        <Button android:textColor="@color/colorAccent1" android:id="@+id/selectDone" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Done" android:layout_weight="5"/>
+        <Button android:textColor="@color/colorAccent1" android:id="@+id/selectCancel" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Cancle" android:layout_weight="5"/>
+    </LinearLayout>
+</LinearLayout>

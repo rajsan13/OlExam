@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView android:id="@+id/soupsCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Soups"/>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of Indian Soups available." android:layout_weight="1"/>
+                                <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/soup" android:scaleType="fitEnd" android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView android:id="@+id/rotiCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Roti"/>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of Indian Rotis available." android:layout_weight="1"/>
+                                <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/roti" android:scaleType="fitEnd" android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView android:id="@+id/vstarterCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Starters Veg"/>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of Indian Veg Starters available." android:layout_weight="1"/>
+                                <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/vstarter" android:scaleType="fitEnd" android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView android:id="@+id/nvStarterCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Starters Non Veg"/>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of Indian Non Veg Starters available." android:layout_weight="1"/>
+                                <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/nvstarter" android:scaleType="fitEnd" android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView android:id="@+id/vCourseCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Main Course Veg"/>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of Indian Main Course available." android:layout_weight="1"/>
+                                <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/vcourse" android:scaleType="fitEnd" android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView android:id="@+id/nvCourseCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Main Course Non Veg"/>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of Indian Non Veg Main Course available." android:layout_weight="1"/>
+                                <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/nvcourse" android:scaleType="fitEnd" android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView android:id="@+id/riceCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Rice"/>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of Indian Rice available." android:layout_weight="1"/>
+                                <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/rice" android:scaleType="fitEnd" android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView android:id="@+id/dalCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Dal"/>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of Indian Dal available." android:layout_weight="1"/>
+                                <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/daal" android:scaleType="fitEnd" android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView android:id="@+id/coldCoffeeCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Cold Coffee"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of cold coffee available." android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_cold_coffee" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView android:id="@+id/hotCoffeeCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Hot Coffee"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of hot coffee available." android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_hot_coffee" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView android:id="@+id/hotTeaCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Hot Tea"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of hot tea available." android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_hot_tea" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView android:id="@+id/smoothiesCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Smoothies"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Choose from the varieties of smoothies available." android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_smoothies" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

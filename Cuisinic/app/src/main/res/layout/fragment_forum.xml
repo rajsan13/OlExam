@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <LinearLayout android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Discussion"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Demand for live music and information on the current slot" android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_discussion" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Initiatives"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Browse through the various food blogs just made for you" android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_green" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView android:id="@+id/shareRecipe" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Recipe"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Share your awesome recipe that would be added in the menu" android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_recipe" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView android:id="@+id/mealsCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" app:cardCornerRadius="10dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Testimonials"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Browse through the various food blogs just made for you" android:layout_weight="1"/>
+                            <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/cuisinic_testimonial" android:scaleType="fitEnd" android:layout_weight="1"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

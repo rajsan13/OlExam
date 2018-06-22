@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#ffe6e5e5" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/butLay">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/lay" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="10" android:layout_below="@+id/scroll">
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@+id/tt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Address" android:layout_weight="5"/>
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:gravity="end" android:id="@+id/addressCount" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="20dp" android:text="Address" android:layout_weight="5"/>
+            </LinearLayout>
+            <TextView android:id="@+id/noAddress" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="No address found" android:layout_below="@+id/lay"/>
+            <android.support.v7.widget.RecyclerView android:id="@+id/profile_address_recycler" android:background="#e6e5e5" android:padding="3dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/addAddressButton" android:layout_below="@+id/lay"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:id="@+id/butLay" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:textColor="@color/colorAccent1" android:id="@+id/addAddressButton" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="3dp" android:text="ADD ADDRESS"/>
+    </LinearLayout>
+</RelativeLayout>

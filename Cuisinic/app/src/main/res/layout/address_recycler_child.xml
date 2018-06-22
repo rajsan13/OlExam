@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/layout" android:background="@drawable/selector_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp">
+    <android.support.v7.widget.CardView android:id="@+id/card" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="10dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textColor="#000000" android:id="@+id/addressName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="name"/>
+            <TextView android:id="@+id/addressMobile" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Mobile"/>
+            <TextView android:id="@+id/addressMain" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Address"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:weightSum="10">
+            <TextView android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Select Date" android:layout_weight="5"/>
+            <EditText android:textColor="#000000" android:gravity="end" android:id="@+id/selectDate" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Select Date" android:layout_weight="5"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:weightSum="10">
+            <TextView android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Select Start Time" android:layout_weight="5"/>
+            <EditText android:textColor="#000000" android:gravity="end" android:id="@+id/selectStartTime" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Select start time" android:layout_weight="5"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:weightSum="10">
+            <TextView android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Select End Time" android:layout_weight="5"/>
+            <EditText android:textColor="#000000" android:gravity="end" android:id="@+id/selectEndTime" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Select end time" android:layout_weight="5"/>
+        </LinearLayout>
+        <TextView android:textColor="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Maximum booking time is 1 hr **"/>
+    </LinearLayout>
+    <Button android:textColor="@color/colorAccent1" android:id="@+id/book" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Book" android:layout_weight="5" android:layout_alignParentBottom="true"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/progress" android:background="#ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Booking slot for live music! Please wait!!!"/>
+        <com.wang.avi.AVLoadingIndicatorView android:layout_width="wrap_content" android:layout_height="wrap_content" app:indicatorColor="@color/colorPrimary"/>
+    </LinearLayout>
+</RelativeLayout>
