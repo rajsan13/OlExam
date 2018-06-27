@@ -294,7 +294,8 @@ public class VTestStart extends Activity implements View.OnClickListener{
 			        res.saveInBackground();
 					startActivity(indexIntent);	}
 		else{*/
-						 
+
+
 						
 					    // final EditText ccorrect = (EditText) findViewById(R.id.editText1);
 					   //  String cor=ccorrect.getText().toString();

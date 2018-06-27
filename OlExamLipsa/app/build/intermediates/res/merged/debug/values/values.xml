@@ -443,7 +443,7 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="title_activity_admin_show_student_id">AdminShowStudentId</string>
+    <string name="title_activity_admin_show_student_id">Student IDs</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -1446,11 +1446,10 @@
     </style>
     <style name="MyActionBar" parent="@android:style/Widget.Holo.ActionBar.Solid">
         <item name="android:background">#4d004d</item>
-
-
     </style>
     <style name="MyTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
         <item name="android:actionBarStyle">@style/MyActionBar</item>
+
 
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
@@ -1915,5 +1914,10 @@
         <item name="android:paddingLeft">21dp</item>
         <item name="android:paddingRight">21dp</item>
         <item name="android:textColor">@color/button_text_color</item>
+    </style>
+    <style name="up" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:background">#4d004d</item>
+
+
     </style>
 </resources>

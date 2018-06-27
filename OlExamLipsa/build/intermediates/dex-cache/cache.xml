@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="30bfa5e60f97e40593b1fa2fdeb51087651dc229">
+        <dex dex="C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_a1b859150e1eac673798af0bc83c1db242c8f0e0\classes.dex" />
+    </item>
+
+</items>

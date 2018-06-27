@@ -109,7 +109,9 @@
         <activity android:name="com.example.Aphexams.StudentEdit" />
         <!-- <activity android:name=".MainActivity"/ -->
         <!-- < <activity android:name=".StudentLogin" / -->
-        <activity android:name="com.example.Aphexams.StudentReg" />
+        <activity
+            android:name="com.example.Aphexams.StudentReg"
+            android:theme="@style/MyTheme" />
         <activity android:name="com.example.Aphexams.SucAdminReg" />
         <activity android:name="com.example.Aphexams.SucStudReg" />
         <activity android:name="com.example.Aphexams.ViewQues" />
@@ -124,7 +126,8 @@
         <activity android:name="com.example.Aphexams.UploadImage" />
         <activity
             android:name="com.example.Aphexams.AdminShowStudentId"
-            android:label="@string/title_activity_admin_show_student_id" />
+            android:label="@string/title_activity_admin_show_student_id"
+            android:theme="@style/MyTheme" />
         <activity android:name="com.example.Aphexams.AdminSetQuesLimit" />
         <activity android:name="com.example.Aphexams.StudentView" />
     </application>

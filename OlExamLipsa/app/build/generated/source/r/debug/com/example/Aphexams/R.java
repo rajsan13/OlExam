@@ -2642,33 +2642,37 @@ containing a value of this type.
         public static final int aptitudetest1=0x7f02004b;
         public static final int back=0x7f02004c;
         public static final int blue_button_background=0x7f02004d;
-        public static final int changepassword=0x7f02004e;
-        public static final int design_fab_background=0x7f02004f;
-        public static final int design_snackbar_background=0x7f020050;
-        public static final int dialog_background=0x7f020051;
-        public static final int edit=0x7f020052;
-        public static final int ellipselogin=0x7f020053;
-        public static final int error_center_x=0x7f020054;
-        public static final int error_circle=0x7f020055;
-        public static final int gray_button_background=0x7f020056;
-        public static final int ic_launcher=0x7f020057;
-        public static final int login=0x7f020058;
-        public static final int loginbutton=0x7f020059;
-        public static final int notification_template_icon_bg=0x7f020068;
-        public static final int onlinetest=0x7f02005a;
-        public static final int popup_bg=0x7f02005b;
-        public static final int red_button_background=0x7f02005c;
-        public static final int register=0x7f02005d;
-        public static final int rounded_rectangle=0x7f02005e;
-        public static final int roundedrectangle=0x7f02005f;
-        public static final int setlimits=0x7f020060;
-        public static final int setquestion=0x7f020061;
-        public static final int success_bow=0x7f020062;
-        public static final int success_circle=0x7f020063;
-        public static final int viewquestionset=0x7f020064;
-        public static final int viewstudentinformation=0x7f020065;
-        public static final int warning_circle=0x7f020066;
-        public static final int warning_sigh=0x7f020067;
+        public static final int box=0x7f02004e;
+        public static final int changepassword=0x7f02004f;
+        public static final int design_fab_background=0x7f020050;
+        public static final int design_snackbar_background=0x7f020051;
+        public static final int dialog_background=0x7f020052;
+        public static final int edit=0x7f020053;
+        public static final int ellipselogin=0x7f020054;
+        public static final int error_center_x=0x7f020055;
+        public static final int error_circle=0x7f020056;
+        public static final int gray_button_background=0x7f020057;
+        public static final int ic_launcher=0x7f020058;
+        public static final int line=0x7f020059;
+        public static final int login=0x7f02005a;
+        public static final int loginbutton=0x7f02005b;
+        public static final int notification_template_icon_bg=0x7f02006c;
+        public static final int onlinetest=0x7f02005c;
+        public static final int popup_bg=0x7f02005d;
+        public static final int red_button_background=0x7f02005e;
+        public static final int register=0x7f02005f;
+        public static final int rounded_rectangle=0x7f020060;
+        public static final int roundedrectangle=0x7f020061;
+        public static final int setlimits=0x7f020062;
+        public static final int setquestion=0x7f020063;
+        public static final int studregline=0x7f020064;
+        public static final int success_bow=0x7f020065;
+        public static final int success_circle=0x7f020066;
+        public static final int uptext=0x7f020067;
+        public static final int viewquestionset=0x7f020068;
+        public static final int viewstudentinformation=0x7f020069;
+        public static final int warning_circle=0x7f02006a;
+        public static final int warning_sigh=0x7f02006b;
     }
     public static final class id {
         public static final int TextView01=0x7f0c0128;
@@ -3523,6 +3527,7 @@ containing a value of this type.
         public static final int Widget_Design_TextInputLayout=0x7f09015f;
         public static final int alert_dialog=0x7f090160;
         public static final int dialog_blue_button=0x7f090161;
+        public static final int up=0x7f090162;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.

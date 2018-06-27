@@ -106,7 +106,7 @@
         <activity android:name=".StudentEdit" />
         <!-- <activity android:name=".MainActivity"/ -->
         <!-- < <activity android:name=".StudentLogin" / -->
-        <activity android:name=".StudentReg" />
+        <activity android:name=".StudentReg" android:theme="@style/MyTheme"/>
         <activity android:name=".SucAdminReg" />
         <activity android:name=".SucStudReg" />
         <activity android:name=".ViewQues" />
@@ -120,8 +120,9 @@
         <activity android:name=".TimeLimit" />
         <activity android:name=".UploadImage" />
         <activity
-            android:name=".AdminShowStudentId"
-            android:label="@string/title_activity_admin_show_student_id" />
+            android:name=".AdminShowStudentId" android:theme="@style/MyTheme"
+            android:label="@string/title_activity_admin_show_student_id"
+            />
         <activity android:name=".AdminSetQuesLimit" />
         <activity android:name=".StudentView"></activity>
     </application>

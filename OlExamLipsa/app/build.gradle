@@ -55,7 +55,7 @@ repositories {
     mavenCentral()
     jcenter()
     maven {
-        //url "http://maven.google.com"
-        url 'https://jitpack.io'
+        url "http://maven.google.com"
+        //url 'https://jitpack.io'
     }
 }

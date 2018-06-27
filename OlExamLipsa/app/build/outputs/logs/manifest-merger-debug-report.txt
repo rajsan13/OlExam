@@ -335,7 +335,9 @@ ADDED from C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\
 	android:name
 		ADDED from C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:106:19-46
 activity#com.example.Aphexams.StudentReg
-ADDED from C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:109:9-48
+ADDED from C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:109:9-78
+	android:theme
+		ADDED from C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:109:46-76
 	android:name
 		ADDED from C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:109:19-45
 activity#com.example.Aphexams.SucAdminReg
@@ -390,6 +392,8 @@ activity#com.example.Aphexams.AdminShowStudentId
 ADDED from C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:122:9-124:76
 	android:label
 		ADDED from C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:124:13-73
+	android:theme
+		ADDED from C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:123:48-78
 	android:name
 		ADDED from C:\Users\Sandeep\Desktop\OlExam-master\OlExam-master\OlExamLipsa\app\src\main\AndroidManifest.xml:123:13-47
 activity#com.example.Aphexams.AdminSetQuesLimit
