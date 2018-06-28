@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Tracker</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">sD2HNlnrrDej7Bps3lTXYxjQv77eZXisfSwuy0M7</string>
+    <string name="back4app_client_key">BYZiA82eedzgqFkEf2sZeSmYhVkGNZWxnRMUTOhf</string>
+    <string-array name="tasks">
+        <item>task1</item>
+        <item>task2</item>
+        <item>task3</item>
+        <item>task4</item>
+        <item>task5</item>
+    </string-array>
+    <string-array name="projects">
+        <item>project1</item>
+        <item>project2</item>
+        <item>project3</item>
+        <item>project4</item>
+        <item>project5</item>
+    </string-array>
+    <string-array name="reasons">
+        <item>reason1</item>
+        <item>reason2</item>
+        <item>reason3</item>
+        <item>reason4</item>
+        <item>reason5</item>
+    </string-array>
+</resources>

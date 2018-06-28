@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply Leave"
+        android:id="@+id/applyLeave"
+        android:layout_toLeftOf="@+id/showTask"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show my tasks"
+        android:id="@+id/showTask"
+        android:layout_toRightOf="@+id/applyLeave"
+        android:layout_gravity="right"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Office"
+        android:id="@+id/checkboxer"
+        android:checked="false"/>
+
+    <Spinner
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_task"
+        android:layout_gravity="center_horizontal"
+       />
+
+    <Spinner
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_project"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start"
+        android:id="@+id/Sbut"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="end"
+        android:id="@+id/Ebut"
+        android:layout_gravity="right"/>
+
+</LinearLayout>
