@@ -32,12 +32,12 @@ public class SplashScreen extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
-        Parse.initialize(new Parse.Configuration.Builder(SplashScreen.this)
+       /* Parse.initialize(new Parse.Configuration.Builder(SplashScreen.this)
                 .applicationId("QBQyVxRaYxbMEtpU31gZc0jbp7zoXD9WtoqtT1nd")
                 .clientKey("IZyyYsHU5dvxaoFNQ6GbTY0by1uFWgUgFI5xiU1K")
                 .server("https://parseapi.back4app.com/")
                 .build()
-        );
+        );*/
         StartAnimations();
     }
     private void StartAnimations() {

@@ -92,7 +92,9 @@
             android:theme="@style/MyTheme" />
         <activity android:name=".AdminChangePword" />
         <activity android:name=".AdminReg" />
-        <activity android:name=".HomeAdmin" android:theme="@style/MyTheme"/>
+        <activity
+            android:name=".HomeAdmin"
+            android:theme="@style/MyTheme" />
         <activity android:name=".HomeStudent" />
         <activity android:name=".QTestStart" />
         <activity android:name=".Result" />
@@ -100,9 +102,10 @@
         <activity android:name=".SetQuant" />
         <activity android:name=".SetVerb" />
         <activity android:name=".StudentChangePword" />
-        <activity android:name=".Result2"/>
-        <activity android:name=".PieChartActivity"/>
-        <activity android:name=".Rank1"/>.
+        <activity android:name=".Result2" />
+        <activity android:name=".PieChartActivity" />
+        <activity android:name=".Rank1" />
+        .
         <activity android:name=".StudentEdit" />
         <!-- <activity android:name=".MainActivity"/ -->
         <!-- < <activity android:name=".StudentLogin" / -->
@@ -111,7 +114,9 @@
         <activity android:name=".SucStudReg" />
         <activity android:name=".ViewQues" />
         <activity android:name=".ViewQ" />
-        <activity android:name=".ViewV" />
+        <activity
+            android:name=".ViewV"
+            android:theme="@style/MyTheme" />
         <activity android:name=".ViewStudent" />
         <activity android:name=".VTestStart" />
         <activity android:name=".QTestInstructiions" />
@@ -123,7 +128,8 @@
             android:name=".AdminShowStudentId"
             android:label="@string/title_activity_admin_show_student_id" />
         <activity android:name=".AdminSetQuesLimit" />
-        <activity android:name=".StudentView"></activity>
+        <activity android:name=".StudentView" />
+        <activity android:name=".AdminViewQuestionSet"></activity>
     </application>
 
 </manifest>

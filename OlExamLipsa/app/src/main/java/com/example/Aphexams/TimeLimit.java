@@ -43,7 +43,7 @@ public class TimeLimit extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.time_limit);
-       // Timer=(EditText) findViewById(R.id.timer);
+        // Timer=(EditText) findViewById(R.id.timer);
         ActionBar ab = getActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
         Timer1=(EditText)findViewById(R.id.timer1) ;
@@ -60,6 +60,15 @@ public class TimeLimit extends Activity {
                 Global.time2=1000;*/
                 Global.time3=value1*1000;
                 Global.time4=1000;
+
+
+                ParseObject res = new ParseObject("TimeLimit");
+                res.put("Time3",value1*1000);
+                res.put("Time4",1000);
+                res.saveInBackground();
+
+
+
                 Toast.makeText(TimeLimit.this,"Time Limit is set Successfully",
                         Toast.LENGTH_SHORT).show();
             }
@@ -69,7 +78,7 @@ public class TimeLimit extends Activity {
         setqueslimit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               QuestionNo = new ParseObject("QuestionNo");
+                QuestionNo = new ParseObject("QuestionNo");
                 Toast.makeText(getApplicationContext(),QuestionNo.getObjectId(),Toast.LENGTH_SHORT).show();
                 //deleting all rows in a parse table
                 ParseQuery<ParseObject> query=ParseQuery.getQuery("QuestionNo");
@@ -146,5 +155,3 @@ public class TimeLimit extends Activity {
     }
 
 }
-
-

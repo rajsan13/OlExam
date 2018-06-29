@@ -24,6 +24,7 @@ import java.util.List;
 import android.app.ActionBar;
 import android.view.MenuItem;
 import java.util.Objects;
+import java.util.StringTokenizer;
 
 //import app.android.project.com.olexam.R;
 
@@ -37,6 +38,8 @@ public class AdminShowStudentId extends Activity {
     private ArrayList<StudentId> studentidarraylist;
     private boolean notComplete = true;
     private String studId;
+    String temp;
+    StudentId studentId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,13 +68,36 @@ public class AdminShowStudentId extends Activity {
                     @Override
                     public void done(List<ParseObject> objects, ParseException e) {
                         if (e == null) {
-                            Toast.makeText(getApplicationContext(),Integer.toString(objects.size()),Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(),Integer.toString(objects.size()),Toast.LENGTH_LONG).show();
                             for(int i=0;i<objects.size();i++)
                             {
                                 String studentidstring = (String) objects.get(i).get("StudUserName");
-                                StudentId studentId=new StudentId();
+                                studentId=new StudentId();
                                 studentId.setStudentId(studentidstring);
+                                studentId.setStudentEmailid((String)objects.get(i).get("StudEmId"));
+
+                                studentId.setStudentPhno((String)objects.get(i).get("StudPhnNo"));
+
+                                ParseQuery<ParseObject> query1 = ParseQuery.getQuery("result");
+                                query1.whereEqualTo("Studname",studentidstring);
+
+                                query1.getFirstInBackground(new GetCallback<ParseObject>() {
+                                    public void done(ParseObject object, ParseException e) {
+                                        if (object == null) {
+                                            Log.d("vque", "The getFirst request failed.");
+                                        } else {
+                                            Log.d("vque", "Retrieved the object.");
+                                           // Toast.makeText(getApplicationContext(),"marks: "+(String) object.get("MARKS"),Toast.LENGTH_SHORT).show();
+                                           temp=(String) object.get("MARKS");
+                                            studentId.setStudentMark((String) object.get("MARKS"));
+
+                                        }
+                                    }
+                                });
                                 studentidarraylist.add(studentId);
+                               // Toast.makeText(getApplicationContext(),"marks :"+temp,Toast.LENGTH_SHORT).show();
+
+
                             }
                             //Now the arraylist is populated!
                           /*  for(int i=0;i<studentidarraylist.size();i++)
@@ -87,9 +113,9 @@ public class AdminShowStudentId extends Activity {
                                 @Override
                                 public void onItemClick(View view, int position) {
                                     studId=studentidarraylist.get(position).getStudentId();
-                                    Intent i=new Intent(AdminShowStudentId.this,ViewStudent.class);
+                                   /* Intent i=new Intent(AdminShowStudentId.this,ViewStudent.class);
                                     i.putExtra("studId",studId);
-                                    startActivity(i);
+                                    startActivity(i);*/
                                 }
                             }));
 
@@ -101,6 +127,7 @@ public class AdminShowStudentId extends Activity {
                 });
 
                 notComplete=false;
+                //Toast.makeText(getApplicationContext(),"marks :"+temp,Toast.LENGTH_SHORT).show();
 
             }
 
@@ -108,18 +135,6 @@ public class AdminShowStudentId extends Activity {
 
 
         /*fetching data from the database*/
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 

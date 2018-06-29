@@ -35,6 +35,7 @@ public static String marks,names;
         settings = PreferenceManager.getDefaultSharedPreferences(Result2.this);
          marks= settings.getString("mark", "");
          names=settings.getString("name","");
+
         mar=(TextView)findViewById(R.id.res);
         mMatchTextView = (MatchTextView) findViewById(R.id.mMatchTextView);
 
@@ -52,6 +53,7 @@ public static String marks,names;
                     Log.d("Studname", "The getFirst request failed.");
                     ParseObject res = new ParseObject("result");
                     res.put("Studname",names);
+                    Toast.makeText(getApplicationContext(),"names  "+names,Toast.LENGTH_SHORT).show();
                     res.put("MARKS",marks);
                     res.saveInBackground();
                 } else {
@@ -124,6 +126,7 @@ public static String marks,names;
     {
         Intent intent = new Intent(this,HomeStudent
                 .class);
+
         startActivity(intent);
     }
 }

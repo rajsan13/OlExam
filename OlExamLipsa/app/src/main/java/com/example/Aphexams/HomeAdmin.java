@@ -61,7 +61,7 @@ public class HomeAdmin extends Activity {
 		        dlg.setTitle("Please wait.");
 		        dlg.setMessage("Processing request.  Navigating to questions.  Please wait.");
 		        dlg.show();
-				Intent indexIntent=new Intent(HomeAdmin.this,ViewV.class);
+				Intent indexIntent=new Intent(HomeAdmin.this,AdminViewQuestionSet.class);
 					startActivity(indexIntent);	
 			}
 		});
