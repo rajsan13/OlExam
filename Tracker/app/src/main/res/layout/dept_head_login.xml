@@ -54,11 +54,12 @@
                         android:text="Username"
                         android:id="@+id/textView1"/>-->
             <ImageView
-                android:layout_width="250dp"
-                android:layout_height="35dp"
-                android:background="@drawable/onlinetest"
+                android:layout_width="1500dp"
+                android:layout_height="100dp"
+                android:background="@drawable/time2"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="40dp"/>
+                android:layout_marginBottom="40dp"
+                android:layout_weight="0.02"/>
 
             <EditText android:layout_width="fill_parent"
                       android:layout_height="50dp"

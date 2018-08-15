@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="skaipal.example.com.tracker">
+    package="skaipal.example.com.tracker">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -46,7 +46,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-       <!-- <meta-data
+
+        <!--
+        <meta-data
             android:name="com.parse.SERVER_URL"
             android:value="@string/back4app_server_url" />
         <meta-data
@@ -54,24 +56,30 @@
             android:value="@string/back4app_app_id" />
         <meta-data
             android:name="com.parse.CLIENT_KEY"
-            android:value="@string/back4app_client_key" />-->
+            android:value="@string/back4app_client_key" />
+        -->
         <activity android:name=".EmployeeReg">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:theme="@style/MyTheme"></activity>
-        <activity android:name=".SucEmp"></activity>
-        <activity android:name=".DeptHeadLogin"></activity>
-        <activity android:name=".SuperAdmin"></activity>
-        <activity android:name=".EmpHome"></activity>
-        <activity android:name=".ApplyLeave"></activity>
-        <activity android:name=".DeptHeadHome"></activity>
-        <activity android:name=".SuperAdminHome"></activity>
-        <activity android:name=".DatePick"></activity>
-
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/MyTheme" />
+        <activity android:name=".SucEmp" />
+        <activity android:name=".DeptHeadLogin" />
+        <activity android:name=".SuperAdmin" />
+        <activity android:name=".EmpHome" />
+        <activity android:name=".ApplyLeave" />
+        <activity android:name=".DeptHeadHome" />
+        <activity android:name=".SuperAdminHome" />
+        <activity android:name=".DatePick" />
+        <activity android:name=".AssignTask" />
+        <activity android:name=".DeptHeadAssignTask" />
+        <activity android:name=".DeptHeadShowDailyDetails" />
+        <activity android:name=".GrantLeave"></activity>
     </application>
 
 </manifest>

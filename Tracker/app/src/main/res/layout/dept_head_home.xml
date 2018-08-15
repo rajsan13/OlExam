@@ -3,22 +3,43 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Granting Leave"
-        android:id="@+id/grant_leave"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="75dp"/>
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Granting Leave"
+            android:id="@+id/grant_leave"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="75dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assigning tasks"
+            android:id="@+id/assigntask"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="75dp"/>
+    </LinearLayout>
 
-    <Button
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Daily"
-        android:id="@+id/daily"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="75dp"/>
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="pick date for daily details"
+            android:id="@+id/daily"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btdaily"
+            android:text="show daily details"/>
+    </LinearLayout>
+
 
     <Button
         android:layout_width="wrap_content"

@@ -1,57 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fbutton="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
 
-    <Button
-        android:layout_width="wrap_content"
+    <!-- <Button
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Apply Leave"
+         android:id="@+id/applyLeave"
+         android:layout_toLeftOf="@+id/showTask"
+         android:layout_marginBottom="20dp"/>-->
+
+    <info.hoang8f.widget.FButton
+        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:text="Apply Leave"
         android:id="@+id/applyLeave"
-        android:layout_toLeftOf="@+id/showTask"/>
+        android:layout_toLeftOf="@+id/showTask"
+        android:layout_marginBottom="20dp"
+        android:minHeight="@dimen/demo_button_min_height"
+        android:minWidth="@dimen/demo_button_min_width"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        fbutton:buttonColor="#4d004d"
+        fbutton:shadowEnabled="true" />
 
-    <Button
-        android:layout_width="wrap_content"
+    <!-- <Button
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Show my tasks"
+         android:id="@+id/showTask"
+         android:layout_toRightOf="@+id/applyLeave"
+         android:layout_gravity="right"
+         android:layout_marginBottom="20dp"/>-->
+
+
+    <info.hoang8f.widget.FButton
+
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:text="Show my tasks"
         android:id="@+id/showTask"
-        android:layout_toRightOf="@+id/applyLeave"
-        android:layout_gravity="right"/>
+
+        android:layout_marginBottom="20dp"
+        android:minHeight="@dimen/demo_button_min_height"
+        android:minWidth="@dimen/demo_button_min_width"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        fbutton:buttonColor="#4d004d"
+        fbutton:shadowEnabled="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter Office"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:id="@+id/checkboxer"
-        android:checked="false"/>
+        android:checked="false"
+        android:layout_marginBottom="20dp"/>
 
     <Spinner
         android:layout_width="211dp"
         android:layout_height="wrap_content"
         android:id="@+id/spinner_task"
         android:layout_gravity="center_horizontal"
-       />
+        android:layout_marginBottom="20dp"
+        />
+
+    <!--<WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView"
+        android:layout_gravity="right"/>-->
 
     <Spinner
         android:layout_width="211dp"
         android:layout_height="wrap_content"
         android:id="@+id/spinner_project"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/white"
+        android:color="#4d004d"
         />
 
-    <Button
-        android:layout_width="wrap_content"
+    <!-- <Button
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="start"
+         android:id="@+id/Sbut"
+         android:layout_marginBottom="20dp"/>-->
+
+
+    <info.hoang8f.widget.FButton
+
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:text="start"
-        android:id="@+id/Sbut"/>
+        android:id="@+id/Sbut"
 
-    <Button
-        android:layout_width="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:minHeight="@dimen/demo_button_min_height"
+        android:minWidth="@dimen/demo_button_min_width"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        fbutton:buttonColor="#4d004d"
+        fbutton:shadowEnabled="true" />
+
+    <!-- <Button
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="end"
+         android:id="@+id/Ebut"
+         android:layout_gravity="right"/>-->
+
+    <info.hoang8f.widget.FButton
+
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:text="end"
         android:id="@+id/Ebut"
-        android:layout_gravity="right"/>
+
+        android:layout_marginBottom="20dp"
+        android:minHeight="@dimen/demo_button_min_height"
+        android:minWidth="@dimen/demo_button_min_width"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        fbutton:buttonColor="#4d004d"
+        fbutton:shadowEnabled="true" />
+
+
 
 </LinearLayout>

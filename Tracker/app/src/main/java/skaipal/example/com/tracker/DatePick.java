@@ -1,7 +1,10 @@
 package skaipal.example.com.tracker;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.DatePicker;
 import android.widget.Toast;
@@ -12,10 +15,12 @@ import java.util.Calendar;
  * Created by Sandeep on 28-06-2018.
  */
 public class DatePick extends Activity {
+    Bundle ob;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pick_date);
+
         DatePicker datePicker = (DatePicker) findViewById(R.id.datePicker);
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
@@ -23,8 +28,15 @@ public class DatePick extends Activity {
 
             @Override
             public void onDateChanged(DatePicker datePicker, int year, int month, int dayOfMonth) {
-                Log.d("Date", "Year=" + year + " Month=" + (month + 1) + " day=" + dayOfMonth);
-                Toast.makeText(DatePick.this,year+"  "+(month+1)+"   "+dayOfMonth,Toast.LENGTH_LONG).show();
+
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                //prefs.edit().putBoolean("isMobile", Boolean.valueOf(mobile)).commit();
+                SharedPreferences.Editor editor= prefs.edit();
+                editor.putString("year",Integer.toString(year));
+                editor.putString("month",Integer.toString(month));
+                editor.putString("day",Integer.toString(dayOfMonth));
+
+                editor.commit();
 
             }
         });
