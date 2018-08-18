@@ -33,7 +33,14 @@ public class AdminLogin extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.test_admin_login);
 		//Parse.initialize(this, "eX31t72OF1l2SfT72YlLNkBiCiMwRGCf6S8QGMHB", "r70qpWRJ6IMNgTn7YW2dLZUFMmvTn5GQRfNQcwsd");
-
+		if(Global.check==0){
+			Parse.initialize(new Parse.Configuration.Builder(this)
+					.applicationId("QBQyVxRaYxbMEtpU31gZc0jbp7zoXD9WtoqtT1nd")
+					.clientKey("IZyyYsHU5dvxaoFNQ6GbTY0by1uFWgUgFI5xiU1K")
+					.server("https://parseapi.back4app.com/")
+					.build()
+			);
+			Global.check=1;}
 
 		ActionBar ab = getActionBar();
 		ab.setDisplayHomeAsUpEnabled(true);

@@ -70,7 +70,7 @@
         android:minWidth="@dimen/demo_button_min_width"
         android:text="Start Test"
         android:textColor="@android:color/white"
-        fbutton:buttonColor="@color/fbutton_color_turquoise"
+        fbutton:buttonColor="#4d004d"
         fbutton:shadowEnabled="true" />
     <info.hoang8f.widget.FButton
         android:id="@+id/hsedit"
@@ -82,7 +82,7 @@
         android:minWidth="@dimen/demo_button_min_width"
         android:text="View and Edit Profile"
         android:textColor="@android:color/white"
-        fbutton:buttonColor="@color/fbutton_color_turquoise"
+        fbutton:buttonColor="#4d004d"
         fbutton:shadowEnabled="true" />
 
     <info.hoang8f.widget.FButton
@@ -95,9 +95,10 @@
         android:minWidth="@dimen/demo_button_min_width"
         android:text="Change Password"
         android:textColor="@android:color/white"
-        fbutton:buttonColor="@color/fbutton_color_turquoise"
+        fbutton:buttonColor="#4d004d"
         fbutton:shadowEnabled="true" />
     <info.hoang8f.widget.FButton
+        android:visibility="invisible"
         android:id="@+id/rank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

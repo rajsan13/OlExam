@@ -19,21 +19,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.app.ActionBar;
 import android.view.MenuItem;
-
-import org.w3c.dom.Text;
-
 public class ViewV extends Activity{
 	Point p;
-	TextView ccoreect,textView1,qquestn,tvquesno;
+	TextView ccoreect,textView1,qquestn;
 	Button ddelete,vvqcancel,nnext,pprev;
-	TextView qquestion,oop1,oop2,oop3,oop4,solution;
+	TextView qquestion,oop1,oop2,oop3,oop4;
 	String objectId,questiondata;
-	int noOfRows;
-	int quesno;
-	EditText gotoet;
 	//Button bback,banother,bsub;
 	//TextView qvtop1,qvtop2,qvtop3,qvtop4,qvtque,qvtcorrect;
-	public static int  num3;
+	public static int  num3=1;
 	
 	
 	@Override
@@ -48,10 +42,8 @@ public class ViewV extends Activity{
 				.server("https://parseapi.back4app.com/")
 				.build()
 		);*/
-       Bundle ob=getIntent().getExtras();
-		num3=Integer.parseInt(ob.getString("quesno"));
-		Toast.makeText(getApplicationContext(),"quesno "+num3,Toast.LENGTH_LONG).show();
 
+		
 		ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
 		query.whereEqualTo("vqno",num3);
 		query.getFirstInBackground(new GetCallback<ParseObject>() {
@@ -61,12 +53,10 @@ public class ViewV extends Activity{
 		    } else {
 		      Log.d("vque", "Retrieved the object.");
 				objectId=object.getObjectId();
-				//Toast.makeText(getApplicationContext(),"modified objectid "+object.get("vqno"),Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(),"modified objectid "+objectId,Toast.LENGTH_LONG).show();
 		      questiondata=object.getString("vque");
 				//objectId=object.getString("objectId");
 				//Toast.makeText(getApplicationContext(),questiondata,Toast.LENGTH_LONG).show();
-				tvquesno=(TextView)findViewById(R.id.tvqno);
-				tvquesno.setText(Integer.toString(object.getInt("vqno"))+".");
 		      qquestn = (TextView) findViewById(R.id.questn);
 		      qquestn.setText(questiondata);
 		      String option1=object.getString("vopt1");
@@ -81,8 +71,6 @@ public class ViewV extends Activity{
 		      String option4=object.getString("vopt4");
 		       oop4 = (TextView) findViewById(R.id.op4);
 		      oop4.setText(option4);
-				solution=(TextView)findViewById(R.id.solution);
-				solution.setText(object.getString("Solution"));
 		      int righta=object.getInt("vrightans");
 		      final TextView ccorrect = (TextView) findViewById(R.id.correct);
 		     ccorrect.setText(Integer.toString(righta));
@@ -93,53 +81,15 @@ public class ViewV extends Activity{
 		
 	
 		
-	/*	vvqcancel = (Button)findViewById(R.id.vqcancel);
-		//vvqcancel.setVisibility(View.INVISIBLE);
+		vvqcancel = (Button)findViewById(R.id.vqcancel);
+		vvqcancel.setVisibility(View.INVISIBLE);
 		vvqcancel.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				gotoet=(EditText)findViewById(R.id.gototv);
-				String que=gotoet.getText().toString().trim();
-
-				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
-				query.whereEqualTo("vqno",Integer.parseInt(que));
-				query.getFirstInBackground(new GetCallback<ParseObject>() {
-					public void done(ParseObject object, ParseException e) {
-						if (object == null) {
-							Log.d("vque", "The getFirst request failed.");
-						} else {
-							Log.d("vque", "Retrieved the object.");
-							objectId=object.getObjectId();
-							//Toast.makeText(getApplicationContext(),"modified objectid "+object.get("vqno"),Toast.LENGTH_LONG).show();
-							questiondata=object.getString("vque");
-							//objectId=object.getString("objectId");
-							//Toast.makeText(getApplicationContext(),questiondata,Toast.LENGTH_LONG).show();
-							tvquesno.setText(Integer.toString(object.getInt("vqno"))+".");
-							qquestn = (TextView) findViewById(R.id.questn);
-							qquestn.setText(questiondata);
-							String option1=object.getString("vopt1");
-							oop1 = (TextView) findViewById(R.id.op1);
-							oop1.setText(option1);
-							String option2=object.getString("vopt2");
-							oop2 = (TextView) findViewById(R.id.op2);
-							oop2.setText(option2);
-							String option3=object.getString("vopt3");
-							oop3 = (TextView) findViewById(R.id.op3);
-							oop3.setText(option3);
-							String option4=object.getString("vopt4");
-							oop4 = (TextView) findViewById(R.id.op4);
-							oop4.setText(option4);
-							solution=(TextView)findViewById(R.id.solution);
-							solution.setText(object.getString("Solution"));
-							int righta=object.getInt("vrightans");
-							final TextView ccorrect = (TextView) findViewById(R.id.correct);
-							ccorrect.setText(Integer.toString(righta));
-
-						}
-					}
-				});
+				Intent indexIntent=new Intent(ViewV.this,HomeAdmin.class);
+					startActivity(indexIntent);	
 			}
-		});*/
+		});
 
 		
 		
@@ -172,8 +122,6 @@ public class ViewV extends Activity{
 						//objectId=object.getString("objectId");
 						objectId=object.getObjectId();
 				       questiondata=object.getString("vque");
-						//Toast.makeText(getApplicationContext(),"modified objectid "+object.get("vqno"),Toast.LENGTH_LONG).show();
-						tvquesno.setText(Integer.toString(object.getInt("vqno"))+".");
 				      final TextView qquestn = (TextView) findViewById(R.id.questn);
 				      qquestn.setText(questiondata);
 				      String option1=object.getString("vopt1");
@@ -191,8 +139,6 @@ public class ViewV extends Activity{
 				      int righta=object.getInt("vrightans");
 				      final TextView ccorrect = (TextView) findViewById(R.id.correct);
 				     ccorrect.setText(Integer.toString(righta));
-						final TextView solution=(TextView)findViewById(R.id.solution);
-						solution.setText(object.getString("Solution"));
 				     
 				    }
 				  }
@@ -223,8 +169,6 @@ public class ViewV extends Activity{
 						objectId=object.getObjectId();
 						questiondata=object.getString("vque");
 						//objectId=object.getString("objectId");
-						Toast.makeText(getApplicationContext(),"modified objectid "+object.get("vqno"),Toast.LENGTH_LONG).show();
-						tvquesno.setText(Integer.toString(object.getInt("vqno"))+".");
 				      final TextView qquestn = (TextView) findViewById(R.id.questn);
 				      qquestn.setText(questiondata);
 				      String option1=object.getString("vopt1");
@@ -242,8 +186,6 @@ public class ViewV extends Activity{
 				      int righta=object.getInt("vrightans");
 				      final TextView ccorrect = (TextView) findViewById(R.id.correct);
 				     ccorrect.setText(Integer.toString(righta));
-						final TextView solution=(TextView)findViewById(R.id.solution);
-						solution.setText(object.getString("Solution"));
 				     
 				    }
 				  }
@@ -261,7 +203,7 @@ public class ViewV extends Activity{
 		switch (item.getItemId()) {
 			case android.R.id.home:
 				// app icon in action bar clicked; go home
-				Intent i=new Intent(ViewV.this,AdminViewQuestionSet.class);
+				Intent i=new Intent(ViewV.this,HomeAdmin.class);
 				startActivity(i);
 				i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				//If the Intent resolves to an Activity in the current task the Activities above it on the stack are destroyed so that it is at the top of the stack, and it is re-used.
@@ -292,7 +234,7 @@ public class ViewV extends Activity{
 
 	private void showPopup(final Activity context, Point p) {
 		//Toast.makeText(getApplicationContext(),"inside showpopup",Toast.LENGTH_LONG).show();
-		int popupWidth = 650;
+		int popupWidth = 1000;
 		int popupHeight = 550;
 		// Inflate the popup_layout.xml
 		LinearLayout viewGroup = (LinearLayout) context.findViewById(R.id.popup);
@@ -306,8 +248,8 @@ public class ViewV extends Activity{
 		popup.setHeight(popupHeight);
 		popup.setFocusable(true);
 		// Some offset to align the popup a bit to the right, and a bit down, relative to button's position.
-		int OFFSET_X = -70;
-		int OFFSET_Y = -70;
+		int OFFSET_X = 30;
+		int OFFSET_Y = 30;
 		// Clear the default translucent background
 		popup.setBackgroundDrawable(new BitmapDrawable());
 		// Displaying the popup at the specified location, + offsets.
@@ -333,7 +275,7 @@ public class ViewV extends Activity{
 				query.whereEqualTo("objectId", objectId);
                 query.getInBackground(objectId, new GetCallback<ParseObject>() {
                     @Override
-                    public void done(final ParseObject object, ParseException e) {
+                    public void done(ParseObject object, ParseException e) {
 
                         if (object == null) {
                             Log.d("vque", "The getFirst request failed.");
@@ -341,36 +283,10 @@ public class ViewV extends Activity{
                         } else {
                             try {
                                 object.delete();
-								//after deletion logic
-								quesno=object.getInt("vqno");
-								ParseQuery<ParseObject> queryNoOfRows = ParseQuery.getQuery("Vex");
-								queryNoOfRows.setLimit(1000);
-								//query.whereEqualTo("rightans",Integer.parseInt(cor));
-								queryNoOfRows.findInBackground(new FindCallback<ParseObject>() {
-									@Override
-									public void done(List<ParseObject> objects, ParseException e) {
-										if (e == null) {
-											Log.d("que", "The getFirst request failed.");
-
-											noOfRows=objects.size();
-											Toast.makeText(getApplicationContext(),"no of rows : "+noOfRows,Toast.LENGTH_SHORT).show();
-											for(int i=quesno-1;i<noOfRows;i++)
-											{
-												objects.get(i).put("vqno",i+1);
-												objects.get(i).saveInBackground();
-											}
-											/*Toast.makeText(getApplicationContext(), "quesno" + quesno, Toast.LENGTH_LONG).show();
-								for (int i=0;i<=quesno;i++)
-									Toast.makeText(getApplicationContext(), "list values are" + list.get(i), Toast.LENGTH_LONG).show();
-*/
-										}
-									}
-								});
-
                                 object.saveInBackground();
 
 
-                                Toast.makeText(getApplicationContext(), "Deleted Successfully.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Deleted Successuly.", Toast.LENGTH_SHORT).show();
 
 
                             } catch (ParseException e1) {
@@ -390,7 +306,6 @@ public class ViewV extends Activity{
 						} else {
 							Log.d("vque", "Retrieved the object.");
 							//objectId=object.getString("objectId");
-							tvquesno.setText(Integer.toString(object.getInt("vqno"))+".");
 							objectId=object.getObjectId();
 							questiondata=object.getString("vque");
 							final TextView qquestn = (TextView) findViewById(R.id.questn);

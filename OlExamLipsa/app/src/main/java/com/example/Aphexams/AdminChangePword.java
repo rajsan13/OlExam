@@ -1,26 +1,16 @@
 package com.example.Aphexams;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.widget.*;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.app.ActionBar;
 import android.view.MenuItem;
 
-import com.parse.GetCallback;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
-
 public class AdminChangePword extends Activity{
 	Button acpsubmit,acpcancel;
-	SharedPreferences settings;
 	EditText et1,et2,et3;
-	String userid;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,33 +19,6 @@ public class AdminChangePword extends Activity{
 
 		ActionBar ab = getActionBar();
 		ab.setDisplayHomeAsUpEnabled(true);
-		settings= PreferenceManager.getDefaultSharedPreferences(AdminChangePword.this);
-		userid=settings.getString("AdminUserName","");
-		acpsubmit=(Button)findViewById(R.id.acp1);
-		acpsubmit.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				ParseQuery<ParseObject> qry = ParseQuery.getQuery("user");
-				//Toast.makeText(getApplicationContext(),"kab ayega list value"+randint,Toast.LENGTH_LONG).show();
-				//Toast.makeText(getApplicationContext(),"num5 "+num5,Toast.LENGTH_LONG).show();
-				qry.whereEqualTo("username",userid);
-				qry.getFirstInBackground(new GetCallback<ParseObject>() {
-					public void done(ParseObject object, ParseException e) {
-						if (object == null) {
-							Log.d("vque", "The getFirst request failed.");
-						} else {
-							Log.d("vque", "Retrieved the object.");
-							String questiondata=object.getString("vque");
-							final TextView qquestn = (TextView) findViewById(R.id.textView2);
-							qquestn.setText(questiondata);
-
-						}
-					}
-
-				});
-
-			}
-		});
 		
 		acpcancel = (Button)findViewById(R.id.acp2);
 		acpcancel.setOnClickListener(new OnClickListener() {

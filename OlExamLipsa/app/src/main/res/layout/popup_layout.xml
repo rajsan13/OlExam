@@ -1,71 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:id="@+id/popup"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/roundedrectangle"
-    >
+    android:background="@drawable/popup_bg">
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deletion"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are You Sure You Want To Delete This Question?"
+        android:layout_marginBottom="10dp"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DELETION"
-            android:textSize="30dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="center_horizontal"/>
-        <View
-            android:layout_width="400dp"
-            android:layout_height="1dp"
-            android:background="#4d004d"
-            android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+        <Button
+            android:id="@+id/byes"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"
-
-            />
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Are You Sure You Want To Delete This Question?"
-            android:textSize="22dp"
-            android:textColor="#000000"
-            android:layout_marginBottom="10dp"/>
-
-        <LinearLayout
+            android:text="Yes" />
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp">
-            <Button
-                android:id="@+id/byes"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:text="Yes"
-                android:textSize="22dp"
-                android:textColor="#ffffff"
-                android:background="@drawable/login"
-                android:layout_marginRight="20dp"/>
-            <Button
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:id="@+id/bno"
-                android:text="No"
-                android:textColor="#ffffff"
-                android:textSize="22dp"
-                android:background="@drawable/login"/>
+            android:id="@+id/bno"
+            android:text="No"/>
 
-        </LinearLayout>
     </LinearLayout>
 
-
-</android.support.v4.widget.NestedScrollView>
+</LinearLayout>

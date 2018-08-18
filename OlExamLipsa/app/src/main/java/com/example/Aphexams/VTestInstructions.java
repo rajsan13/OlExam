@@ -5,9 +5,17 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.*;
 import android.view.View;
 import android.view.View.OnClickListener;
+
+import com.parse.GetCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+
+import java.util.Collections;
 
 /**
  * Created by Sandeep on 25-05-2018.
@@ -26,6 +34,43 @@ public class VTestInstructions extends Activity {
         final String tillNow = intentIndex.getStringExtra("tillnow");
         final String verbo = intentIndex.getStringExtra("verbo");
         final String quanto = intentIndex.getStringExtra("quanto");
+
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("QuestionNo");
+        query.getFirstInBackground(new GetCallback<ParseObject>() {
+            public void done(ParseObject object, ParseException e) {
+                if (object == null) {
+                    Log.d("vque", "The getFirst request failed.");
+                } else {
+                    Log.d("vque", "Retrieved the object.");
+                  //  Toast.makeText(getApplicationContext(),object.getInt("Quesno")+"",Toast.LENGTH_LONG).show();
+                    TextView tvques=(TextView)findViewById(R.id.tvquestion);
+                    tvques.setText(object.getInt("Quesno")+" questions");
+
+                    }
+
+
+                }
+
+        });
+        ParseQuery<ParseObject> query1 = ParseQuery.getQuery("TimeLimit");
+        query1.getFirstInBackground(new GetCallback<ParseObject>() {
+            public void done(ParseObject object, ParseException e) {
+                if (object == null) {
+                    Log.d("vque", "The getFirst request failed.");
+                } else {
+                    Log.d("vque", "Retrieved the object.");
+                  //  Toast.makeText(getApplicationContext(),(object.getInt("Time3")/(object.getInt("Time4")*60))+"",Toast.LENGTH_LONG).show();
+                    TextView tvtime=(TextView)findViewById(R.id.tvtimelimit);
+                    tvtime.setText((object.getInt("Time3")/(object.getInt("Time4")*6))+" minutes");
+
+                }
+
+
+            }
+
+        });
+
+
 
 
         startbutton.setOnClickListener(new OnClickListener() {

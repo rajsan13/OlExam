@@ -107,7 +107,6 @@ public class HomeStudent extends Activity {
 					startActivity(indexIntent);	
 			}
 		});*/
-		Rank.setVisibility(View.INVISIBLE);
 		Rank.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {

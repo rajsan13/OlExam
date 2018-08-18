@@ -119,7 +119,7 @@ public class StudentReg extends Activity {
 			
 		
 		
-		/*srcancelbutton = (Button)findViewById(R.id.srcancel);
+	/*	srcancelbutton = (Button)findViewById(R.id.srcancel);
 		srcancelbutton.setVisibility(View.INVISIBLE);
 		srcancelbutton.setOnClickListener(new OnClickListener() {
 			

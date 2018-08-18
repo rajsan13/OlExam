@@ -28,44 +28,44 @@
 
             <!-- Full Name Label -->
             <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#4d004d"
-                android:text="Full Name"
+                      android:layout_height="wrap_content"
+                      android:textColor="#372c24"
+                      android:text="Full Name"
                 android:textSize="20dp"/>
             <EditText android:id="@+id/srname"
-                android:layout_width="fill_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="25dip"
-                android:singleLine="true"
+                      android:layout_width="fill_parent"
+                      android:layout_height="2dp"
+                      android:layout_marginTop="25dip"
+                      android:singleLine="true"
 
-                android:layout_marginBottom="25dip"
-                android:background="@drawable/rounded_rectangle"/>
+                      android:layout_marginBottom="25dip"
+                      android:background="@drawable/studregline"/>
 
             <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#4d004d"
-                android:text="User Name"
-                android:textSize="20dp"/>
+                      android:layout_height="wrap_content"
+                      android:textColor="#372c24"
+                      android:text="User Name"
+                      android:textSize="20dp"/>
             <EditText android:id="@+id/sruname"
-                android:layout_width="fill_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="25dip"
-                android:singleLine="true"
+                      android:layout_width="fill_parent"
+                      android:layout_height="2dp"
+                      android:layout_marginTop="25dip"
+                      android:singleLine="true"
 
-                android:layout_marginBottom="25dip"
-                android:background="@drawable/rounded_rectangle"/>
+                      android:layout_marginBottom="25dip"
+                      android:background="@drawable/studregline"/>
 
-            <!--     <TextView android:layout_width="fill_parent"
-                           android:layout_height="wrap_content"
-                           android:textColor="#372c24"
-                           android:text="Student Username"/>
-                 <EditText android:id="@+id/sruname"
-                           android:layout_width="fill_parent"
-                           android:layout_height="wrap_content"
-                           android:layout_marginTop="5dip"
-                           android:singleLine="true"
-                           android:hint="Username"
-                           android:layout_marginBottom="20dip"/>-->
+       <!--     <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="#372c24"
+                      android:text="Student Username"/>
+            <EditText android:id="@+id/sruname"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="5dip"
+                      android:singleLine="true"
+                      android:hint="Username"
+                      android:layout_marginBottom="20dip"/>-->
 
 
             <!--  Email Label -->
@@ -83,116 +83,117 @@
                       />-->
 
             <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#4d004d"
-                android:text="Password"
-                android:textSize="20dp"/>
+                      android:layout_height="wrap_content"
+                      android:textColor="#372c24"
+                      android:text="Password"
+                      android:textSize="20dp"/>
             <EditText android:id="@+id/srpword"
-                android:layout_width="fill_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="25dip"
-                android:singleLine="true"
+                      android:layout_width="fill_parent"
+                      android:layout_height="2dp"
+                      android:layout_marginTop="25dip"
+                      android:singleLine="true"
 
-                android:layout_marginBottom="25dip"
-                android:background="@drawable/rounded_rectangle"/>
+                      android:layout_marginBottom="25dip"
+                      android:background="@drawable/studregline"/>
 
             <!-- Password Label -->
-            <!-- <TextView android:layout_width="fill_parent"
-                       android:layout_height="wrap_content"
-                       android:textColor="#000"
-                       android:text="Confirm Password"/>
-             <EditText android:id="@+id/srconfpword"
-                       android:layout_width="fill_parent"
-                       android:layout_height="wrap_content"
-                       android:password="true"
-                       android:singleLine="true"
-                       android:layout_marginTop="2dip"
-                       android:hint="Password"/>-->
-
-
-            <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#4d004d"
-                android:text="Confirm Password"
-                android:textSize="20dp"/>
+           <!-- <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="#000"
+                      android:text="Confirm Password"/>
             <EditText android:id="@+id/srconfpword"
-                android:layout_width="fill_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="25dip"
-                android:singleLine="true"
-
-                android:layout_marginBottom="25dip"
-                android:background="@drawable/rounded_rectangle"/>
-
-            <!--   <TextView android:layout_width="fill_parent"
-                         android:layout_height="wrap_content"
-                         android:textColor="#372c24"
-                         android:text="Email ID"
-                         android:layout_marginTop="15dip"/>
-               <EditText android:id="@+id/sremail"
-                         android:layout_width="fill_parent"
-                         android:layout_height="wrap_content"
-                         android:singleLine="true"
-                         android:layout_marginTop="5dip"
-                         android:hint="Email"/>-->
-
-            <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#4d004d"
-                android:text="Email ID"
-                android:textSize="20dp"/>
-            <EditText android:id="@+id/sremail"
-                android:layout_width="fill_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="25dip"
-                android:singleLine="true"
-
-                android:layout_marginBottom="25dip"
-                android:background="@drawable/rounded_rectangle"/>
-
-
-            <!--    <TextView android:layout_width="fill_parent"
-                          android:layout_height="wrap_content"
-                          android:textColor="#372c24"
-                          android:text="Phone Number"
-                          android:layout_marginTop="15dip"/>
-                <EditText android:id="@+id/srphn"
-                          android:layout_width="fill_parent"
-                          android:layout_height="wrap_content"
-                          android:singleLine="true"
-                          android:layout_marginTop="5dip"
-                          android:hint="Phone Number"/>-->
-
-
-            <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#4d004d"
-                android:text="Phone Number"
-                android:textSize="20dp"/>
-            <EditText android:id="@+id/srphn"
-                android:layout_width="fill_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="25dip"
-                android:singleLine="true"
-                android:layout_marginBottom="25dip"
-                android:background="@drawable/rounded_rectangle"
-                android:textAlignment="center"
-                style="@android:style/Widget.DeviceDefault.EditText" />
-            <!-- Register Button -->
-            <!--  <Button android:id="@+id/srsubmit"
                       android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
-                      android:layout_marginTop="10dip"
-                      android:text="Register New Account"/>-->
+                      android:password="true"
+                      android:singleLine="true"
+                      android:layout_marginTop="2dip"
+                      android:hint="Password"/>-->
+
+
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="#372c24"
+                      android:text="Confirm Password"
+                      android:textSize="20dp"/>
+            <EditText android:id="@+id/srconfpword"
+                      android:layout_width="fill_parent"
+                      android:layout_height="2dp"
+                      android:layout_marginTop="25dip"
+                      android:singleLine="true"
+
+                      android:layout_marginBottom="25dip"
+                      android:background="@drawable/studregline"/>
+
+         <!--   <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="#372c24"
+                      android:text="Email ID"
+                      android:layout_marginTop="15dip"/>
+            <EditText android:id="@+id/sremail"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+
+                      android:singleLine="true"
+                      android:layout_marginTop="5dip"
+                      android:hint="Email"/>-->
+
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="#372c24"
+                      android:text="Email ID"
+                      android:textSize="20dp"/>
+            <EditText android:id="@+id/sremail"
+                      android:layout_width="fill_parent"
+                      android:layout_height="2dp"
+                      android:layout_marginTop="25dip"
+                      android:singleLine="true"
+
+                      android:layout_marginBottom="25dip"
+                      android:background="@drawable/studregline"/>
+
+
+        <!--    <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="#372c24"
+                      android:text="Phone Number"
+                      android:layout_marginTop="15dip"/>
+            <EditText android:id="@+id/srphn"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+
+                      android:singleLine="true"
+                      android:layout_marginTop="5dip"
+                      android:hint="Phone Number"/>-->
+
+
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="#372c24"
+                      android:text="Phone Number"
+                      android:textSize="20dp"/>
+            <EditText android:id="@+id/srphn"
+                      android:layout_width="fill_parent"
+                      android:layout_height="2dp"
+                      android:layout_marginTop="25dip"
+                      android:singleLine="true"
+
+                      android:layout_marginBottom="25dip"
+                      android:background="@drawable/studregline"/>
+            <!-- Register Button -->
+          <!--  <Button android:id="@+id/srsubmit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="Register New Account"/>-->
             <Button android:id="@+id/srsubmit"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="40dp"
-                android:text="Register"
-                android:textColor="#ffffff"
-                android:background="@drawable/login"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.84" />
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Register"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/login"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.84" />
 
             <!-- Link to Login Screen -->
 

@@ -116,13 +116,13 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
         mChart.setEntryLabelTextSize(12f);
     }
 
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.pie, menu);
         return true;
-    }
+    }*/
 
-    @Override
+   /* @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
@@ -189,7 +189,7 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
             }
         }
         return true;
-    }
+    }*/
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {

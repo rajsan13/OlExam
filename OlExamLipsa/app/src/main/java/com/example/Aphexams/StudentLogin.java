@@ -39,6 +39,7 @@ public class StudentLogin extends Activity {
 				.server("https://parseapi.back4app.com/")
 				.build()
 		);*/
+
 		ActionBar ab = getActionBar();
 		ab.setDisplayHomeAsUpEnabled(true);
 		sid = (EditText) findViewById(R.id.studentid);

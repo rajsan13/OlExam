@@ -5,7 +5,6 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -31,8 +30,9 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 public class VTestStart extends Activity implements View.OnClickListener{
 
 	Button bvsubmit,bvnext,bvexit,reset,bvprev;
-	private SharedPreferences Settings;
+	TextView tvque;
 	TextView oop1,oop2,oop3,oop4,textView1,qquestn;
+	int qcnt=1;
 	public static  int correct=0;
 	public static int  skipped=0;
 	public static int  incorrect=0;
@@ -40,9 +40,10 @@ public class VTestStart extends Activity implements View.OnClickListener{
 	//EditText ccorrect;
 	static int noOfRows,randint;
 	static ArrayList<Integer> list;
+	static ArrayList<Integer> marklist;
 	public static int  num5;
 	int temp;
-	int cnt=-1;
+	int cnt=0;
 	public static int counter1=0;
 	private RadioGroup radioGroup;
 	private RadioButton radio1;
@@ -66,11 +67,13 @@ public class VTestStart extends Activity implements View.OnClickListener{
 				.build()
 		);*/
 		//fetching no of rows in the questions!
+		marklist=new ArrayList<Integer>();
+		tvque=(TextView)findViewById(R.id.textView1);
 
 		rand=new Random();
-		num5=(int) rand.nextInt((10 - 1) + 1) + 1;
-		Toast.makeText(getApplicationContext(),"first value "+num5,Toast.LENGTH_SHORT).show();
-		temp=num5;
+		//num5=(int) rand.nextInt((10 - 1) + 1) + 1;
+		//Toast.makeText(getApplicationContext(),"first value "+num5,Toast.LENGTH_SHORT).show();
+		//temp=num5;
 
 		ParseQuery<ParseObject> queryNoOfRows = ParseQuery.getQuery("Vex");
 		//query.whereEqualTo("rightans",Integer.parseInt(cor));
@@ -81,7 +84,7 @@ public class VTestStart extends Activity implements View.OnClickListener{
 					Log.d("que", "The getFirst request failed.");
 
 					noOfRows=objects.size();
-					list = new ArrayList<Integer>();
+					 list = new ArrayList<Integer>();
 
 
 					ParseQuery<ParseObject> query = ParseQuery.getQuery("QuestionNo");
@@ -93,9 +96,12 @@ public class VTestStart extends Activity implements View.OnClickListener{
 								Log.d("vque", "Retrieved the object.");
 								randint = (int) rand.nextInt((noOfRows - 1) + 1) + 1;
 								quesno = (object.getInt("Quesno"));
-
+								for(int i=0;i<quesno;i++)
+								{
+									marklist.add(0);
+								}
 								//Toast.makeText(getApplicationContext(), "random no is" + randint, Toast.LENGTH_LONG).show();
-								for (int i = 0; i <= quesno+1; i++) {
+								for (int i = 0; i < quesno; i++) {
 									int add=((randint++) % (noOfRows + 1));
 									if (add==0)
 										continue;
@@ -104,10 +110,34 @@ public class VTestStart extends Activity implements View.OnClickListener{
 								}
 
 								Collections.shuffle(list);
-								/*Toast.makeText(getApplicationContext(), "quesno" + quesno, Toast.LENGTH_LONG).show();
-								for (int i=0;i<=quesno;i++)
-									Toast.makeText(getApplicationContext(), "list values are" + list.get(i), Toast.LENGTH_LONG).show();
-*/
+
+								ParseQuery<ParseObject> qry = ParseQuery.getQuery("Vex");
+								//Toast.makeText(getApplicationContext(),"kab ayega list value"+randint,Toast.LENGTH_LONG).show();
+								//Toast.makeText(getApplicationContext(),"num5 "+num5,Toast.LENGTH_LONG).show();
+								qry.whereEqualTo("vqno",list.get(0));
+								qry.getFirstInBackground(new GetCallback<ParseObject>() {
+									public void done(ParseObject object, ParseException e) {
+										if (object == null) {
+											Log.d("vque", "The getFirst request failed.");
+										} else {
+											Log.d("vque", "Retrieved the object.");
+											String questiondata=object.getString("vque");
+											final TextView qquestn = (TextView) findViewById(R.id.textView2);
+
+											tvque.setText(qcnt+"");
+											qquestn.setText(questiondata);
+
+											radio1.setText(object.getString("vopt1"));
+											radio2.setText(object.getString("vopt2"));
+											radio3.setText(object.getString("vopt3"));
+											radio4.setText(object.getString("vopt4"));
+										}
+									}
+
+								});
+
+								//for (int i=0;i<=quesno;i++)
+									//Toast.makeText(getApplicationContext(), "list values are" + list.get(i), Toast.LENGTH_LONG).show();
 							}
 						}
 					});
@@ -119,7 +149,7 @@ public class VTestStart extends Activity implements View.OnClickListener{
 
 					//Toast.makeText(getApplicationContext(),Integer.toString(noOfRows),Toast.LENGTH_LONG).show();
 				}
-				else {
+					else {
 					Log.d("que", "Retrieved the object.");
 
 
@@ -133,18 +163,15 @@ public class VTestStart extends Activity implements View.OnClickListener{
 
 		//Java unique random number generator code
 
-		Intent intentIndex = getIntent();
-		Settings = PreferenceManager.getDefaultSharedPreferences(VTestStart.this);
-		// gets the previously created intent
-		final String studname = Settings.getString("StudUserName","");
-		final TextView tw= (TextView)findViewById(R.id.textView9);
-		tw.setText("Hello "+studname);
-		final String tillNow = intentIndex.getStringExtra("tillnow");
-		final String quanto = intentIndex.getStringExtra("quanto");
-		final String verbo = intentIndex.getStringExtra("verbo");
-		// num5=1;
-		counter1=0;
-		s=studname;
+		Intent intentIndex = getIntent(); // gets the previously created intent
+        final String studname = intentIndex.getStringExtra("studentInvoking"); 
+        final TextView tw= (TextView)findViewById(R.id.textView9);
+        //tw.setText("Hello "+studname);
+        final String tillNow = intentIndex.getStringExtra("tillnow");
+        final String quanto = intentIndex.getStringExtra("quanto"); 
+        final String verbo = intentIndex.getStringExtra("verbo");
+       // num5=1;
+        counter1=0;
 		radioGroup = (RadioGroup)findViewById(R.id.group1);
 		radio1 = (RadioButton)findViewById(R.id.radio1);
 		radio2= (RadioButton)findViewById(R.id.radio2);
@@ -161,8 +188,8 @@ public class VTestStart extends Activity implements View.OnClickListener{
 				if (object == null) {
 					Toast.makeText(VTestStart.this,"Failed",Toast.LENGTH_LONG).show();
 				} else {
-					Global.time3=object.getNumber("Time3").intValue();
-					Global.time4=object.getNumber("Time4").intValue();
+                       Global.time3=object.getNumber("Time3").intValue();
+					   Global.time4=object.getNumber("Time4").intValue();
 
 					new CountDownTimer(Global.time3, Global.time4) {
 
@@ -211,6 +238,7 @@ public class VTestStart extends Activity implements View.OnClickListener{
 		});
 
 		/*new CountDownTimer(30000, 1000) {
+
 			public void onTick(long millisUntilFinished) {
 				//mTextField.setText("Time remaining: " + millisUntilFinished / 1000);
 				//here you can have your logic to set text to edittext
@@ -221,9 +249,11 @@ public class VTestStart extends Activity implements View.OnClickListener{
 						TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
 								TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
 			}
+
 			public void onFinish() {
 				mTextField1.setText("done!");
 				//time=1;
+
 				ParseQuery<ParseObject> query = ParseQuery.getQuery("QuestionNo");
 				query.orderByDescending("updatedAt");
 				query.getFirstInBackground(new GetCallback<ParseObject>() {
@@ -254,33 +284,34 @@ public class VTestStart extends Activity implements View.OnClickListener{
 		//code to generate required number of unique random numbers
 
 		//for setting the question and the options in the intent
+		/*
 		ParseQuery<ParseObject> qry = ParseQuery.getQuery("Vex");
-		//Toast.makeText(getApplicationContext(),"kab ayega list value"+randint,Toast.LENGTH_LONG).show();
-		//Toast.makeText(getApplicationContext(),"num5 "+num5,Toast.LENGTH_LONG).show();
 		qry.whereEqualTo("vqno",temp);
 		qry.getFirstInBackground(new GetCallback<ParseObject>() {
-			public void done(ParseObject object, ParseException e) {
-				if (object == null) {
-					Log.d("vque", "The getFirst request failed.");
-				} else {
-					Log.d("vque", "Retrieved the object.");
-					String questiondata=object.getString("vque");
-					final TextView qquestn = (TextView) findViewById(R.id.textView2);
-					qquestn.setText(questiondata);
+		  public void done(ParseObject object, ParseException e) {
+		    if (object == null) {
+		      Log.d("vque", "The getFirst request failed.");
+		    } else {
+		      Log.d("vque", "Retrieved the object.");
+		      String questiondata=object.getString("vque");
+		      final TextView qquestn = (TextView) findViewById(R.id.textView2);
 
-					radio1.setText(object.getString("vopt1"));
-					radio2.setText(object.getString("vopt2"));
-					radio3.setText(object.getString("vopt3"));
-					radio4.setText(object.getString("vopt4"));
-				}
-			}
+				tvque.setText(qcnt+"");
+		      qquestn.setText(questiondata);
 
-		});
+				radio1.setText(object.getString("vopt1"));
+				radio2.setText(object.getString("vopt2"));
+				radio3.setText(object.getString("vopt3"));
+				radio4.setText(object.getString("vopt4"));
+		    }
+		  }
 
+		});*/
 
+		
 		bvsubmit = (Button)findViewById(R.id.vsubmit);
 		bvsubmit.setOnClickListener(new OnClickListener() {
-
+			
 			public void onClick(View v) {
 
 	/*	if(num5==0){
@@ -299,9 +330,10 @@ public class VTestStart extends Activity implements View.OnClickListener{
 		else{*/
 
 
-				// final EditText ccorrect = (EditText) findViewById(R.id.editText1);
-				//  String cor=ccorrect.getText().toString();
-				//ccorrect.setText("");
+						
+					    // final EditText ccorrect = (EditText) findViewById(R.id.editText1);
+					   //  String cor=ccorrect.getText().toString();
+					     //ccorrect.setText("");
 					    /* ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
 							query.whereEqualTo("vqno",num5);
 							query.whereEqualTo("vrightans",Integer.parseInt(cor));
@@ -315,140 +347,158 @@ public class VTestStart extends Activity implements View.OnClickListener{
 							      Log.d("vque", "Retrieved the object.");
 							      counter1=counter1+5;
 							   //   ccorrect.setEnabled(false);
-
+							     
 							    }
 							  }
 							});*/
 
-				if(R.id.radio1==radioGroup.getCheckedRadioButtonId()) {
+			if(R.id.radio1==radioGroup.getCheckedRadioButtonId()) {
 
-					//String cor=radio1.getText().toString();
-					//ccorrect.setText("");
-					flag=1;
-					ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
-					query.whereEqualTo("qno",temp);
-					//query.whereEqualTo("rightans",Integer.parseInt(cor));
-					query.whereEqualTo("rightans",1);
-					query.getFirstInBackground(new GetCallback<ParseObject>() {
-						public void done(ParseObject object, ParseException e) {
-							if (object == null) {
-								Log.d("que", "The getFirst request failed.");
-								//ccorrect.setEnabled(false);
-								incorrect++;
-								counter1=counter1-1;
-								Log.d("MYINT", "value: " + counter1);
-							} else {
-								Log.d("que", "Retrieved the object.");
-								correct++;
-								counter1=counter1+5;
-								//ccorrect.setEnabled(false);
-								Log.d("MYINT", "value: " + counter1);
+				//String cor=radio1.getText().toString();
+				//ccorrect.setText("");
+				flag=1;
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
+				query.whereEqualTo("vqno",temp);
+				//query.whereEqualTo("rightans",Integer.parseInt(cor));
+				query.whereEqualTo("vrightans",1);
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							Log.d("que", "The getFirst request failed.");
+							//ccorrect.setEnabled(false);
+							Toast.makeText(getApplicationContext(),"wrong answer ",Toast.LENGTH_LONG).show();
+							incorrect++;
+							marklist.set(cnt,-1);
+							//counter1=counter1-1;
+							//Log.d("MYINT", "value:1 " + counter1);
+						} else {
+							Log.d("que", "Retrieved the object.");
+							Toast.makeText(getApplicationContext(),"right answer ",Toast.LENGTH_LONG).show();
+							correct++;
+							marklist.set(cnt,5);
+							//counter1=counter1+5;
+							//ccorrect.setEnabled(false);
+							//Log.d("MYINT", "value:1 " + counter1);
 
-							}
 						}
-					});
-				}
-				else if(R.id.radio2==radioGroup.getCheckedRadioButtonId()) {
-
-					//String cor=radio2.getText().toString();
-					//ccorrect.setText("");
-					flag=2;
-					ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
-					query.whereEqualTo("qno",temp);
-					//query.whereEqualTo("rightans",Integer.parseInt(cor));
-					query.whereEqualTo("rightans",2);
-					query.getFirstInBackground(new GetCallback<ParseObject>() {
-						public void done(ParseObject object, ParseException e) {
-							if (object == null) {
-								Log.d("que", "The getFirst request failed.");
-								//ccorrect.setEnabled(false);
-								incorrect++;
-								counter1=counter1-1;
-								Log.d("MYINT", "value: " + counter1);
-							} else {
-								Log.d("que", "Retrieved the object.");
-								correct++;
-								counter1=counter1+5;
-								//ccorrect.setEnabled(false);
-								Log.d("MYINT", "value: " + counter1);
-
-							}
-						}
-					});
-				}
-				else if(R.id.radio3==radioGroup.getCheckedRadioButtonId()) {
-
-					flag=3;
-					String cor=radio3.getText().toString();
-					//ccorrect.setText("");
-					ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
-					query.whereEqualTo("qno",temp);
-					//query.whereEqualTo("rightans",Integer.parseInt(cor));
-					query.whereEqualTo("rightans",3);
-					query.getFirstInBackground(new GetCallback<ParseObject>() {
-						public void done(ParseObject object, ParseException e) {
-							if (object == null) {
-								Log.d("que", "The getFirst request failed.");
-								//ccorrect.setEnabled(false);
-								incorrect++;
-								counter1=counter1-1;
-								Log.d("MYINT", "value: " + counter1);
-							} else {
-								Log.d("que", "Retrieved the object.");
-								correct++;
-								counter1=counter1+5;
-								//ccorrect.setEnabled(false);
-								Log.d("MYINT", "value: " + counter1);
-
-							}
-						}
-					});
-				}
-				else if(R.id.radio4==radioGroup.getCheckedRadioButtonId()) {
-					flag=4;
-					String cor=radio4.getText().toString();
-					//ccorrect.setText("");
-					ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
-					query.whereEqualTo("qno",temp);
-					//query.whereEqualTo("rightans",Integer.parseInt(cor));
-					query.whereEqualTo("rightans",4);
-					query.getFirstInBackground(new GetCallback<ParseObject>() {
-						public void done(ParseObject object, ParseException e) {
-							if (object == null) {
-								Log.d("que", "The getFirst request failed.");
-								//ccorrect.setEnabled(false);
-								incorrect++;
-								counter1=counter1-1;
-								Log.d("MYINT", "value: " + counter1);
-							} else {
-								Log.d("que", "Retrieved the object.");
-								correct++;
-								counter1=counter1+5;
-								//cccorrect.setEnabled(false);
-								Log.d("MYINT", "value: " + counter1);
-
-							}
-						}
-					});
-				}
-				bvsubmit.setBackgroundColor(Color.GREEN);
+					}
+				});
 			}
+			else if(R.id.radio2==radioGroup.getCheckedRadioButtonId()) {
+
+				//String cor=radio2.getText().toString();
+				//ccorrect.setText("");
+				flag=2;
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
+				query.whereEqualTo("vqno",temp);
+				//query.whereEqualTo("rightans",Integer.parseInt(cor));
+				query.whereEqualTo("vrightans",2);
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							Log.d("que", "The getFirst request failed.");
+							Toast.makeText(getApplicationContext(),"wrong answer ",Toast.LENGTH_LONG).show();
+							//ccorrect.setEnabled(false);
+							incorrect++;
+							marklist.set(cnt,-1);
+							//counter1=counter1-1;
+							Log.d("MYINT", "value:2 " + counter1);
+						} else {
+							Log.d("que", "Retrieved the object.");
+							Toast.makeText(getApplicationContext(),"right answer ",Toast.LENGTH_LONG).show();
+							correct++;
+							marklist.set(cnt,5);
+							//counter1=counter1+5;
+							//ccorrect.setEnabled(false);
+							Log.d("MYINT", "value:2 " + counter1);
+
+						}
+					}
+				});
+			}
+			else if(R.id.radio3==radioGroup.getCheckedRadioButtonId()) {
+
+				flag=3;
+				String cor=radio3.getText().toString();
+				//ccorrect.setText("");
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
+				query.whereEqualTo("vqno",temp);
+				//query.whereEqualTo("rightans",Integer.parseInt(cor));
+				query.whereEqualTo("vrightans",3);
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							Toast.makeText(getApplicationContext(),"wrong answer ",Toast.LENGTH_LONG).show();
+							Log.d("que", "The getFirst request failed.");
+							//ccorrect.setEnabled(false);
+							incorrect++;
+							marklist.set(cnt,-1);
+							//counter1=counter1-1;
+							Log.d("MYINT", "value:3 " + counter1);
+						} else {
+							Log.d("que", "Retrieved the object.");
+							Toast.makeText(getApplicationContext(),"right answer ",Toast.LENGTH_LONG).show();
+							correct++;
+							marklist.set(cnt,5);
+							//counter1=counter1+5;
+							//ccorrect.setEnabled(false);
+							Log.d("MYINT", "value:3 " + counter1);
+
+						}
+					}
+				});
+			}
+			else if(R.id.radio4==radioGroup.getCheckedRadioButtonId()) {
+				flag=4;
+				String cor=radio4.getText().toString();
+				//ccorrect.setText("");
+				ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
+				query.whereEqualTo("vqno",temp);
+				//query.whereEqualTo("rightans",Integer.parseInt(cor));
+				query.whereEqualTo("vrightans",4);
+				query.getFirstInBackground(new GetCallback<ParseObject>() {
+					public void done(ParseObject object, ParseException e) {
+						if (object == null) {
+							Log.d("que", "The getFirst request failed.");
+							Toast.makeText(getApplicationContext(),"wrong answer ",Toast.LENGTH_LONG).show();
+							//ccorrect.setEnabled(false);
+							incorrect++;
+							marklist.set(cnt,-1);
+							//counter1=counter1-1;
+							Log.d("MYINT", "value:4 " + counter1);
+						} else {
+							Log.d("que", "Retrieved the object.");
+							Toast.makeText(getApplicationContext(),"right answer ",Toast.LENGTH_LONG).show();
+							correct++;
+							marklist.set(cnt,5);
+							//counter1=counter1+5;
+							//cccorrect.setEnabled(false);
+							Log.d("MYINT", "value:4 " + counter1);
+
+						}
+					}
+				});
+			}
+				bvsubmit.setBackgroundColor(Color.GREEN);
+		}
 		});
-
-
-
+		
+		
+		
 		bvnext = (Button)findViewById(R.id.vnext);
 		bvnext.setOnClickListener(new OnClickListener() {
 
+			
 			public void onClick(View v) {
-				//bvsubmit.setBackgroundColor(Color.GRAY);
-				radioGroup.clearCheck();
-				if (num5==list.get(++cnt))
-					cnt++;
 
-				if (cnt<quesno){
-					temp=list.get(cnt);
-					//Toast.makeText(getApplicationContext(),"qno "+temp+" cnt "+cnt,Toast.LENGTH_LONG).show();
+				bvsubmit.setBackgroundColor(Color.GRAY);
+				radioGroup.clearCheck();
+				//if (num5==list.get(cnt))
+				//	cnt++;
+
+				if (cnt<(quesno-1)){
+					temp=list.get(++cnt);
+					Toast.makeText(getApplicationContext(),"qno "+temp+" cnt "+cnt,Toast.LENGTH_LONG).show();
 					ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
 					query.whereEqualTo("vqno",temp);
 					query.getFirstInBackground(new GetCallback<ParseObject>() {
@@ -459,7 +509,15 @@ public class VTestStart extends Activity implements View.OnClickListener{
 								Log.d("vque", "Retrieved the object.");
 								String questiondata=object.getString("vque");
 								final TextView qquestn = (TextView) findViewById(R.id.textView2);
+								//Toast.makeText(getApplicationContext(),object.getInt("qno")+"",Toast.LENGTH_LONG).show();
+								if(qcnt<quesno)
+								{
+									qcnt++;
+								}
 
+								tvque.setText(qcnt+"");
+								qquestn.setText(questiondata);
+								//Toast.makeText(getApplicationContext(),object.getInt("vqno")+" quesno",Toast.LENGTH_LONG).show();
 								radio1.setText(object.getString("vopt1"));
 								radio2.setText(object.getString("vopt2"));
 								radio3.setText(object.getString("vopt3"));
@@ -483,117 +541,81 @@ public class VTestStart extends Activity implements View.OnClickListener{
 		bvprev.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				//bvsubmit.setBackgroundColor(Color.GRAY);
-				radioGroup.clearCheck();
 
-				/*if (cnt==0)
+				bvsubmit.setBackgroundColor(Color.GRAY);
+				radioGroup.clearCheck();
+				if (cnt==0)
 				{
-					cnt--;
 					ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
-					query.whereEqualTo("qno",num5);
-					Toast.makeText(getApplicationContext(),"num5 "+num5+" cnt "+cnt,Toast.LENGTH_LONG).show();
+					query.whereEqualTo("vqno",list.get(0));
+					//Toast.makeText(getApplicationContext(),list.get(0)+" cnt "+cnt,Toast.LENGTH_LONG).show();
 					query.getFirstInBackground(new GetCallback<ParseObject>() {
 						public void done(ParseObject object, ParseException e) {
 							if (object == null) {
 								Log.d("que", "The getFirst request failed.");
 							} else {
 								Log.d("que", "Retrieved the object.");
-								String questiondata=object.getString("que");
+								String questiondata=object.getString("vque");
+								Toast.makeText(getApplicationContext(),cnt+" "+object.getInt("vqno")+" quesno",Toast.LENGTH_LONG).show();
 								final TextView qquestn = (TextView) findViewById(R.id.textView2);
+								if(qcnt>1)
+								{
+									qcnt--;
+								}
+
+								tvque.setText(qcnt+"");
 								qquestn.setText(questiondata);
-								radio1.setText(object.getString("opt1"));
-								radio2.setText(object.getString("opt2"));
-								radio3.setText(object.getString("opt3"));
-								radio4.setText(object.getString("opt4"));
+								radio1.setText(object.getString("vopt1"));
+								radio2.setText(object.getString("vopt2"));
+								radio3.setText(object.getString("vopt3"));
+								radio4.setText(object.getString("vopt4"));
 							}
 						}
 					});
-				}*/
-				if (cnt==-1)
-				{
 
+				}
+				else if (cnt==-1)
+				{
 					Toast.makeText(getApplicationContext(),"this is the very first question!!!",Toast.LENGTH_LONG).show();
 				}
 				else
 				{
-					    cnt--;
-						if(cnt>-1)
-						{
-							if (num5==list.get(cnt))
-								cnt--;
-							if(cnt==-1)
-							{
-								ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
-								query.whereEqualTo("vqno",num5);
-								//Toast.makeText(getApplicationContext(),"num5 "+num5+" cnt "+cnt,Toast.LENGTH_LONG).show();
-								query.getFirstInBackground(new GetCallback<ParseObject>() {
-									public void done(ParseObject object, ParseException e) {
-										if (object == null) {
-											Log.d("que", "The getFirst request failed.");
-										} else {
-											Log.d("que", "Retrieved the object.");
-											String questiondata=object.getString("vque");
-											final TextView qquestn = (TextView) findViewById(R.id.textView2);
-											qquestn.setText(questiondata);
-											radio1.setText(object.getString("vopt1"));
-											radio2.setText(object.getString("vopt2"));
-											radio3.setText(object.getString("vopt3"));
-											radio4.setText(object.getString("vopt4"));
-										}
-									}
-								});
-							}
-							else
-							{
-								temp=list.get(cnt);
-								//Toast.makeText(getApplicationContext(),"qno "+temp+" cnt "+cnt,Toast.LENGTH_LONG).show();
-								ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
-								query.whereEqualTo("vqno",temp);
-								query.getFirstInBackground(new GetCallback<ParseObject>() {
-									public void done(ParseObject object, ParseException e) {
-										if (object == null) {
-											Log.d("que", "The getFirst request failed.");
-										} else {
-											Log.d("que", "Retrieved the object.");
-											String questiondata=object.getString("vque");
-											final TextView qquestn = (TextView) findViewById(R.id.textView2);
-											qquestn.setText(questiondata);
+					//if (num5==list.get(--cnt))
+					//	cnt--;
+					//else
+					//{
 
-											radio1.setText(object.getString("vopt1"));
-											radio2.setText(object.getString("vopt2"));
-											radio3.setText(object.getString("vopt3"));
-											radio4.setText(object.getString("vopt4"));
-										}
-									}
-								});
-							}
+						temp=list.get(--cnt);
 
-						}
-					   else
-						{
-							//it is equal to than -1
-							ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
-							query.whereEqualTo("vqno",num5);
-							//Toast.makeText(getApplicationContext(),"num5 "+num5+" cnt "+cnt,Toast.LENGTH_LONG).show();
-							query.getFirstInBackground(new GetCallback<ParseObject>() {
-								public void done(ParseObject object, ParseException e) {
-									if (object == null) {
-										Log.d("que", "The getFirst request failed.");
-									} else {
-										Log.d("que", "Retrieved the object.");
-										String questiondata=object.getString("vque");
-										final TextView qquestn = (TextView) findViewById(R.id.textView2);
-										qquestn.setText(questiondata);
-										radio1.setText(object.getString("vopt1"));
-										radio2.setText(object.getString("vopt2"));
-										radio3.setText(object.getString("vopt3"));
-										radio4.setText(object.getString("vopt4"));
+						Toast.makeText(getApplicationContext(),"qno "+temp+" cnt "+cnt,Toast.LENGTH_LONG).show();
+						ParseQuery<ParseObject> query = ParseQuery.getQuery("Vex");
+						query.whereEqualTo("vqno",temp);
+						query.getFirstInBackground(new GetCallback<ParseObject>() {
+							public void done(ParseObject object, ParseException e) {
+								if (object == null) {
+									Log.d("que", "The getFirst request failed.");
+								} else {
+									Log.d("que", "Retrieved the object.");
+									String questiondata=object.getString("vque");
+									final TextView qquestn = (TextView) findViewById(R.id.textView2);
+									if(qcnt>1)
+									{
+										qcnt--;
 									}
+
+									tvque.setText(qcnt+"");
+									qquestn.setText(questiondata);
+									//Toast.makeText(getApplicationContext(),object.getInt("vqno")+" quesno",Toast.LENGTH_LONG).show();
+									radio1.setText(object.getString("vopt1"));
+									radio2.setText(object.getString("vopt2"));
+									radio3.setText(object.getString("vopt3"));
+									radio4.setText(object.getString("vopt4"));
 								}
-							});
-						}
+							}
+						});
+					}
 
-				}
+				//}
 
 			}
 		});
@@ -606,19 +628,19 @@ public class VTestStart extends Activity implements View.OnClickListener{
 				radioGroup.clearCheck();
 			}
 		});
-
-
+		
+		
 		bvexit = (Button)findViewById(R.id.vexit);
 		bvexit.setOnClickListener(new OnClickListener() {
-
+			
 			public void onClick(View v) {
 				final ProgressDialog dlg = new ProgressDialog(VTestStart.this);
-				dlg.setTitle("Please wait.");
-				dlg.setMessage("Processing request. Exiting the test.  Please wait.");
-				dlg.show();
+		        dlg.setTitle("Please wait.");
+		        dlg.setMessage("Processing request. Exiting the test.  Please wait.");
+		        dlg.show();
 
 				//num5 1 cnt 0 ::  qno =4 cnt 1:: qno=8 cnt =2: 10 8 7 2 9 6 3
-
+				
 				/*ParseQuery<ParseObject> query = ParseQuery.getQuery("results");
 				query.whereEqualTo("Studname",studname);
 				query.getFirstInBackground(new GetCallback<ParseObject>() {
@@ -635,7 +657,7 @@ public class VTestStart extends Activity implements View.OnClickListener{
 				    }
 				  }
 				});*/
-				flag1=1;
+		        flag1=1;
 		      /*  Intent indexIntent=new Intent(VTestStart.this,Result.class);
 				indexIntent.putExtra("studentInvoking",studname);
 				indexIntent.putExtra("quanto",quanto);
@@ -701,12 +723,17 @@ public class VTestStart extends Activity implements View.OnClickListener{
 										} else {
 											skipped=object.getNumber("Quesno").intValue()-(correct+incorrect);
 											//Toast.makeText(VTestStart.this,"Success",Toast.LENGTH_LONG).show();
+											for(int i=0;i<quesno;i++)
+											{
+												counter1+=marklist.get(i);
+											}
 											Toast.makeText(VTestStart.this,Integer.toString(skipped)+" "+Integer.toString(correct)+" "+Integer.toString(incorrect),Toast.LENGTH_LONG).show();
 											SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(VTestStart.this);
 											SharedPreferences.Editor editor= prefs.edit();
 											editor.putString("mark",Integer.toString(counter1));
+
+											//Toast.makeText(getApplicationContext(),"marks :"+counter1,Toast.LENGTH_LONG).show();
 											editor.putString("name",s);
-											Toast.makeText(getApplicationContext(),"names  "+s,Toast.LENGTH_SHORT).show();
 											editor.commit();
 											Global.skippeda=skipped;
 											Global.correcta=correct;
@@ -727,3 +754,4 @@ public class VTestStart extends Activity implements View.OnClickListener{
 		}
 	}
 }
+

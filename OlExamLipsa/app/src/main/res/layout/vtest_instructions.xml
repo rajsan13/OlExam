@@ -20,13 +20,65 @@
         android:text="This Test consists of SAS questions"
         android:id="@+id/textView13"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.85"/>
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="The test consists of: "
+            android:id="@+id/tvques"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.85"/>
+        <TextView
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="20 questions"
+            android:id="@+id/tvquestion"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.85"
+            android:textColor="#4d004d"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="70dp">
+        <TextView
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Total Time Alloted for the test is: "
+            android:id="@+id/tvtime"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.85"/>
+        <TextView
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="20 minutes"
+            android:id="@+id/tvtimelimit"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.85"
+            android:textColor="#4d004d"/>
+    </LinearLayout>
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start!"
         android:id="@+id/vbutton"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200dp"
+        android:background="#4d004d"
+        android:textColor="#ffffff"/>
+
 
 </LinearLayout>

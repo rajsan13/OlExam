@@ -3,47 +3,69 @@
 
     <item
         android:id="@+id/actionToggleValues"
-        android:title="Toggle Y-Values">
+        android:title="Toggle Y-Values"
+        android:visible="false"
+        android:enabled="false">
     </item>
     <item
         android:id="@+id/actionToggleIcons"
-        android:title="Toggle Icons">
+        android:title="Toggle Icons"
+        android:visible="false"
+        android:enabled="false">
     </item>
     <item
         android:id="@+id/actionToggleXVals"
-        android:title="Toggle X-Values">
+        android:title="Toggle X-Values"
+        android:visible="false"
+        android:enabled="false">
     </item>
     <item
         android:id="@+id/actionTogglePercent"
-        android:title="Toggle Percent">
+        android:title="Toggle Percent"
+        android:visible="false"
+        android:enabled="false">
     </item>
     <item
         android:id="@+id/actionToggleHole"
-        android:title="Toggle Hole">
+        android:title="Toggle Hole"
+        android:visible="false"
+        android:enabled="false">
     </item>
     <item
         android:id="@+id/animateX"
-        android:title="Animate X">
+        android:title="Animate X"
+        android:visible="false"
+        android:enabled="false">
     </item>
     <item
         android:id="@+id/animateY"
-        android:title="Animate Y">
+        android:title="Animate Y"
+        android:visible="false"
+        android:enabled="false">
     </item>
     <item
         android:id="@+id/animateXY"
-        android:title="Animate XY">
+        android:title="Animate XY"
+        android:visible="false"
+        android:enabled="false">
     </item>
     <item
         android:id="@+id/actionDrawCenter"
-        android:title="Draw CenterText">
+        android:title="Draw CenterText"
+        android:visible="false"
+        android:enabled="false">
     </item>
     <item
         android:id="@+id/actionSave"
-        android:title="Save to Gallery">
+        android:title="Save to Gallery"
+        android:visible="false"
+        android:enabled="false">
     </item>
     <item
         android:id="@+id/actionToggleSpin"
-        android:title="Spin Animation">
+        android:title="Spin Animation"
+        android:visible="false"
+        android:enabled="false">
     </item>
 
 </menu>
